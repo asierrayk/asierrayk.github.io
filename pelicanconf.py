@@ -32,3 +32,14 @@ DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
+
+
+THEME = 'themes/elegant'
+
+
+PLUGIN_PATHS = ['plugins']
+PLUGINS = ['tipue_search']
+
+
+DISQUS_SITENAME = 'blogdeasier'
+
