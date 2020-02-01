@@ -8,7 +8,16 @@
 
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
-        <title>Blog de Asier - Authors</title>
+
+<meta property="og:title" content="Search · Blog de Asier"/>
+<meta name="twitter:title" content="Search · Blog de Asier">
+<meta property="og:url" content="./search.html" />
+<meta property="og:description" content="Search results for Blog de Asier blog" />
+<meta name="twitter:description" content="Search results for Blog de Asier blog">
+<meta property="og:site_name" content="Blog de Asier" />
+<meta property="og:article:author" content="Asier Cardoso Sánchez" />
+        <title>Search · Blog de Asier
+</title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="./theme/css/elegant.prod.css" media="screen">
         <link rel="stylesheet" type="text/css" href="./theme/css/custom.css" media="screen">
@@ -48,10 +57,9 @@
                 <div class="row-fluid">
                     <div class="span1"></div>
                     <div class="span10">
-    <h1>Authors on Blog de Asier</h1>
-    <ul>
-        <li><a href="./author/asier-cardoso-sanchez.html">Asier Cardoso Sánchez</a> (2)</li>
-    </ul>
+    <div class="span8 offset2">
+        <div id="tipue_search_content"><div id="tipue_search_loading"></div></div>
+    </div>
                     </div>
                     <div class="span1"></div>
                 </div>
@@ -66,14 +74,21 @@
         Powered by: <a href="http://getpelican.com/" title="Pelican Home Page" target="_blank" rel="nofollow noopener noreferrer">Pelican</a>
         Theme: <a href="https://elegant.oncrashreboot.com/" title="Theme Elegant Home Page" target="_blank" rel="nofollow noopener noreferrer">Elegant</a>
     </div>
-</footer>        <script src="//code.jquery.com/jquery.min.js"></script>
-        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
-        <script>
-            function validateForm(query)
-            {
-                return (query.length > 0);
-            }
-        </script>
+</footer><script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script src="./theme/tipuesearch/tipuesearch_set.js"></script>
+<script src="./theme/tipuesearch/tipuesearch.min.js"></script>
+
+<script src="./tipuesearch_content.js"></script>
+
+<script>
+$(document).ready(function() {
+     $('#tipue_search_input').tipuesearch({
+             'mode' : 'json',
+         'show': 10,
+         'newWindow': false,
+     });
+});
+</script>
     </body>
     <!-- Theme: Elegant built for Pelican
         License : MIT -->
