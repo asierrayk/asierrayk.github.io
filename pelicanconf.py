@@ -39,7 +39,6 @@ THEME = 'themes/elegant'
 
 PLUGIN_PATHS = ['plugins']
 PLUGINS = ['tipue_search']
-
+DIRECT_TEMPLATES = ['search']
 
 DISQUS_SITENAME = 'blogdeasier'
-
