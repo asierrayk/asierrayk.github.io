@@ -34,13 +34,13 @@ DEFAULT_PAGINATION = 10
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
-
 THEME = 'themes/elegant'
 
 
 PLUGIN_PATHS = ['plugins']
-PLUGINS = ['tipue_search', 'neighbors', 'related_posts', 'share_post']
-DIRECT_TEMPLATES = ['index', 'categories', 'tags', 'archives', 'search', '404']
+PLUGINS = ['tipue_search', 'neighbors', 'related_posts', 'share_post', 'assets', 'i18n_subsites']
+DIRECT_TEMPLATES = ['index', 'categories', 'tags', 'archives',
+                    'search', '404']
 
 UTTERANCES_REPO='asierrayk/asierrayk.github.io'
 UTTERANCES_THEME='github-light'
@@ -49,6 +49,7 @@ UTTERANCES_FILTER=False
 APPLAUSE_BUTTON=True
 
 # CLEAN URL
+
 TAGS_URL = "tags"
 CATEGORIES_URL = "categories"
 ARCHIVES_URL = "archives"
@@ -59,6 +60,8 @@ PAGE_SAVE_AS = "{slug}.html"
 SEARCH_URL = "search"
 
 # LABELS
+LANDING_PAGE_TITLE = 'El placer de pensar'
+
 RELATED_POSTS_LABEL = 'Contenido relacionado'
 SOCIAL_PROFILE_LABEL = 'Contact'
 PROJECTS_TITLE = 'Mis Proyectos'
@@ -80,6 +83,7 @@ SITESUBTITLE = ''
 # accordingly
 USE_SHORTCUT_ICONS = False
 
+# Example projects
 PROJECTS = [{
     'name': 'Logpad + Duration',
     'url': 'https://github.com/talha131/logpad-plus-duration#logpad--duration',
@@ -91,3 +95,30 @@ PROJECTS = [{
     ' lot more unique features, using Jinja2 and Bootstrap'}]
 PROJECTS = ''
 
+# TRANSLATIONS
+LANG = 'es'
+
+# Waiting for this issue to be solved https://github.com/Pelican-Elegant/elegant/issues/139
+MENUITEMS = (
+    ('Inicio', '/'),
+    ('Categorias', '/categories'),
+    ('Etiquetas', '/tags'),
+    ('Archivas', '/archives'),
+)
+
+I18N_SUBSITES = {
+    'en': {
+        'THEME': 'themes/elegant',
+        'SITENAME': "Asier's Blog",
+        'LANDING_PAGE_TITLE': 'The joy of thinking',
+
+        # CLEAN URL
+        'TAGS_URL': "tags",
+        'CATEGORIES_URL': "categories",
+        'ARCHIVES_URL': "archives",
+        'ARTICLE_URL': "{slug}",
+        'PAGE_URL': "{slug}",
+        'PAGE_SAVE_AS': "{slug}.html",
+        'SEARCH_URL': "search"
+        }
+    }

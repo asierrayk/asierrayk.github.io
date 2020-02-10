@@ -2,10 +2,12 @@ Title: Objetos mutables en python
 Date: 2020-02-01 16:31
 Category: Programación
 Status: published
-Tags: Programación, Python
+lang: es
+slug: python-mutable-objects
+Tags: programación, Python
 
 
-Supongamos que tenemos definida en python  la siguiente función:
+Supongamos que tenemos definida en python la siguiente función:
 ```python
 def f(x, l=[]):
     for i in range(x):
@@ -36,7 +38,7 @@ Sin embargo, el resultado que obtenemos es el siguiente:
 ```
 
 
-Esto es debido a que ***las listas en python son objetos mutables*** y por tanto cuando son definidos como parametros por defecto en una función, la lista se comporta como una variable global a todas las ejecuciones de la función. 
+Esto es debido a que **las listas en python son objetos mutables** y por tanto cuando son definidos como parametros por defecto en una función, la lista se comporta como una variable global a todas las ejecuciones de la función. 
 
 Cuando llamamos a `f(2)` por primera vez se utiliza `[]` que es el valor por defecto de la lista. Pero cuando se ejecuta `f(3)` se utiliza la misma variable global que cuando se llamó a `f(2)` cuyo ultimo valor es `[0, 1]`.
 
