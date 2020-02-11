@@ -61,22 +61,27 @@ SEARCH_URL = "search"
 
 # LABELS
 LANDING_PAGE_TITLE = 'El placer de pensar'
-
 RELATED_POSTS_LABEL = 'Contenido relacionado'
-SOCIAL_PROFILE_LABEL = 'Contact'
+SOCIAL_PROFILE_LABEL = 'Otras redes'
 PROJECTS_TITLE = 'Mis Proyectos'
-COMMENTS_INTRO = ''
+COMMENTS_INTRO = 'Añade un comentario:'
+SHARE_POST_INTRO = 'Compartir en:'
+SUBSCRIBE_BUTTON_TITLE  = 'Suscribirse'
+
 # Thumbnail image to show when homepage is shared on social media. It also
 # serves as the default image for posts whose featured_image is not set.
 FEATURED_IMAGE = ''
 # License of your site that appears in the footer of every page
-SITE_LICENSE = ''
+SITE_LICENSE = """Content licensed under <a rel="license nofollow noopener noreferrer"
+    href="http://creativecommons.org/licenses/by/4.0/" target="_blank">
+    Creative Commons Attribution 4.0 International License</a>."""
 # Description of your site. It is used in meta tags so it will appear in
 # search results and social media
 SITE_DESCRIPTION = ''
 
 # It is displayed along with the SITENAME in the footer of every page
-SITESUBTITLE = ''
+SITESUBTITLE = 'El placer de pensar'
+
 
 # Set it to True to display favicon and speed dial icon. Also make sure that
 # you have placed images in the appropriate directory and defined STATIC_PATHS
@@ -95,6 +100,18 @@ PROJECTS = [{
     ' lot more unique features, using Jinja2 and Bootstrap'}]
 PROJECTS = ''
 
+
+# MARKDOWN
+MARKDOWN = {
+    'extension_configs': {
+        'markdown.extensions.admonition': {},
+        'markdown.extensions.codehilite': {'css_class': 'highlight'},
+        'markdown.extensions.extra': {},
+        'markdown.extensions.meta': {},
+    },
+    'output_format': 'html5',
+}
+
 # TRANSLATIONS
 LANG = 'es'
 
@@ -108,9 +125,17 @@ MENUITEMS = (
 
 I18N_SUBSITES = {
     'en': {
+        # LABELS
         'THEME': 'themes/elegant',
         'SITENAME': "Asier's Blog",
+        'SHARE_POST_INTRO': 'Share on:',
+        'COMMENTS_INTRO': 'Add a comment:',
+        'SITESUBTITLE': 'The joy of thinking',
         'LANDING_PAGE_TITLE': 'The joy of thinking',
+        'RELATED_POSTS_LABEL': 'Related content',
+        'SOCIAL_PROFILE_LABEL': 'Contact',
+        'PROJECTS_TITLE': 'My projects',
+        'SUBSCRIBE_BUTTON_TITLE': 'Subscribe',
 
         # CLEAN URL
         'TAGS_URL': "tags",
@@ -119,6 +144,6 @@ I18N_SUBSITES = {
         'ARTICLE_URL': "{slug}",
         'PAGE_URL': "{slug}",
         'PAGE_SAVE_AS': "{slug}.html",
-        'SEARCH_URL': "search"
+        'SEARCH_URL': "search",
         }
     }
