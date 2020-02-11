@@ -4,6 +4,10 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./theme/css/style.min.css?fc5adb95">
+        <link rel="dns-prefetch" href="//fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+
         <meta name="author" content="Asier Cardoso Sánchez" />
 
         <meta property="og:type" content="article" />
@@ -18,8 +22,6 @@
 <meta property="og:article:author" content="Asier Cardoso Sánchez" />
         <title>All Categories · Blog de Asier
 </title>
-        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
-<link rel="stylesheet" href="./theme/css/style.min.css?bec7d543">
         <link href="https://asierrayk.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Blog de Asier - Full Atom Feed" />
 
         <link href="https://asierrayk.github.io/feeds/programacion.atom.xml" type="application/atom+xml" rel="alternate" title="Blog de Asier - Programación Category Atom Feed" />
@@ -70,20 +72,20 @@
         <div class="accordion" id="accordion2">
             <div class="accordion-group">
                 <div class="accordion-heading">
-                    <a class="accordion-toggle list-of-categories" data-toggle="collapse" data-parent="#accordion2" href="#programacion-ref">
-                        Programación<span>1</span>
+                    <a class="accordion-toggle category-title-inside-accordion collapsed" data-toggle="collapse" data-parent="#accordion2" href="#programacion-ref">
+                        Programación<span class="superscript">1</span>
                     </a>
                 </div>
                 <div id="programacion-ref" class="accordion-body collapse">
                     <div class="accordion-inner">
-                        <ul class="list-articles-category">
+                        <ul class="list-articles-under-tag-category">
                             <li itemscope>
-                                <time itemprop="dateCreated" datetime="2020-02-01T16:31:00+01:00">
-                                    sáb 01 febrero 2020
-                                </time>
                                     <a href="./python-mutable-objects">
                                         Objetos mutables en python
                                     </a>
+                                <time itemprop="dateCreated" datetime="2020-02-01T16:31:00+01:00">
+                                    sáb 01 febrero 2020
+                                </time>
                             </li>
                         </ul>
                     </div>
@@ -91,20 +93,20 @@
             </div>
             <div class="accordion-group">
                 <div class="accordion-heading">
-                    <a class="accordion-toggle list-of-categories" data-toggle="collapse" data-parent="#accordion2" href="#rubik-ref">
-                        Rubik<span>1</span>
+                    <a class="accordion-toggle category-title-inside-accordion collapsed" data-toggle="collapse" data-parent="#accordion2" href="#rubik-ref">
+                        Rubik<span class="superscript">1</span>
                     </a>
                 </div>
                 <div id="rubik-ref" class="accordion-body collapse">
                     <div class="accordion-inner">
-                        <ul class="list-articles-category">
+                        <ul class="list-articles-under-tag-category">
                             <li itemscope>
-                                <time itemprop="dateCreated" datetime="2020-01-26T18:34:00+01:00">
-                                    dom 26 enero 2020
-                                </time>
                                     <a href="./tutorial-resolver-cubo-a-ciegas">
                                         Tutorial resolver cubo a ciegas
                                     </a>
+                                <time itemprop="dateCreated" datetime="2020-01-26T18:34:00+01:00">
+                                    dom 26 enero 2020
+                                </time>
                             </li>
                         </ul>
                     </div>
@@ -119,7 +121,15 @@
             </div>
         </div>
 <footer>
+    <div>
+        Content licensed under <a rel="license nofollow noopener noreferrer"
+    href="http://creativecommons.org/licenses/by/4.0/" target="_blank">
+    Creative Commons Attribution 4.0 International License</a>.
+    </div>
 
+    <div>
+        <span class="site-name">Blog de Asier</span> - El placer de pensar
+    </div>
 
 
 
@@ -129,6 +139,7 @@
     </div>
 </footer>        <script src="//code.jquery.com/jquery.min.js"></script>
         <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script src="./theme/js/elegant.prod.9e9d5ce754.js"></script>
         <script>
             function validateForm(query)
             {
