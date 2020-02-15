@@ -6,6 +6,7 @@ lang: es
 slug: python-mutable-objects
 Tags: programación, Python
 
+[TOC]
 
 Supongamos que tenemos definida en python la siguiente función:
 ```python

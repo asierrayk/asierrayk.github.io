@@ -10,3 +10,8 @@ Mi nombre es Asier Cardoso Sánchez.
 
 Me apasiona todo aquello que conlleve pensar y en este blog podréis encontrar contenido sobre programación, ajedrez,
 rubik y muchas cosas más.
+
+Ajedrez
+=======
+
+<iframe src="https://lichess.org/training/frame?theme=maple&bg=light" style="width: 400px; height: 444px;" allowtransparency="true" frameborder="0"></iframe>

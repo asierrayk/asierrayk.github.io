@@ -38,7 +38,7 @@ THEME = 'themes/elegant'
 
 
 PLUGIN_PATHS = ['plugins']
-PLUGINS = ['tipue_search', 'neighbors', 'related_posts', 'share_post', 'assets', 'i18n_subsites']
+PLUGINS = ['tipue_search', 'neighbors', 'related_posts', 'share_post', 'assets', 'i18n_subsites', 'extract_toc']
 DIRECT_TEMPLATES = ['index', 'categories', 'tags', 'archives',
                     'search', '404']
 
@@ -80,8 +80,12 @@ SITE_LICENSE = """Content licensed under <a rel="license nofollow noopener noref
 SITE_DESCRIPTION = ''
 
 # It is displayed along with the SITENAME in the footer of every page
-SITESUBTITLE = 'El placer de pensar'
+SITESUBTITLE = f'<a href="{SITEURL}/bob-ross/" target="_blank">{LANDING_PAGE_TITLE}</a>'
 
+HOSTED_ON = {
+    "name": "GitHub Pages",
+    "url": " https://pages.github.com/"
+    }
 
 # Set it to True to display favicon and speed dial icon. Also make sure that
 # you have placed images in the appropriate directory and defined STATIC_PATHS
@@ -108,6 +112,7 @@ MARKDOWN = {
         'markdown.extensions.codehilite': {'css_class': 'highlight'},
         'markdown.extensions.extra': {},
         'markdown.extensions.meta': {},
+        'markdown.extensions.toc': {},
     },
     'output_format': 'html5',
 }
@@ -131,6 +136,8 @@ I18N_SUBSITES = {
         'SHARE_POST_INTRO': 'Share on:',
         'COMMENTS_INTRO': 'Add a comment:',
         'SITESUBTITLE': 'The joy of thinking',
+
+        'SITESUBTITLE': f'<a href="{SITEURL}/bob-ross/" target="_blank">The joy of thinking</a>',
         'LANDING_PAGE_TITLE': 'The joy of thinking',
         'RELATED_POSTS_LABEL': 'Related content',
         'SOCIAL_PROFILE_LABEL': 'Contact',
