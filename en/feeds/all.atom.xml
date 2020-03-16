@@ -1,5 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Asier's Blog</title><link href="https://asierrayk.github.io/en/" rel="alternate"></link><link href="https://asierrayk.github.io/feeds/all.atom.xml" rel="self"></link><id>https://asierrayk.github.io/en/</id><updated>2020-02-01T16:31:00+01:00</updated><subtitle>&lt;a href="/bob-ross/" target="_blank"&gt;The joy of thinking&lt;/a&gt;</subtitle><entry><title>Mutable objects in python</title><link href="https://asierrayk.github.io/en/python-mutable-objects" rel="alternate"></link><published>2020-02-01T16:31:00+01:00</published><updated>2020-02-01T16:31:00+01:00</updated><author><name>Asier Cardoso Sánchez</name></author><id>tag:asierrayk.github.io,2020-02-01:/en/python-mutable-objects</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Asier's Blog</title><link href="https://asierrayk.github.io/en/" rel="alternate"></link><link href="https://asierrayk.github.io/feeds/all.atom.xml" rel="self"></link><id>https://asierrayk.github.io/en/</id><updated>2020-03-15T19:21:00+01:00</updated><subtitle>&lt;a href="/bob-ross/" target="_blank"&gt;The joy of thinking&lt;/a&gt;</subtitle><entry><title>My first Vim plugin</title><link href="https://asierrayk.github.io/en/my-first-vim-plugin" rel="alternate"></link><published>2020-03-15T19:21:00+01:00</published><updated>2020-03-15T19:21:00+01:00</updated><author><name>Asier Cardoso Sánchez</name></author><id>tag:asierrayk.github.io,2020-03-15:/en/my-first-vim-plugin</id><summary type="html">&lt;p&gt;After been using Vim for a long time. I've decided to venture into the creation of my first vim plugin.&lt;/p&gt;
+&lt;p&gt;It's a very simple plugin that allows you to iterate over a list of possible dictionaries used for spell checking.
+The idea is to be able to activate the spell …&lt;/p&gt;</summary><content type="html">&lt;p&gt;After been using Vim for a long time. I've decided to venture into the creation of my first vim plugin.&lt;/p&gt;
+&lt;p&gt;It's a very simple plugin that allows you to iterate over a list of possible dictionaries used for spell checking.
+The idea is to be able to activate the spell checking (&lt;code&gt;:set spell&lt;/code&gt;) in case it is deactivated and iterate over a configurable list of languages.&lt;/p&gt;
+&lt;p&gt;The following function accomplish the objective.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:SpellLangList &lt;span class="p"&gt;=&lt;/span&gt; get&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;g&lt;/span&gt;:&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;SpellLangList&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; []&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;quot; Cycle through spelllang list and toggle spell&lt;/span&gt;
+&lt;span class="k"&gt;function&lt;/span&gt;&lt;span class="p"&gt;!&lt;/span&gt; ToggleCycleSpellLang&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;!&lt;/span&gt; &amp;amp;&lt;span class="k"&gt;spell&lt;/span&gt;
+        &lt;span class="k"&gt;setlocal&lt;/span&gt; &lt;span class="k"&gt;spell&lt;/span&gt;
+    &lt;span class="k"&gt;else&lt;/span&gt;
+        &lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;l&lt;/span&gt;:lang_index &lt;span class="p"&gt;=&lt;/span&gt; index&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;g&lt;/span&gt;:SpellLangList&lt;span class="p"&gt;,&lt;/span&gt; &amp;amp;&lt;span class="nb"&gt;spelllang&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;l&lt;/span&gt;:lang_index &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;l&lt;/span&gt;:lang_index &lt;span class="p"&gt;+&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; % len&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;g&lt;/span&gt;:SpellLangList&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;let&lt;/span&gt; &amp;amp;&lt;span class="nb"&gt;spelllang&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:SpellLangList[&lt;span class="k"&gt;l&lt;/span&gt;:lang_index]
+
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="k"&gt;l&lt;/span&gt;:lang_index &lt;span class="p"&gt;==&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;
+            &lt;span class="k"&gt;setlocal&lt;/span&gt; &lt;span class="nb"&gt;nospell&lt;/span&gt;
+        &lt;span class="k"&gt;endif&lt;/span&gt;
+    &lt;span class="k"&gt;endif&lt;/span&gt;
+&lt;span class="k"&gt;endfunction&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;It'll be possible to configure the list of languages and the keybindings as follows:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:SpellLangList&lt;span class="p"&gt;=&lt;/span&gt; [&lt;span class="s2"&gt;&amp;quot;en_us&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;es&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;en_us,es&amp;quot;&lt;/span&gt;]
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;F6&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; :&lt;span class="k"&gt;call&lt;/span&gt; ToggleCycleSpellLang&lt;span class="p"&gt;()&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Consequently pressing &lt;code&gt;F6&lt;/code&gt; will enable spell check for the current buffer (&lt;code&gt;:set spell&lt;/code&gt;), and pressing &lt;code&gt;F6&lt;/code&gt; successively will be changing current language used for spell checking (&lt;code&gt;:set spelllang=es&lt;/code&gt;) until finally disable spell check again (&lt;code&gt;:set nospell&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;I've uploaded the plugin to a &lt;a class="ampl" href="https://github.com/asierrayk/vim-toggle" target="_blank"&gt;github&lt;/a&gt; repository, and I've added similar funcionality related with quickfix and location windows.&lt;/p&gt;</content><category term="Programming"></category><category term="Programming"></category><category term="Vim"></category></entry><entry><title>Mi primer plugin en VIM</title><link href="https://asierrayk.github.io/en/../my-first-vim-plugin" rel="alternate"></link><published>2020-03-15T19:21:00+01:00</published><updated>2020-03-15T19:21:00+01:00</updated><author><name>Asier Cardoso Sánchez</name></author><id>tag:asierrayk.github.io,2020-03-15:/en/../my-first-vim-plugin</id><summary type="html">&lt;p&gt;Tras usar Vim durante un largo periodo de tiempo, he decidido aventurarme a hacer mi primer plugin.&lt;/p&gt;
+&lt;p&gt;Se trata de un plugin muy sencillo que simplemente te permite iterar una lista de posibles diccionarios para la corrección ortográfica.&lt;/p&gt;
+&lt;p&gt;La idea es que sea posible activar el corrector ortográfico (&lt;code&gt;:set spell …&lt;/code&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;Tras usar Vim durante un largo periodo de tiempo, he decidido aventurarme a hacer mi primer plugin.&lt;/p&gt;
+&lt;p&gt;Se trata de un plugin muy sencillo que simplemente te permite iterar una lista de posibles diccionarios para la corrección ortográfica.&lt;/p&gt;
+&lt;p&gt;La idea es que sea posible activar el corrector ortográfico (&lt;code&gt;:set spell&lt;/code&gt;) en caso de que este desactivado e ir iterando por una lista configurable de idiomas.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:SpellLangList &lt;span class="p"&gt;=&lt;/span&gt; get&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;g&lt;/span&gt;:&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;SpellLangList&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; []&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;quot; Cycle through spelllang list and toggle spell&lt;/span&gt;
+&lt;span class="k"&gt;function&lt;/span&gt;&lt;span class="p"&gt;!&lt;/span&gt; ToggleCycleSpellLang&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;!&lt;/span&gt; &amp;amp;&lt;span class="k"&gt;spell&lt;/span&gt;
+        &lt;span class="k"&gt;setlocal&lt;/span&gt; &lt;span class="k"&gt;spell&lt;/span&gt;
+    &lt;span class="k"&gt;else&lt;/span&gt;
+        &lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;l&lt;/span&gt;:lang_index &lt;span class="p"&gt;=&lt;/span&gt; index&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;g&lt;/span&gt;:SpellLangList&lt;span class="p"&gt;,&lt;/span&gt; &amp;amp;&lt;span class="nb"&gt;spelllang&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;l&lt;/span&gt;:lang_index &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;l&lt;/span&gt;:lang_index &lt;span class="p"&gt;+&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; % len&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;g&lt;/span&gt;:SpellLangList&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;let&lt;/span&gt; &amp;amp;&lt;span class="nb"&gt;spelllang&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:SpellLangList[&lt;span class="k"&gt;l&lt;/span&gt;:lang_index]
+
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="k"&gt;l&lt;/span&gt;:lang_index &lt;span class="p"&gt;==&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;
+            &lt;span class="k"&gt;setlocal&lt;/span&gt; &lt;span class="nb"&gt;nospell&lt;/span&gt;
+        &lt;span class="k"&gt;endif&lt;/span&gt;
+    &lt;span class="k"&gt;endif&lt;/span&gt;
+&lt;span class="k"&gt;endfunction&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Se podría configurar por ejemplo con las siguientes opciones:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:SpellLangList&lt;span class="p"&gt;=&lt;/span&gt; [&lt;span class="s2"&gt;&amp;quot;en_us&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;es&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;en_us,es&amp;quot;&lt;/span&gt;]
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;F6&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; :&lt;span class="k"&gt;call&lt;/span&gt; ToggleCycleSpellLang&lt;span class="p"&gt;()&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;De esta manera una primera pulsación de la tecla &lt;code&gt;F6&lt;/code&gt; activaría la corrección ortográfica para el buffer activo, y sucesivas pulsaciones irían cambiando el idioma activo (&lt;code&gt;:set spelllang=es&lt;/code&gt;) iterando la lista &lt;code&gt;g:SpellLangList&lt;/code&gt; hasta desactivar de nuevo la corrección ortográfica (&lt;code&gt;:set nospell&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;He subido el plugin a un repositorio en &lt;a class="ampl" href="https://github.com/asierrayk/vim-toggle" target="_blank"&gt;github&lt;/a&gt; y añadido alguna funcionalidad, relacionada con las ventanas &lt;code&gt;quickfix&lt;/code&gt; y &lt;code&gt;location&lt;/code&gt;.&lt;/p&gt;</content><category term="Programación"></category><category term="programación"></category><category term="Vim"></category></entry><entry><title>Mutable objects in python</title><link href="https://asierrayk.github.io/en/python-mutable-objects" rel="alternate"></link><published>2020-02-01T16:31:00+01:00</published><updated>2020-02-01T16:31:00+01:00</updated><author><name>Asier Cardoso Sánchez</name></author><id>tag:asierrayk.github.io,2020-02-01:/en/python-mutable-objects</id><summary type="html">
 &lt;p&gt;Let's assume we have defined the following function:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[]):&lt;/span&gt;
     &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;

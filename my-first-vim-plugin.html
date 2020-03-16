@@ -75,20 +75,23 @@
 
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
-            
+            <p id="list-of-translations">
+This post is also available in:
+    <a href="./en/my-first-vim-plugin">en</a></p>
+
             <p>Tras usar Vim durante un largo periodo de tiempo, he decidido aventurarme a hacer mi primer plugin.</p>
 <p>Se trata de un plugin muy sencillo que simplemente te permite iterar una lista de posibles diccionarios para la corrección ortográfica.</p>
 <p>La idea es que sea posible activar el corrector ortográfico (<code>:set spell</code>) en caso de que este desactivado e ir iterando por una lista configurable de idiomas.</p>
-<div class="highlight"><pre><span></span><span class="k">let</span> <span class="k">g</span>:SpellLanglist <span class="p">=</span> get<span class="p">(</span><span class="k">g</span>:<span class="p">,</span> <span class="s1">&#39;SpellLanglist&#39;</span><span class="p">,</span> []<span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="k">let</span> <span class="k">g</span>:SpellLangList <span class="p">=</span> get<span class="p">(</span><span class="k">g</span>:<span class="p">,</span> <span class="s1">&#39;SpellLangList&#39;</span><span class="p">,</span> []<span class="p">)</span>
 
 <span class="c">&quot; Cycle through spelllang list and toggle spell</span>
 <span class="k">function</span><span class="p">!</span> ToggleCycleSpellLang<span class="p">()</span>
     <span class="k">if</span> <span class="p">!</span> &amp;<span class="k">spell</span>
         <span class="k">setlocal</span> <span class="k">spell</span>
     <span class="k">else</span>
-        <span class="k">let</span> <span class="k">l</span>:lang_index <span class="p">=</span> index<span class="p">(</span><span class="k">g</span>:SpellLanglist<span class="p">,</span> &amp;<span class="nb">spelllang</span><span class="p">)</span>
-        <span class="k">let</span> <span class="k">l</span>:lang_index <span class="p">=</span> <span class="p">(</span><span class="k">l</span>:lang_index <span class="p">+</span> <span class="m">1</span><span class="p">)</span> % len<span class="p">(</span><span class="k">g</span>:SpellLanglist<span class="p">)</span>
-        <span class="k">let</span> &amp;<span class="nb">spelllang</span> <span class="p">=</span> <span class="k">g</span>:SpellLanglist[<span class="k">l</span>:lang_index]
+        <span class="k">let</span> <span class="k">l</span>:lang_index <span class="p">=</span> index<span class="p">(</span><span class="k">g</span>:SpellLangList<span class="p">,</span> &amp;<span class="nb">spelllang</span><span class="p">)</span>
+        <span class="k">let</span> <span class="k">l</span>:lang_index <span class="p">=</span> <span class="p">(</span><span class="k">l</span>:lang_index <span class="p">+</span> <span class="m">1</span><span class="p">)</span> % len<span class="p">(</span><span class="k">g</span>:SpellLangList<span class="p">)</span>
+        <span class="k">let</span> &amp;<span class="nb">spelllang</span> <span class="p">=</span> <span class="k">g</span>:SpellLangList[<span class="k">l</span>:lang_index]
 
         <span class="k">if</span> <span class="k">l</span>:lang_index <span class="p">==</span> <span class="m">0</span>
             <span class="k">setlocal</span> <span class="nb">nospell</span>
