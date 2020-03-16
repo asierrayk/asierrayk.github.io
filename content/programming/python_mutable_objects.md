@@ -16,7 +16,7 @@ def f(x, l=[]):
     print(l)
 ```
 
-Si tuviesemos que decir cual es el resultado de hacer las siguientes llamadas sucesivas a la función, muchos pensareis que el resultado que se obitendría es:
+Si tuviésemos que decir cual es el resultado de hacer las siguientes llamadas sucesivas a la función, muchos pensareis que el resultado que se obtendría es:
 
 ```python
 >>> f(2)
@@ -39,7 +39,7 @@ Sin embargo, el resultado que obtenemos es el siguiente:
 ```
 
 
-Esto es debido a que **las listas en python son objetos mutables** y por tanto cuando son definidos como parametros por defecto en una función, la lista se comporta como una variable global a todas las ejecuciones de la función. 
+Esto es debido a que **las listas en python son objetos mutables** y por tanto cuando son definidos como parámetros por defecto en una función, la lista se comporta como una variable global a todas las ejecuciones de la función. 
 
 Cuando llamamos a `f(2)` por primera vez se utiliza `[]` que es el valor por defecto de la lista. Pero cuando se ejecuta `f(3)` se utiliza la misma variable global que cuando se llamó a `f(2)` cuyo ultimo valor es `[0, 1]`.
 
