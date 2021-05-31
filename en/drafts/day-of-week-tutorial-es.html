@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="./theme/css/style.min.css?fc5adb95">
+<link rel="stylesheet" href="../theme/css/style.min.css?fc5adb95">
 
         <link rel="dns-prefetch" href="//fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
@@ -14,18 +14,18 @@
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="Programming, Vim, Programming, " />
+<meta name="keywords" content="Matemáticas, tutorial, Matemáticas, " />
 
-<meta property="og:title" content="My first Vim plugin "/>
-<meta property="og:url" content="./my-first-vim-plugin" />
-<meta property="og:description" content="After been using Vim for a long time. I&#39;ve decided to venture into the creation of my first vim plugin. It&#39;s a very simple plugin that allows you to iterate over a list of possible dictionaries used for spell checking. The idea is to be able to activate the spell …" />
+<meta property="og:title" content="Calendario Mental "/>
+<meta property="og:url" content="../drafts/day-of-week-tutorial-es.html" />
+<meta property="og:description" content=": Cómo saber en que día de la semana cayó cualquier fecha" />
 <meta property="og:site_name" content="The joy of thinking" />
 <meta property="og:article:author" content="" />
-<meta property="og:article:published_time" content="2020-03-15T19:21:00+01:00" />
-<meta name="twitter:title" content="My first Vim plugin ">
-<meta name="twitter:description" content="After been using Vim for a long time. I&#39;ve decided to venture into the creation of my first vim plugin. It&#39;s a very simple plugin that allows you to iterate over a list of possible dictionaries used for spell checking. The idea is to be able to activate the spell …">
+<meta property="og:article:published_time" content="2021-05-30T20:22:00+02:00" />
+<meta name="twitter:title" content="Calendario Mental ">
+<meta name="twitter:description" content=": Cómo saber en que día de la semana cayó cualquier fecha">
 
-        <title>My first Vim plugin  · The joy of thinking
+        <title>Calendario Mental  · The joy of thinking
 </title>
         <link href="https://asierrayk.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="The joy of thinking - Full Atom Feed" />
 
@@ -41,18 +41,18 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </a>
-                        <a class="brand" href="./"><span class=site-name>The joy of thinking</span></a>
+                        <a class="brand" href="../"><span class=site-name>The joy of thinking</span></a>
                         <div class="nav-collapse collapse">
                             <ul class="nav pull-right top-menu">
                                 <li >
                                     <a href=
-                                       .
+                                       ..
                                     >Home</a>
                                 </li>
-                                <li ><a href="./categories">Categories</a></li>
-                                <li ><a href="./tags">Tags</a></li>
-                                <li ><a href="./archives">Archives</a></li>
-                                <li><form class="navbar-search" action="./search" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                                <li ><a href="../categories">Categories</a></li>
+                                <li ><a href="../tags">Tags</a></li>
+                                <li ><a href="../archives">Archives</a></li>
+                                <li><form class="navbar-search" action="../search" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
                             </ul>
                         </div>
                     </div>
@@ -66,8 +66,8 @@
 <div class="row-fluid">
     <header class="page-header span10 offset2">
         <h1>
-            <a href="./my-first-vim-plugin">
-                My first Vim plugin
+            <a href="../drafts/day-of-week-tutorial-es.html">
+                Calendario Mental
             </a>
         </h1>
     </header>
@@ -75,55 +75,204 @@
 
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
-            <p id="list-of-translations">
-This post is also available in:
-    <a href="./../my-first-vim-plugin">es</a></p>
-
-            <p>After been using Vim for a long time. I've decided to venture into the creation of my first vim plugin.</p>
-<p>It's a very simple plugin that allows you to iterate over a list of possible dictionaries used for spell checking.
-The idea is to be able to activate the spell checking (<code>:set spell</code>) in case it is deactivated and iterate over a configurable list of languages.</p>
-<p>The following function accomplish the objective.</p>
-<div class="highlight"><pre><span></span><code><span class="k">let</span> <span class="k">g</span>:SpellLangList <span class="p">=</span> get<span class="p">(</span><span class="k">g</span>:<span class="p">,</span> <span class="s1">&#39;SpellLangList&#39;</span><span class="p">,</span> []<span class="p">)</span>
-
-<span class="c">&quot; Cycle through spelllang list and toggle spell</span>
-<span class="k">function</span><span class="p">!</span> ToggleCycleSpellLang<span class="p">()</span>
-    <span class="k">if</span> <span class="p">!</span> &amp;<span class="k">spell</span>
-        <span class="k">setlocal</span> <span class="k">spell</span>
-    <span class="k">else</span>
-        <span class="k">let</span> <span class="k">l</span>:lang_index <span class="p">=</span> index<span class="p">(</span><span class="k">g</span>:SpellLangList<span class="p">,</span> &amp;<span class="nb">spelllang</span><span class="p">)</span>
-        <span class="k">let</span> <span class="k">l</span>:lang_index <span class="p">=</span> <span class="p">(</span><span class="k">l</span>:lang_index <span class="p">+</span> <span class="m">1</span><span class="p">)</span> % len<span class="p">(</span><span class="k">g</span>:SpellLangList<span class="p">)</span>
-        <span class="k">let</span> &amp;<span class="nb">spelllang</span> <span class="p">=</span> <span class="k">g</span>:SpellLangList[<span class="k">l</span>:lang_index]
-
-        <span class="k">if</span> <span class="k">l</span>:lang_index <span class="p">==</span> <span class="m">0</span>
-            <span class="k">setlocal</span> <span class="nb">nospell</span>
-        <span class="k">endif</span>
-    <span class="k">endif</span>
-<span class="k">endfunction</span>
+            
+            
+<p>Existe un método para poder calcular en que día de la semana cayó cualquier fecha.
+El método es muy sencillo y hay que seguir los siguientes pasos:</p>
+<ol>
+<li>Calcular las claves para cada parte de la fecha:<ul>
+<li>Calcular la clave del <strong>día del mes</strong>.</li>
+<li>Calcular la clave del <strong>mes</strong>.</li>
+<li>Calcular la clave para el <strong><em>siglo</em></strong>.</li>
+<li>Calcular la clave para el <strong>año</strong>.</li>
+</ul>
+</li>
+<li>Sumar todas las claves.</li>
+<li>Restar 1 si el año es bisiesto y el mes es enero o febrero.</li>
+<li>Aplicar modulo 7 para obtener el día de la semana.</li>
+</ol>
+<h1 id="1-calculo-de-claves">1. Cálculo de claves</h1>
+<p>Vamos a ver como poder calcular cada una de las claves, para cada una de las partes de la fecha.
+Cada una de las claves que obtengamos la podemos simplificar aplicando modulo 7 antes de llegar al paso 2.</p>
+<h2 id="clave-del-dia-del-mes">Clave del día del mes</h2>
+<p>Para calcular la clave del día del mes, simplemente debemos coger el número del mes como clave.
+Por ejemplo para la fecha <strong>16 julio 1969</strong> la clave para el día del mes es el propio número del día del mes <strong>16</strong> que simplificada es <strong>2</strong>.</p>
+<h2 id="clave-del-mes">Clave del mes</h2>
+<p>Para calcular la clave del mes debemos aplicar la correspondencia de la siguiente tabla:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Mes</th>
+<th align="center">Clave</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Enero</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">Febrero</td>
+<td align="center">3</td>
+</tr>
+<tr>
+<td align="center">Marzo</td>
+<td align="center">3</td>
+</tr>
+<tr>
+<td align="center">Abril</td>
+<td align="center">6</td>
+</tr>
+<tr>
+<td align="center">Mayo</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">Junio</td>
+<td align="center">4</td>
+</tr>
+<tr>
+<td align="center">Julio</td>
+<td align="center">6</td>
+</tr>
+<tr>
+<td align="center">Agosto</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="center">Septiembre</td>
+<td align="center">5</td>
+</tr>
+<tr>
+<td align="center">Octubre</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">Noviembre</td>
+<td align="center">3</td>
+</tr>
+<tr>
+<td align="center">Diciembre</td>
+<td align="center">5</td>
+</tr>
+</tbody>
+</table>
+<p>Por ejemplo para la fecha 16 de julio de 1969 la clave del mes es <strong>6</strong>.</p>
+<h2 id="clave-del-siglo">Clave del <em>siglo</em></h2>
+<p>Para esta parte de la fecha, nos fijamos en el año ignorando las dos últimas cifras.
+Para calcular la clave del siglo deberemos tener en cuenta la siguiente correspondencia:</p>
+<table>
+<thead>
+<tr>
+<th align="center"><em>Siglo</em></th>
+<th align="center">Clave</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">16xx</td>
+<td align="center">6</td>
+</tr>
+<tr>
+<td align="center">17xx</td>
+<td align="center">4</td>
+</tr>
+<tr>
+<td align="center">18xx</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="center">19xx</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">20xx</td>
+<td align="center">6</td>
+</tr>
+<tr>
+<td align="center">21xx</td>
+<td align="center">4</td>
+</tr>
+</tbody>
+</table>
+<h2 id="clave-del-ano">Clave del año</h2>
+<p>El cálculo de la clave del año se compone de los siguientes pasos:</p>
+<ol>
+<li>Nos quedamos con las <strong>dos últimas cifras del año</strong>. Por ejemplo con 1969 nos quedamos con 69.</li>
+<li>Calculamos el <strong>cociente</strong> de la división del primer paso <strong>entre 4</strong>. Por ejemplo 69 entre 4 da como cociente 17. Podemos simplificar el número 17 y usar 3 en su lugar.
+Este paso está relacionado con los años bisiestos.</li>
+<li>Calculamos el <strong>resto</strong> de la división del número del primer paso <strong>entre 7</strong>. Por ejemplo 69 modulo 7 es 6.</li>
+<li>Por último <strong>sumamos los números del segundo y tercer paso</strong> y obtenemos la clave para el año.
+   Con nuestro ejemplo sumamos 3 y 6 y obtenemos 9 que simplificado nos da 2.</li>
+</ol>
+<h1 id="2-comprobar-el-resultado">2. Comprobar el resultado</h1>
+<p>Una vez tengamos todas las claves basta con sumarlas, simplificar el resultado para que nos quede un número entre 0 y 6.
+Comprobar el resultado con la siguiente tabla:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Día de la semana</th>
+<th align="center">Clave</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Domingo</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">Lunes</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">Martes</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="center">Miércoles</td>
+<td align="center">3</td>
+</tr>
+<tr>
+<td align="center">Jueves</td>
+<td align="center">4</td>
+</tr>
+<tr>
+<td align="center">Viernes</td>
+<td align="center">5</td>
+</tr>
+<tr>
+<td align="center">Sábado</td>
+<td align="center">6</td>
+</tr>
+</tbody>
+</table>
+<p>Para la fecha <strong>16 de julio de 1969</strong> tendríamos:
+2 + 6 + 0 + 3 + 6 = 17 = 3 
+Por tanto ese día fue un <strong>miércoles</strong>.</p>
+<h1 id="3-consideracion-de-anos-bisiestos">3. Consideración de años bisiestos</h1>
+<p>Si la fecha para la cual estamos calculando el día de la semana. Se trata de un año bisiesto y el mes es enero o febrero, al resultado final deberemos restar una unidad.</p>
+<h2 id="definicion-ano-bisiesto">Definición año bisiesto</h2>
+<p>En el calendario que usamos actualmente que es el calendario Gregoriano, vigente desde 1582. Para nuestro calendario la definición de un año bisiesto es la siguiente: </p>
+<div class="highlight"><pre><span></span><code>Un año es bisiesto si es divisible por 4, excepto si acaba en 00,
+que ha de ser divisible entre 400.
 </code></pre></div>
-
-<p>It'll be possible to configure the list of languages and the keybindings as follows:</p>
-<div class="highlight"><pre><span></span><code><span class="k">let</span> <span class="k">g</span>:SpellLangList<span class="p">=</span> [<span class="s2">&quot;en_us&quot;</span><span class="p">,</span> <span class="s2">&quot;es&quot;</span><span class="p">,</span> <span class="s2">&quot;en_us,es&quot;</span>]
-<span class="nb">nnoremap</span> <span class="p">&lt;</span>F6<span class="p">&gt;</span> :<span class="k">call</span> ToggleCycleSpellLang<span class="p">()&lt;</span>CR<span class="p">&gt;</span>
-</code></pre></div>
-
-<p>Consequently pressing <code>F6</code> will enable spell check for the current buffer (<code>:set spell</code>), and pressing <code>F6</code> successively will be changing current language used for spell checking (<code>:set spelllang=es</code>) until finally disable spell check again (<code>:set nospell</code>).</p>
-<p>I've uploaded the plugin to a <a class="ampl" href="https://github.com/asierrayk/vim-toggle" target="_blank">github</a> repository, and I've added similar funcionality related with quickfix and location windows.</p>
+<p>Es decir 1600 y 2000 son años bisiestos, sin embargo 1700, 1800 y 1900 no son años bisiestos.</p>
+<h2 id="ejemplo-ano-bisiesto">Ejemplo año bisiesto</h2>
+<p>Calculemos el día de la semana para la fecha <strong>1 de enero de 2020</strong>.
+1 + 0 + 6 + 5 + 6 = 18 = 4
+Pero debemos restar uno, ya que el año es bisiesto y el mes enero, por tanto el resultado es 3.
+Es decir, un <strong>miércoles</strong>.</p>
 
 
              
 
 
 <div class="applause_button">
-    <applause-button url=./my-first-vim-plugin> </applause-button>
+    <applause-button url=../drafts/day-of-week-tutorial-es.html> </applause-button>
 </div>
 
  
-                <p id="post-share-links">
-    Share on:
-      <a href="https://twitter.com/intent/tweet?text=My%20first%20Vim%20plugin&url=https%3A//asierrayk.github.io/en/my-first-vim-plugin&hashtags=programming,vim" target="_blank" rel="nofollow noopener noreferrer" title="Share on Twitter">Twitter</a>
- ❄       <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//asierrayk.github.io/en/my-first-vim-plugin" target="_blank" rel="nofollow noopener noreferrer" title="Share on Facebook">Facebook</a>
- ❄       <a href="mailto:?subject=My%20first%20Vim%20plugin&amp;body=https%3A//asierrayk.github.io/en/my-first-vim-plugin" target="_blank" rel="nofollow noopener noreferrer" title="Share via Email">Email</a>
-
+            
             
             
 
@@ -132,71 +281,26 @@ The idea is to be able to activate the spell checking (<code>:set spell</code>) 
 
 
 
-
-<section>
-    <h6 style="display:none;">Comments</h6>
-    <p id="comment-message">Add a comment: </p>
-
-    <div class="accordion" id="accordion2">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                <a class="accordion-toggle disqus-comment-count comment-count collapsed"
-                   data-toggle="collapse"
-                   data-parent="#accordion2"
-                   href="./my-first-vim-plugin#comment_thread"
-                   id="comment-accordion-toggle">
-                    Comments
-                </a>
-            </div>
-            <div id="comment_thread" class="accordion-body collapse">
-                <div class="accordion-inner">
-                    <div class="comments">
-
-                        <script src="https://utteranc.es/client.js"
-        data-repo="asierrayk/asierrayk.github.io"
-        data-issue-term="./my-first-vim-plugin"
-        data-label=""
-        data-theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script>
-
-
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
             <hr/>
 <section>
     <h2>Related content</h2>
 <ul class="related-posts-list">
-<li><a href="./python-mutable-objects" title="Mutable objects in python">Mutable objects in python</a></li>
+<li><a href="../tutorial-resolver-cubo-a-ciegas" title="Tutorial resolver cubo a ciegas">Tutorial resolver cubo a ciegas</a></li>
 </ul>
 <hr />
 </section>
-            <aside>
-            <nav>
-            <ul class="articles-timeline">
-                <li class="previous-article">« <a href="./python-mutable-objects" title="Previous: Mutable objects in python">Mutable objects in python</a></li>
-            </ul>
-            </nav>
-            </aside>
         </div>
         <section id="article-sidebar" class="span2">
             <h4>Published</h4>
-            <time itemprop="dateCreated" datetime="2020-03-15T19:21:00+01:00">Sun 15 March 2020</time>
+            <time itemprop="dateCreated" datetime="2021-05-30T20:22:00+02:00">Sun 30 May 2021</time>
             <h4>Category</h4>
-            <a class="category-link" href="./categories#programming-ref">Programming</a>
+            <a class="category-link" href="../categories#matematicas-ref">Matemáticas</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="./tags#programming-ref">Programming
-                    <span class="superscript">2</span>
+                <li><a href="../tags#matematicas-ref">Matemáticas
 </a></li>
-                <li><a href="./tags#vim-ref">Vim
+                <li><a href="../tags#tutorial-ref">tutorial
                     <span class="superscript">1</span>
 </a></li>
             </ul>
@@ -323,7 +427,7 @@ The idea is to be able to activate the spell checking (<code>:set spell</code>) 
     </div>
 </footer>            <script src="//code.jquery.com/jquery.min.js"></script>
         <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
-        <script src="./theme/js/elegant.prod.9e9d5ce754.js"></script>
+        <script src="../theme/js/elegant.prod.9e9d5ce754.js"></script>
         <script>
             function validateForm(query)
             {

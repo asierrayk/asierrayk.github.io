@@ -1,10 +1,195 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Blog de Asier</title><link href="https://asierrayk.github.io/" rel="alternate"></link><link href="https://asierrayk.github.io/feeds/all.atom.xml" rel="self"></link><id>https://asierrayk.github.io/</id><updated>2020-03-15T19:21:00+01:00</updated><subtitle>&lt;a href="/bob-ross/" target="_blank"&gt;El placer de pensar&lt;/a&gt;</subtitle><entry><title>Mi primer plugin en VIM</title><link href="https://asierrayk.github.io/my-first-vim-plugin" rel="alternate"></link><published>2020-03-15T19:21:00+01:00</published><updated>2020-03-15T19:21:00+01:00</updated><author><name>Asier Cardoso Sánchez</name></author><id>tag:asierrayk.github.io,2020-03-15:/my-first-vim-plugin</id><summary type="html">&lt;p&gt;Tras usar Vim durante un largo periodo de tiempo, he decidido aventurarme a hacer mi primer plugin.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>El placer de pensar</title><link href="https://asierrayk.github.io/" rel="alternate"></link><link href="https://asierrayk.github.io/feeds/all.atom.xml" rel="self"></link><id>https://asierrayk.github.io/</id><updated>2021-05-30T20:22:00+02:00</updated><subtitle>&lt;a href="/bob-ross/" target="_blank"&gt;El placer de pensar&lt;/a&gt;</subtitle><entry><title>Calendario Mental</title><link href="https://asierrayk.github.io/day-of-week-tutorial" rel="alternate"></link><published>2021-05-30T20:22:00+02:00</published><updated>2021-05-30T20:22:00+02:00</updated><author><name></name></author><id>tag:asierrayk.github.io,2021-05-30:/day-of-week-tutorial</id><summary type="html">&lt;p&gt;: Cómo saber en que día de la semana cayó cualquier fecha&lt;/p&gt;</summary><content type="html">
+&lt;p&gt;Existe un método para poder calcular en que día de la semana cayó cualquier fecha.
+El método es muy sencillo y hay que seguir los siguientes pasos:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Calcular las claves para cada parte de la fecha:&lt;ul&gt;
+&lt;li&gt;Calcular la clave del &lt;strong&gt;día del mes&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Calcular la clave del &lt;strong&gt;mes&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Calcular la clave para el &lt;strong&gt;&lt;em&gt;siglo&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Calcular la clave para el &lt;strong&gt;año&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Sumar todas las claves.&lt;/li&gt;
+&lt;li&gt;Restar 1 si el año es bisiesto y el mes es enero o febrero.&lt;/li&gt;
+&lt;li&gt;Aplicar modulo 7 para obtener el día de la semana.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id="1-calculo-de-claves"&gt;1. Cálculo de claves&lt;/h1&gt;
+&lt;p&gt;Vamos a ver como poder calcular cada una de las claves, para cada una de las partes de la fecha.
+Cada una de las claves que obtengamos la podemos simplificar aplicando modulo 7 antes de llegar al paso 2.&lt;/p&gt;
+&lt;h2 id="clave-del-dia-del-mes"&gt;Clave del día del mes&lt;/h2&gt;
+&lt;p&gt;Para calcular la clave del día del mes, simplemente debemos coger el número del mes como clave.
+Por ejemplo para la fecha &lt;strong&gt;16 julio 1969&lt;/strong&gt; la clave para el día del mes es el propio número del día del mes &lt;strong&gt;16&lt;/strong&gt; que simplificada es &lt;strong&gt;2&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id="clave-del-mes"&gt;Clave del mes&lt;/h2&gt;
+&lt;p&gt;Para calcular la clave del mes debemos aplicar la correspondencia de la siguiente tabla:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align="center"&gt;Mes&lt;/th&gt;
+&lt;th align="center"&gt;Clave&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;Enero&lt;/td&gt;
+&lt;td align="center"&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;Febrero&lt;/td&gt;
+&lt;td align="center"&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;Marzo&lt;/td&gt;
+&lt;td align="center"&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;Abril&lt;/td&gt;
+&lt;td align="center"&gt;6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;Mayo&lt;/td&gt;
+&lt;td align="center"&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;Junio&lt;/td&gt;
+&lt;td align="center"&gt;4&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;Julio&lt;/td&gt;
+&lt;td align="center"&gt;6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;Agosto&lt;/td&gt;
+&lt;td align="center"&gt;2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;Septiembre&lt;/td&gt;
+&lt;td align="center"&gt;5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;Octubre&lt;/td&gt;
+&lt;td align="center"&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;Noviembre&lt;/td&gt;
+&lt;td align="center"&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;Diciembre&lt;/td&gt;
+&lt;td align="center"&gt;5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Por ejemplo para la fecha 16 de julio de 1969 la clave del mes es &lt;strong&gt;6&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id="clave-del-siglo"&gt;Clave del &lt;em&gt;siglo&lt;/em&gt;&lt;/h2&gt;
+&lt;p&gt;Para esta parte de la fecha, nos fijamos en el año ignorando las dos últimas cifras.
+Para calcular la clave del siglo deberemos tener en cuenta la siguiente correspondencia:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align="center"&gt;&lt;em&gt;Siglo&lt;/em&gt;&lt;/th&gt;
+&lt;th align="center"&gt;Clave&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;16xx&lt;/td&gt;
+&lt;td align="center"&gt;6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;17xx&lt;/td&gt;
+&lt;td align="center"&gt;4&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;18xx&lt;/td&gt;
+&lt;td align="center"&gt;2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;19xx&lt;/td&gt;
+&lt;td align="center"&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;20xx&lt;/td&gt;
+&lt;td align="center"&gt;6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;21xx&lt;/td&gt;
+&lt;td align="center"&gt;4&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="clave-del-ano"&gt;Clave del año&lt;/h2&gt;
+&lt;p&gt;El cálculo de la clave del año se compone de los siguientes pasos:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Nos quedamos con las &lt;strong&gt;dos últimas cifras del año&lt;/strong&gt;. Por ejemplo con 1969 nos quedamos con 69.&lt;/li&gt;
+&lt;li&gt;Calculamos el &lt;strong&gt;cociente&lt;/strong&gt; de la división del primer paso &lt;strong&gt;entre 4&lt;/strong&gt;. Por ejemplo 69 entre 4 da como cociente 17. Podemos simplificar el número 17 y usar 3 en su lugar.
+Este paso está relacionado con los años bisiestos.&lt;/li&gt;
+&lt;li&gt;Calculamos el &lt;strong&gt;resto&lt;/strong&gt; de la división del número del primer paso &lt;strong&gt;entre 7&lt;/strong&gt;. Por ejemplo 69 modulo 7 es 6.&lt;/li&gt;
+&lt;li&gt;Por último &lt;strong&gt;sumamos los números del segundo y tercer paso&lt;/strong&gt; y obtenemos la clave para el año.
+   Con nuestro ejemplo sumamos 3 y 6 y obtenemos 9 que simplificado nos da 2.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id="2-comprobar-el-resultado"&gt;2. Comprobar el resultado&lt;/h1&gt;
+&lt;p&gt;Una vez tengamos todas las claves basta con sumarlas, simplificar el resultado para que nos quede un número entre 0 y 6.
+Comprobar el resultado con la siguiente tabla:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align="center"&gt;Día de la semana&lt;/th&gt;
+&lt;th align="center"&gt;Clave&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;Domingo&lt;/td&gt;
+&lt;td align="center"&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;Lunes&lt;/td&gt;
+&lt;td align="center"&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;Martes&lt;/td&gt;
+&lt;td align="center"&gt;2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;Miércoles&lt;/td&gt;
+&lt;td align="center"&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;Jueves&lt;/td&gt;
+&lt;td align="center"&gt;4&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;Viernes&lt;/td&gt;
+&lt;td align="center"&gt;5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;Sábado&lt;/td&gt;
+&lt;td align="center"&gt;6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Para la fecha &lt;strong&gt;16 de julio de 1969&lt;/strong&gt; tendríamos:
+2 + 6 + 0 + 3 + 6 = 17 = 3 
+Por tanto ese día fue un &lt;strong&gt;miércoles&lt;/strong&gt;.&lt;/p&gt;
+&lt;h1 id="3-consideracion-de-anos-bisiestos"&gt;3. Consideración de años bisiestos&lt;/h1&gt;
+&lt;p&gt;Si la fecha para la cual estamos calculando el día de la semana. Se trata de un año bisiesto y el mes es enero o febrero, al resultado final deberemos restar una unidad.&lt;/p&gt;
+&lt;h2 id="definicion-ano-bisiesto"&gt;Definición año bisiesto&lt;/h2&gt;
+&lt;p&gt;En el calendario que usamos actualmente que es el calendario Gregoriano, vigente desde 1582. Para nuestro calendario la definición de un año bisiesto es la siguiente: &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Un año es bisiesto si es divisible por 4, excepto si acaba en 00,
+que ha de ser divisible entre 400.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Es decir 1600 y 2000 son años bisiestos, sin embargo 1700, 1800 y 1900 no son años bisiestos.&lt;/p&gt;
+&lt;h2 id="ejemplo-ano-bisiesto"&gt;Ejemplo año bisiesto&lt;/h2&gt;
+&lt;p&gt;Calculemos el día de la semana para la fecha &lt;strong&gt;1 de enero de 2020&lt;/strong&gt;.
+1 + 0 + 6 + 5 + 6 = 18 = 4
+Pero debemos restar uno, ya que el año es bisiesto y el mes enero, por tanto el resultado es 3.
+Es decir, un &lt;strong&gt;miércoles&lt;/strong&gt;.&lt;/p&gt;</content><category term="Matemáticas"></category><category term="Matemáticas"></category><category term="tutorial"></category></entry><entry><title>Mi primer plugin en VIM</title><link href="https://asierrayk.github.io/my-first-vim-plugin" rel="alternate"></link><published>2020-03-15T19:21:00+01:00</published><updated>2020-03-15T19:21:00+01:00</updated><author><name></name></author><id>tag:asierrayk.github.io,2020-03-15:/my-first-vim-plugin</id><summary type="html">&lt;p&gt;Tras usar Vim durante un largo periodo de tiempo, he decidido aventurarme a hacer mi primer plugin.&lt;/p&gt;
 &lt;p&gt;Se trata de un plugin muy sencillo que simplemente te permite iterar una lista de posibles diccionarios para la corrección ortográfica.&lt;/p&gt;
 &lt;p&gt;La idea es que sea posible activar el corrector ortográfico (&lt;code&gt;:set spell …&lt;/code&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;Tras usar Vim durante un largo periodo de tiempo, he decidido aventurarme a hacer mi primer plugin.&lt;/p&gt;
 &lt;p&gt;Se trata de un plugin muy sencillo que simplemente te permite iterar una lista de posibles diccionarios para la corrección ortográfica.&lt;/p&gt;
 &lt;p&gt;La idea es que sea posible activar el corrector ortográfico (&lt;code&gt;:set spell&lt;/code&gt;) en caso de que este desactivado e ir iterando por una lista configurable de idiomas.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:SpellLangList &lt;span class="p"&gt;=&lt;/span&gt; get&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;g&lt;/span&gt;:&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;SpellLangList&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; []&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:SpellLangList &lt;span class="p"&gt;=&lt;/span&gt; get&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;g&lt;/span&gt;:&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;SpellLangList&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; []&lt;span class="p"&gt;)&lt;/span&gt;
 
 &lt;span class="c"&gt;&amp;quot; Cycle through spelllang list and toggle spell&lt;/span&gt;
 &lt;span class="k"&gt;function&lt;/span&gt;&lt;span class="p"&gt;!&lt;/span&gt; ToggleCycleSpellLang&lt;span class="p"&gt;()&lt;/span&gt;
@@ -20,23 +205,21 @@
         &lt;span class="k"&gt;endif&lt;/span&gt;
     &lt;span class="k"&gt;endif&lt;/span&gt;
 &lt;span class="k"&gt;endfunction&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Se podría configurar por ejemplo con las siguientes opciones:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:SpellLangList&lt;span class="p"&gt;=&lt;/span&gt; [&lt;span class="s2"&gt;&amp;quot;en_us&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;es&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;en_us,es&amp;quot;&lt;/span&gt;]
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:SpellLangList&lt;span class="p"&gt;=&lt;/span&gt; [&lt;span class="s2"&gt;&amp;quot;en_us&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;es&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;en_us,es&amp;quot;&lt;/span&gt;]
 &lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;F6&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; :&lt;span class="k"&gt;call&lt;/span&gt; ToggleCycleSpellLang&lt;span class="p"&gt;()&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;De esta manera una primera pulsación de la tecla &lt;code&gt;F6&lt;/code&gt; activaría la corrección ortográfica para el buffer activo, y sucesivas pulsaciones irían cambiando el idioma activo (&lt;code&gt;:set spelllang=es&lt;/code&gt;) iterando la lista &lt;code&gt;g:SpellLangList&lt;/code&gt; hasta desactivar de nuevo la corrección ortográfica (&lt;code&gt;:set nospell&lt;/code&gt;).&lt;/p&gt;
-&lt;p&gt;He subido el plugin a un repositorio en &lt;a class="ampl" href="https://github.com/asierrayk/vim-toggle" target="_blank"&gt;github&lt;/a&gt; y añadido alguna funcionalidad, relacionada con las ventanas &lt;code&gt;quickfix&lt;/code&gt; y &lt;code&gt;location&lt;/code&gt;.&lt;/p&gt;</content><category term="Programación"></category><category term="programación"></category><category term="Vim"></category></entry><entry><title>My first Vim plugin</title><link href="https://asierrayk.github.io/en/my-first-vim-plugin" rel="alternate"></link><published>2020-03-15T19:21:00+01:00</published><updated>2020-03-15T19:21:00+01:00</updated><author><name>Asier Cardoso Sánchez</name></author><id>tag:asierrayk.github.io,2020-03-15:/en/my-first-vim-plugin</id><summary type="html">&lt;p&gt;After been using Vim for a long time. I've decided to venture into the creation of my first vim plugin.&lt;/p&gt;
+&lt;p&gt;He subido el plugin a un repositorio en &lt;a class="ampl" href="https://github.com/asierrayk/vim-toggle" target="_blank"&gt;github&lt;/a&gt; y añadido alguna funcionalidad, relacionada con las ventanas &lt;code&gt;quickfix&lt;/code&gt; y &lt;code&gt;location&lt;/code&gt;.&lt;/p&gt;</content><category term="Programación"></category><category term="programación"></category><category term="Vim"></category></entry><entry><title>My first Vim plugin</title><link href="https://asierrayk.github.io/en/my-first-vim-plugin" rel="alternate"></link><published>2020-03-15T19:21:00+01:00</published><updated>2020-03-15T19:21:00+01:00</updated><author><name></name></author><id>tag:asierrayk.github.io,2020-03-15:/en/my-first-vim-plugin</id><summary type="html">&lt;p&gt;After been using Vim for a long time. I've decided to venture into the creation of my first vim plugin.&lt;/p&gt;
 &lt;p&gt;It's a very simple plugin that allows you to iterate over a list of possible dictionaries used for spell checking.
 The idea is to be able to activate the spell …&lt;/p&gt;</summary><content type="html">&lt;p&gt;After been using Vim for a long time. I've decided to venture into the creation of my first vim plugin.&lt;/p&gt;
 &lt;p&gt;It's a very simple plugin that allows you to iterate over a list of possible dictionaries used for spell checking.
 The idea is to be able to activate the spell checking (&lt;code&gt;:set spell&lt;/code&gt;) in case it is deactivated and iterate over a configurable list of languages.&lt;/p&gt;
 &lt;p&gt;The following function accomplish the objective.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:SpellLangList &lt;span class="p"&gt;=&lt;/span&gt; get&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;g&lt;/span&gt;:&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;SpellLangList&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; []&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:SpellLangList &lt;span class="p"&gt;=&lt;/span&gt; get&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;g&lt;/span&gt;:&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;SpellLangList&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; []&lt;span class="p"&gt;)&lt;/span&gt;
 
 &lt;span class="c"&gt;&amp;quot; Cycle through spelllang list and toggle spell&lt;/span&gt;
 &lt;span class="k"&gt;function&lt;/span&gt;&lt;span class="p"&gt;!&lt;/span&gt; ToggleCycleSpellLang&lt;span class="p"&gt;()&lt;/span&gt;
@@ -52,47 +235,45 @@ The idea is to be able to activate the spell checking (&lt;code&gt;:set spell&lt
         &lt;span class="k"&gt;endif&lt;/span&gt;
     &lt;span class="k"&gt;endif&lt;/span&gt;
 &lt;span class="k"&gt;endfunction&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;It'll be possible to configure the list of languages and the keybindings as follows:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:SpellLangList&lt;span class="p"&gt;=&lt;/span&gt; [&lt;span class="s2"&gt;&amp;quot;en_us&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;es&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;en_us,es&amp;quot;&lt;/span&gt;]
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:SpellLangList&lt;span class="p"&gt;=&lt;/span&gt; [&lt;span class="s2"&gt;&amp;quot;en_us&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;es&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;en_us,es&amp;quot;&lt;/span&gt;]
 &lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;F6&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; :&lt;span class="k"&gt;call&lt;/span&gt; ToggleCycleSpellLang&lt;span class="p"&gt;()&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Consequently pressing &lt;code&gt;F6&lt;/code&gt; will enable spell check for the current buffer (&lt;code&gt;:set spell&lt;/code&gt;), and pressing &lt;code&gt;F6&lt;/code&gt; successively will be changing current language used for spell checking (&lt;code&gt;:set spelllang=es&lt;/code&gt;) until finally disable spell check again (&lt;code&gt;:set nospell&lt;/code&gt;).&lt;/p&gt;
-&lt;p&gt;I've uploaded the plugin to a &lt;a class="ampl" href="https://github.com/asierrayk/vim-toggle" target="_blank"&gt;github&lt;/a&gt; repository, and I've added similar funcionality related with quickfix and location windows.&lt;/p&gt;</content><category term="Programming"></category><category term="Programming"></category><category term="Vim"></category></entry><entry><title>Objetos mutables en python</title><link href="https://asierrayk.github.io/python-mutable-objects" rel="alternate"></link><published>2020-02-01T16:31:00+01:00</published><updated>2020-02-01T16:31:00+01:00</updated><author><name>Asier Cardoso Sánchez</name></author><id>tag:asierrayk.github.io,2020-02-01:/python-mutable-objects</id><summary type="html">
+&lt;p&gt;I've uploaded the plugin to a &lt;a class="ampl" href="https://github.com/asierrayk/vim-toggle" target="_blank"&gt;github&lt;/a&gt; repository, and I've added similar funcionality related with quickfix and location windows.&lt;/p&gt;</content><category term="Programming"></category><category term="Programming"></category><category term="Vim"></category></entry><entry><title>Objetos mutables en python</title><link href="https://asierrayk.github.io/python-mutable-objects" rel="alternate"></link><published>2020-02-01T16:31:00+01:00</published><updated>2020-02-01T16:31:00+01:00</updated><author><name></name></author><id>tag:asierrayk.github.io,2020-02-01:/python-mutable-objects</id><summary type="html">
 &lt;p&gt;Supongamos que tenemos definida en python la siguiente función:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[]):&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[]):&lt;/span&gt;
     &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
         &lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Si tuviésemos que decir cual es el resultado de hacer las siguientes llamadas sucesivas a la función, muchos pensareis que el resultado que se obtendría es:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;f …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;f …&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">
 &lt;p&gt;Supongamos que tenemos definida en python la siguiente función:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[]):&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[]):&lt;/span&gt;
     &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
         &lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Si tuviésemos que decir cual es el resultado de hacer las siguientes llamadas sucesivas a la función, muchos pensareis que el resultado que se obtendría es:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
 &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# RESULTADO ERRONEO &lt;/span&gt;
 &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Sin embargo, el resultado que obtenemos es el siguiente:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
 &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# RESULTADO CORRECTO&lt;/span&gt;
 &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Esto es debido a que &lt;strong&gt;las listas en python son objetos mutables&lt;/strong&gt; y por tanto cuando son definidos como parámetros por defecto en una función, la lista se comporta como una variable global a todas las ejecuciones de la función. &lt;/p&gt;
 &lt;p&gt;Cuando llamamos a &lt;code&gt;f(2)&lt;/code&gt; por primera vez se utiliza &lt;code&gt;[]&lt;/code&gt; que es el valor por defecto de la lista. Pero cuando se ejecuta &lt;code&gt;f(3)&lt;/code&gt; se utiliza la misma variable global que cuando se llamó a &lt;code&gt;f(2)&lt;/code&gt; cuyo ultimo valor es &lt;code&gt;[0, 1]&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id="tabla-de-objetos-en-python"&gt;Tabla de objetos en python&lt;/h2&gt;
@@ -144,48 +325,48 @@ The idea is to be able to activate the spell checking (&lt;code&gt;:set spell&lt
 &lt;/table&gt;
 &lt;p&gt;Los objetos mutables en python son pasados por referencia. A diferencia del resto que es como si fuesen pasados por valor (ya que son inmutables).
 Un ejemplo de ello es el siguiente código:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
     &lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;23&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;l&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;37&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;37&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;23&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</content><category term="Programación"></category><category term="programación"></category><category term="Python"></category></entry><entry><title>Mutable objects in python</title><link href="https://asierrayk.github.io/en/python-mutable-objects" rel="alternate"></link><published>2020-02-01T16:31:00+01:00</published><updated>2020-02-01T16:31:00+01:00</updated><author><name>Asier Cardoso Sánchez</name></author><id>tag:asierrayk.github.io,2020-02-01:/en/python-mutable-objects</id><summary type="html">
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Programación"></category><category term="programación"></category><category term="Python"></category></entry><entry><title>Mutable objects in python</title><link href="https://asierrayk.github.io/en/python-mutable-objects" rel="alternate"></link><published>2020-02-01T16:31:00+01:00</published><updated>2020-02-01T16:31:00+01:00</updated><author><name></name></author><id>tag:asierrayk.github.io,2020-02-01:/en/python-mutable-objects</id><summary type="html">
 &lt;p&gt;Let's assume we have defined the following function:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[]):&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[]):&lt;/span&gt;
     &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
         &lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;If we have to guess what is the output of these calls to the function. A lot of
 us will think is:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3 …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3 …&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">
 &lt;p&gt;Let's assume we have defined the following function:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[]):&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[]):&lt;/span&gt;
     &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
         &lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;If we have to guess what is the output of these calls to the function. A lot of
 us will think is:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
 &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# WRONG RESULT&lt;/span&gt;
 &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;However, the correct result is:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
 &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# CORRECT RESULT&lt;/span&gt;
 &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;This is due to the fact that &lt;strong&gt;lists in python are mutable objects&lt;/strong&gt;, and
 therefore whenever they are defined as default parameters in a function, the
 list behaves as a global variable common to all function's executions.&lt;/p&gt;
@@ -242,14 +423,14 @@ was called is used, which last value is &lt;code&gt;[0, 1]&lt;/code&gt;.&lt;/p&g
 &lt;p&gt;Mutable objects in python are passed by reference. Immutable objects is like
 they were being passed by value.
 An example of that is the following code:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
     &lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;23&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;l&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;37&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;37&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;23&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</content><category term="Programming"></category><category term="programming"></category><category term="Python"></category></entry><entry><title>Tutorial resolver cubo a ciegas</title><link href="https://asierrayk.github.io/tutorial-resolver-cubo-a-ciegas" rel="alternate"></link><published>2020-01-26T18:34:00+01:00</published><updated>2020-01-26T18:34:00+01:00</updated><author><name>Asier Cardoso Sánchez</name></author><id>tag:asierrayk.github.io,2020-01-26:/tutorial-resolver-cubo-a-ciegas</id><summary type="html">&lt;p&gt;Resolver por primera vez el cubo de Rubik es un momento emocionante. Sin embargo, esta sensación no es comparable a lo que se siente al resolver el cubo a ciegas por primera vez.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Programming"></category><category term="programming"></category><category term="Python"></category></entry><entry><title>Tutorial resolver cubo a ciegas</title><link href="https://asierrayk.github.io/tutorial-resolver-cubo-a-ciegas" rel="alternate"></link><published>2020-01-26T18:34:00+01:00</published><updated>2020-01-26T18:34:00+01:00</updated><author><name></name></author><id>tag:asierrayk.github.io,2020-01-26:/tutorial-resolver-cubo-a-ciegas</id><summary type="html">&lt;p&gt;Resolver por primera vez el cubo de Rubik es un momento emocionante. Sin embargo, esta sensación no es comparable a lo que se siente al resolver el cubo a ciegas por primera vez.&lt;/p&gt;
 &lt;p&gt;En esta nueva entrada os dejo una serie de videos en los que os explico como poder …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Resolver por primera vez el cubo de Rubik es un momento emocionante. Sin embargo, esta sensación no es comparable a lo que se siente al resolver el cubo a ciegas por primera vez.&lt;/p&gt;
 &lt;p&gt;En esta nueva entrada os dejo una serie de videos en los que os explico como poder resolver el cubo de Rubik a ciegas. Recordad que nada se consigue de la noche a la mañana, pero cuando se consigue, ese esfuerzo se ve recompensado.&lt;/p&gt;
 &lt;iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/F6ZExWLDTVA?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
