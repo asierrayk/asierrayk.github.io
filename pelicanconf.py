@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-AUTHOR = 'Asier Cardoso Sánchez'
-SITENAME = 'Blog de Asier'
+AUTHORS = ['Asier Cardoso Sánchez']
+SITENAME = 'El placer de pensar'
 SITEURL = ''
 
 PATH = 'content'
@@ -24,7 +24,7 @@ LINKS = ()
 
 # Social widget
 SOCIAL = (('Github', 'https://github.com/asierrayk'),
-          ('Youtube', 'https://www.youtube.com/channel/UCNxp1vvT6VHRK4YeB8pr8LA'),
+          ('Youtube', 'https://www.youtube.com/channel/UCyXCYTXnFcCW6rm4BHMn9CA'),
           ('LinkedIn', 'https://www.linkedin.com/in/asier-cardoso-s%C3%A1nchez-7b90a8124/'),
           ("RSS", SITEURL + "/feeds/all.atom.xml"),
           )
@@ -132,7 +132,7 @@ I18N_SUBSITES = {
     'en': {
         # LABELS
         'THEME': 'themes/elegant',
-        'SITENAME': "Asier's Blog",
+        'SITENAME': "The joy of thinking",
         'SHARE_POST_INTRO': 'Share on:',
         'COMMENTS_INTRO': 'Add a comment:',
         'SITESUBTITLE': 'The joy of thinking',
