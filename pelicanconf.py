@@ -123,9 +123,9 @@ LANG = 'es'
 # Waiting for this issue to be solved https://github.com/Pelican-Elegant/elegant/issues/139
 MENUITEMS = (
     ('Inicio', '/'),
-    ('Categorias', '/categories'),
+    ('Categorías', '/categories'),
     ('Etiquetas', '/tags'),
-    ('Archivas', '/archives'),
+    ('Archivos', '/archives'),
 )
 
 I18N_SUBSITES = {
@@ -154,3 +154,11 @@ I18N_SUBSITES = {
         'SEARCH_URL': "search",
         }
     }
+
+STATIC_PATHS =[
+    'extra',
+]
+
+EXTRA_PATH_METADATA = {
+    'extra/favicon.ico': {'path': 'favicon.ico'},
+}
