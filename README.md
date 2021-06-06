@@ -11,3 +11,6 @@ make devserver
 
 Process to deploy
 =================
+```
+make github
+```

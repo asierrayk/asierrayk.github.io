@@ -34,13 +34,29 @@ DEFAULT_PAGINATION = 10
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
-THEME = 'themes/elegant'
+THEME = 'elegant'
 
 
 PLUGIN_PATHS = ['plugins']
-PLUGINS = ['tipue_search', 'neighbors', 'related_posts', 'share_post', 'assets', 'i18n_subsites', 'extract_toc']
-DIRECT_TEMPLATES = ['index', 'categories', 'tags', 'archives',
-                    'search', '404']
+PLUGINS = [
+    'tipue_search',
+    'neighbors',
+    'related_posts',
+    'share_post',
+    'assets',
+    'i18n_subsites',
+    'extract_toc',
+    'latex',
+    'pelican.plugins.render_math',
+]
+DIRECT_TEMPLATES = [
+    'index',
+    'categories',
+    'tags',
+    'archives',
+    'search',
+    '404'
+]
 
 UTTERANCES_REPO='asierrayk/asierrayk.github.io'
 UTTERANCES_THEME='github-light'
@@ -77,7 +93,7 @@ SITE_LICENSE = """Content licensed under <a rel="license nofollow noopener noref
     Creative Commons Attribution 4.0 International License</a>."""
 # Description of your site. It is used in meta tags so it will appear in
 # search results and social media
-SITE_DESCRIPTION = ''
+SITE_DESCRIPTION = 'El placer de pensar, blog donde hablo sobre matemáticas, curiosidades, programación, acertijos y rompecabezas. Escrito por Asier Cardoso Sánchez'
 
 # It is displayed along with the SITENAME in the footer of every page
 SITESUBTITLE = f'<a href="{SITEURL}/bob-ross/" target="_blank">{LANDING_PAGE_TITLE}</a>'
@@ -135,8 +151,6 @@ I18N_SUBSITES = {
         'SITENAME': "The joy of thinking",
         'SHARE_POST_INTRO': 'Share on:',
         'COMMENTS_INTRO': 'Add a comment:',
-        'SITESUBTITLE': 'The joy of thinking',
-
         'SITESUBTITLE': f'<a href="{SITEURL}/bob-ross/" target="_blank">The joy of thinking</a>',
         'LANDING_PAGE_TITLE': 'The joy of thinking',
         'RELATED_POSTS_LABEL': 'Related content',
@@ -162,3 +176,5 @@ STATIC_PATHS =[
 EXTRA_PATH_METADATA = {
     'extra/favicon.ico': {'path': 'favicon.ico'},
 }
+
+MATH_JAX = {}

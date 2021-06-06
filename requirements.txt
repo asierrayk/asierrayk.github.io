@@ -3,3 +3,5 @@ ghp-import
 beautifulsoup4
 webassets
 cssmin
+pelican-render-math
+typogrify
