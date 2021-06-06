@@ -11,6 +11,8 @@
 
         <meta name="author" content="" />
 
+        <meta name="description" content="Existe un método para poder calcular en que día de la semana cayó cualquier fecha. El método es muy sencillo y hay que seguir los siguientes pasos: Calcular las claves para cada parte de la fecha: Calcular la clave del día del mes. Calcular la clave del mes. Calcular la …
+" />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
@@ -120,10 +122,10 @@ El método es muy sencillo y hay que seguir los siguientes pasos:</p>
 <h1 id="1-calculo-de-claves">1. Cálculo de claves</h1>
 <p>Vamos a ver como poder calcular cada una de las claves, para cada una de las partes de la fecha.
 Cada una de las claves que obtengamos la podemos simplificar aplicando modulo 7 antes de llegar al paso 2.</p>
-<h2 id="clave-del-dia-del-mes">Clave del día del mes</h2>
+<h3 id="clave-del-dia-del-mes">Clave del día del mes</h3>
 <p>Para calcular la clave del día del mes, simplemente debemos coger el número del mes como clave.
 Por ejemplo para la fecha <strong>16 julio 1969</strong> la clave para el día del mes es el propio número del día del mes <strong>16</strong> que simplificada es <strong>2</strong>.</p>
-<h2 id="clave-del-mes">Clave del mes</h2>
+<h3 id="clave-del-mes">Clave del mes</h3>
 <p>Para calcular la clave del mes debemos aplicar la correspondencia de la siguiente tabla:</p>
 <table>
 <thead>
@@ -184,9 +186,8 @@ Por ejemplo para la fecha <strong>16 julio 1969</strong> la clave para el día d
 </tbody>
 </table>
 <p>Por ejemplo para la fecha 16 de julio de 1969 la clave del mes es <strong>6</strong>.</p>
-<h2 id="clave-del-siglo">Clave del <em>siglo</em></h2>
-<p>Para esta parte de la fecha, nos fijamos en el año ignorando las dos últimas cifras.
-Para calcular la clave del siglo deberemos tener en cuenta la siguiente correspondencia:</p>
+<h3 id="clave-del-siglo">Clave del <em>siglo</em></h3>
+<p>Para esta parte de la fecha, nos fijamos en el año ignorando las dos últimas cifras. Para calcular la clave del siglo deberemos tener en cuenta la siguiente correspondencia:</p>
 <table>
 <thead>
 <tr>
@@ -221,15 +222,18 @@ Para calcular la clave del siglo deberemos tener en cuenta la siguiente correspo
 </tr>
 </tbody>
 </table>
-<h2 id="clave-del-ano">Clave del año</h2>
+<h3 id="clave-del-ano">Clave del año</h3>
 <p>El cálculo de la clave del año se compone de los siguientes pasos:</p>
 <ol>
 <li>Nos quedamos con las <strong>dos últimas cifras del año</strong>. Por ejemplo con 1969 nos quedamos con 69.</li>
-<li>Calculamos el <strong>cociente</strong> de la división del primer paso <strong>entre 4</strong>. Por ejemplo 69 entre 4 da como cociente 17. Podemos simplificar el número 17 y usar 3 en su lugar.
+<li>Calculamos el <strong>cociente</strong> de la división del primer paso <strong>entre 4</strong>.
+   Por ejemplo <span class="math">\(69 = 4 \cdot 17+1\)</span>, es decir, 69 entre 4 da como cociente 17.
+   Simplificando 17 obtenemos <span class="math">\(17 \equiv 3\)</span>, por tanto la clave es <span class="math">\(3\)</span>.
 Este paso está relacionado con los años bisiestos.</li>
-<li>Calculamos el <strong>resto</strong> de la división del número del primer paso <strong>entre 7</strong>. Por ejemplo 69 modulo 7 es 6.</li>
+<li>Calculamos el <strong>resto</strong> de la división del número del primer paso <strong>entre 7</strong>. 
+   Por ejemplo <span class="math">\(69 = 9 \cdot 7 + 6\)</span></li>
 <li>Por último <strong>sumamos los números del segundo y tercer paso</strong> y obtenemos la clave para el año.
-   Con nuestro ejemplo sumamos 3 y 6 y obtenemos 9 que simplificado nos da 2.</li>
+   <span class="math">\(3 + 6 = 9 \equiv 2\)</span></li>
 </ol>
 <h1 id="2-comprobar-el-resultado">2. Comprobar el resultado</h1>
 <p>Una vez tengamos todas las claves basta con sumarlas, simplificar el resultado para que nos quede un número entre 0 y 6.
@@ -272,22 +276,84 @@ Comprobar el resultado con la siguiente tabla:</p>
 </tr>
 </tbody>
 </table>
-<p>Para la fecha <strong>16 de julio de 1969</strong> tendríamos:
-2 + 6 + 0 + 3 + 6 = 17 = 3 
-Por tanto ese día fue un <strong>miércoles</strong>.</p>
+<p>Para la fecha <strong>16 de julio de 1969</strong>, tendríamos:
+<span class="math">\(2 + 6 + 0 + 3 + 6 = 17 \equiv 3\)</span></p>
+<p>Por tanto ese día fue un <strong>miércoles</strong>.</p>
 <h1 id="3-consideracion-de-anos-bisiestos">3. Consideración de años bisiestos</h1>
 <p>Si la fecha para la cual estamos calculando el día de la semana. Se trata de un año bisiesto y el mes es enero o febrero, al resultado final deberemos restar una unidad.</p>
-<h2 id="definicion-ano-bisiesto">Definición año bisiesto</h2>
+<h3 id="definicion-ano-bisiesto">Definición año bisiesto</h3>
 <p>En el calendario que usamos actualmente que es el calendario Gregoriano, vigente desde 1582. Para nuestro calendario la definición de un año bisiesto es la siguiente: </p>
 <div class="highlight"><pre><span></span><code>Un año es bisiesto si es divisible por 4, excepto si acaba en 00,
 que ha de ser divisible entre 400.
 </code></pre></div>
 <p>Es decir 1600 y 2000 son años bisiestos, sin embargo 1700, 1800 y 1900 no son años bisiestos.</p>
-<h2 id="ejemplo-ano-bisiesto">Ejemplo año bisiesto</h2>
+<h3 id="ejemplo-ano-bisiesto">Ejemplo año bisiesto</h3>
 <p>Calculemos el día de la semana para la fecha <strong>1 de enero de 2020</strong>.
-1 + 0 + 6 + 5 + 6 = 18 = 4
-Pero debemos restar uno, ya que el año es bisiesto y el mes enero, por tanto el resultado es 3.
+<span class="math">\(1 + 0 + 6 + 5 + 6 = 18 \equiv 4\)</span>
+Pero debemos restar uno, ya que el año es bisiesto y el mes enero, por tanto el resultado es <span class="math">\(3\)</span>.
 Es decir, un <strong>miércoles</strong>.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
 
 
              
