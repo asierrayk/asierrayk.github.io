@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 AUTHORS = ['Asier Cardoso Sánchez']
-SITENAME = 'El placer de pensar'
+SITENAME = 'El Placer de Pensar'
 SITEURL = ''
 
 PATH = 'content'
@@ -64,11 +64,16 @@ UTTERANCES_FILTER=False
 
 APPLAUSE_BUTTON=True
 
+USE_FOLDER_AS_CATEGORY = True
+
 # CLEAN URL
 
 TAGS_URL = "tags"
 CATEGORIES_URL = "categories"
 ARCHIVES_URL = "archives"
+
+SLUGIFY_SOURCE = 'title'
+SLUGIFY_PRESERVE_CASE = False
 
 ARTICLE_URL = "{slug}"
 PAGE_URL = "{slug}"
@@ -76,7 +81,7 @@ PAGE_SAVE_AS = "{slug}.html"
 SEARCH_URL = "search"
 
 # LABELS
-LANDING_PAGE_TITLE = 'El placer de pensar'
+LANDING_PAGE_TITLE = 'Asier Cardoso Sánchez'
 RELATED_POSTS_LABEL = 'Contenido relacionado'
 SOCIAL_PROFILE_LABEL = 'Otras redes'
 PROJECTS_TITLE = 'Mis Proyectos'
@@ -152,7 +157,7 @@ I18N_SUBSITES = {
         'SHARE_POST_INTRO': 'Share on:',
         'COMMENTS_INTRO': 'Add a comment:',
         'SITESUBTITLE': f'<a href="{SITEURL}/bob-ross/" target="_blank">The joy of thinking</a>',
-        'LANDING_PAGE_TITLE': 'The joy of thinking',
+        'LANDING_PAGE_TITLE': 'Asier Cardoso Sánchez',
         'RELATED_POSTS_LABEL': 'Related content',
         'SOCIAL_PROFILE_LABEL': 'Contact',
         'PROJECTS_TITLE': 'My projects',
@@ -171,6 +176,7 @@ I18N_SUBSITES = {
 
 STATIC_PATHS =[
     'extra',
+    'images'
 ]
 
 EXTRA_PATH_METADATA = {

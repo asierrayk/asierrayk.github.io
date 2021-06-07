@@ -6,7 +6,5 @@ status: hidden
 lang: es
 slug: landing-page-about-hidden
 ---
-Mi nombre es Asier Cardoso Sánchez.
-
 Me apasiona todo aquello que conlleve pensar y en este blog podréis encontrar contenido sobre matemáticas, programación, ajedrez,
 rubik y muchas cosas más.
