@@ -113,17 +113,11 @@ HOSTED_ON = {
 # accordingly
 USE_SHORTCUT_ICONS = False
 
-# Example projects
 PROJECTS = [{
-    'name': 'Logpad + Duration',
-    'url': 'https://github.com/talha131/logpad-plus-duration#logpad--duration',
-    'description': 'Vim plugin to emulate Windows Notepad logging feature,'
-    ' and log duration of each entry'},
-    {'name': 'Elegant Theme for Pelican',
-    'url': 'http://oncrashreboot.com/pelican-elegant',
-    'description': 'A clean and distraction free theme, with search and a'
-    ' lot more unique features, using Jinja2 and Bootstrap'}]
-PROJECTS = ''
+    'name': 'The joy of painting - Bob Ross',
+    'url': 'https://asierrayk.github.io/bob-ross/',
+    'description': 'Pequeño tributo a Bob Ross y su programa de televisión que es una inspiración para este blog'},
+    ]
 
 
 # MARKDOWN
@@ -171,8 +165,15 @@ I18N_SUBSITES = {
         'PAGE_URL': "{slug}",
         'PAGE_SAVE_AS': "{slug}.html",
         'SEARCH_URL': "search",
-        }
+
+        # PROJECTS
+        'PROJECTS': [{
+            'name': 'The joy of painting - Bob Ross',
+            'url': 'https://asierrayk.github.io/bob-ross/',
+            'description': 'Small tribute to Bob Ross and his TV program, which is an inspiration for this blog'},
+        ]
     }
+}
 
 STATIC_PATHS =[
     'extra',
