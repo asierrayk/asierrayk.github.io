@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>El Placer de Pensar - Blog</title><link href="https://asierrayk.github.io/" rel="alternate"></link><link href="https://asierrayk.github.io/feeds/blog.atom.xml" rel="self"></link><id>https://asierrayk.github.io/</id><updated>2021-06-07T20:29:00+02:00</updated><subtitle>&lt;a href="/bob-ross/" target="_blank"&gt;Asier Cardoso Sánchez&lt;/a&gt;</subtitle><entry><title>Chuleta reStructuredText</title><link href="https://asierrayk.github.io/chuleta-restructuredtext" rel="alternate"></link><published>2021-06-07T20:29:00+02:00</published><updated>2021-06-07T20:29:00+02:00</updated><author><name></name></author><id>tag:asierrayk.github.io,2021-06-07:/chuleta-restructuredtext</id><summary type="html">&lt;p class="first last"&gt;Documento resumen con todas las directrices útiles&lt;/p&gt;
+</summary><content type="html">
+&lt;div class="section" id="table-of-contents"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id3"&gt;Table of contents&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;..&lt;/span&gt; &lt;span class="ow"&gt;contents&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt; Contents duplicated :(
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="admonitions"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id4"&gt;Admonitions&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;..&lt;/span&gt; &lt;span class="ow"&gt;ATTENTION&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt;
+    Atención
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="admonition attention"&gt;
+&lt;p class="first admonition-title"&gt;¡Atención!&lt;/p&gt;
+&lt;p class="last"&gt;Atención&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;..&lt;/span&gt; &lt;span class="ow"&gt;CAUTION&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt;
+    Cuidado
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="admonition caution"&gt;
+&lt;p class="first admonition-title"&gt;¡Precaución!&lt;/p&gt;
+&lt;p class="last"&gt;Cuidado&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;..&lt;/span&gt; &lt;span class="ow"&gt;DANGER&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt;
+   Beware killer rabbits!
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="admonition danger"&gt;
+&lt;p class="first admonition-title"&gt;¡PELIGRO!&lt;/p&gt;
+&lt;p class="last"&gt;Beware killer rabbits!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;..&lt;/span&gt; &lt;span class="ow"&gt;ERROR&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt;
+    Error
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="admonition error"&gt;
+&lt;p class="first admonition-title"&gt;Error&lt;/p&gt;
+&lt;p class="last"&gt;Error&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;..&lt;/span&gt; &lt;span class="ow"&gt;HINT&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt;
+    Sugerencia
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="admonition hint"&gt;
+&lt;p class="first admonition-title"&gt;Sugerencia&lt;/p&gt;
+&lt;p class="last"&gt;Sugerencia&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;..&lt;/span&gt; &lt;span class="ow"&gt;IMPORTANT&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt;
+    Importante
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="admonition important"&gt;
+&lt;p class="first admonition-title"&gt;Importante&lt;/p&gt;
+&lt;p class="last"&gt;Importante&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;..&lt;/span&gt; &lt;span class="ow"&gt;NOTE&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt;
+    Nota
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="admonition note"&gt;
+&lt;p class="first admonition-title"&gt;Nota&lt;/p&gt;
+&lt;p class="last"&gt;Nota&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;..&lt;/span&gt; &lt;span class="ow"&gt;TIP&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt;
+    Consejo
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="admonition tip"&gt;
+&lt;p class="first admonition-title"&gt;Consejo&lt;/p&gt;
+&lt;p class="last"&gt;Consejo&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;..&lt;/span&gt; &lt;span class="ow"&gt;WARNING&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt;
+    Advertencia
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="admonition warning"&gt;
+&lt;p class="first admonition-title"&gt;Advertencia&lt;/p&gt;
+&lt;p class="last"&gt;Advertencia&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="amonestaciones-genericas"&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#id5"&gt;Amonestaciones genericas&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;..&lt;/span&gt; &lt;span class="ow"&gt;admonition&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt; Y por cierto
+
+   También puedes personalizar el titulo
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="admonition admonition-y-por-cierto"&gt;
+&lt;p class="first admonition-title"&gt;Y por cierto&lt;/p&gt;
+&lt;p class="last"&gt;También puedes personalizar el titulo&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="images"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id6"&gt;Images&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;..&lt;/span&gt; &lt;span class="ow"&gt;image&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt; images/el_placer_de_pensar.jpg
+    &lt;span class="nc"&gt;:height:&lt;/span&gt; 100px
+    &lt;span class="nc"&gt;:width:&lt;/span&gt; 200 px
+    &lt;span class="nc"&gt;:scale:&lt;/span&gt; 50 %
+    &lt;span class="nc"&gt;:alt:&lt;/span&gt; El placer de pensar logo
+    &lt;span class="nc"&gt;:align:&lt;/span&gt; right
+&lt;/pre&gt;&lt;/div&gt;
+&lt;img alt="El placer de pensar logo" class="align-right" src="images/el_placer_de_pensar.jpg" style="height: 250.0px;"/&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+&lt;div class="section" id="figura"&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#id7"&gt;Figura&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;..&lt;/span&gt; &lt;span class="ow"&gt;figure&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt; images/el_placer_de_pensar.jpg
+    &lt;span class="nc"&gt;:scale:&lt;/span&gt; 50 %
+    &lt;span class="nc"&gt;:figwidth:&lt;/span&gt; 25 %
+    &lt;span class="nc"&gt;:align:&lt;/span&gt; center
+    &lt;span class="nc"&gt;:alt:&lt;/span&gt; Logo de El placer de Pensar
+
+    Este es un mensaje al pie de la figura
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="figure align-center" style="width: 25%"&gt;
+&lt;img alt="Logo de El placer de Pensar" src="images/el_placer_de_pensar.jpg"/&gt;
+&lt;p class="caption"&gt;Este es un mensaje al pie de la figura&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="body-elements"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id8"&gt;Body elements&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;..&lt;/span&gt; &lt;span class="ow"&gt;line-block&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt;
+
+    Lend us a couple of bob till Thursday.
+    I'm absolutely skint.
+    But I'm expecting a postal order and I can pay you back
+        as soon as it comes.
+    Love, Ewan.
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Lend us a couple of bob till Thursday.&lt;/div&gt;
+&lt;div class="line"&gt;I'm absolutely skint.&lt;/div&gt;
+&lt;div class="line"&gt;But I'm expecting a postal order and I can pay you back&lt;/div&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;as soon as it comes.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="line"&gt;Love, Ewan.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="math"&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#id9"&gt;Math&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;  α_t(i) = P(O_1, O_2, … O_t, q_t = S_i λ)
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+\alpha _t(i) = P(O_1, O_2, \ldots  O_t, q_t = S_i \lambda )
+\end{equation*}
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="epigraph"&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#id10"&gt;Epigraph&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    I have discovered a truly remarkable proof of this theorem which this margin is too small to contain.
+
+    -- Pierre de Fermat
+&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote class="epigraph"&gt;
+&lt;p&gt;I have discovered a truly remarkable proof of this theorem which this margin is too small to contain.&lt;/p&gt;
+&lt;p class="attribution"&gt;—Pierre de Fermat&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote class="highlights"&gt;
+Esto debería estar resaltado&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div class="section" id="tables"&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#id11"&gt;Tables&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;..&lt;/span&gt; &lt;span class="ow"&gt;table&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt; Truth table for "not"
+   &lt;span class="nc"&gt;:widths:&lt;/span&gt; auto
+
+   =====  =====
+     A    not A
+   =====  =====
+   False  True
+   True   False
+   =====  =====
+&lt;/pre&gt;&lt;/div&gt;
+&lt;table border="1" class="colwidths-auto docutils"&gt;
+&lt;caption&gt;Truth table for "not"&lt;/caption&gt;
+&lt;thead valign="bottom"&gt;
+&lt;tr&gt;&lt;th class="head"&gt;A&lt;/th&gt;
+&lt;th class="head"&gt;not A&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td&gt;False&lt;/td&gt;
+&lt;td&gt;True&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;True&lt;/td&gt;
+&lt;td&gt;False&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;..&lt;/span&gt; &lt;span class="ow"&gt;csv-table&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt; Frozen Delights!
+   &lt;span class="nc"&gt;:header:&lt;/span&gt; "Treat", "Quantity", "Description"
+   &lt;span class="nc"&gt;:widths:&lt;/span&gt; 15, 10, 30
+
+   "Albatross", 2.99, "On a stick!"
+   "Crunchy Frog", 1.49, "If we took the bones out, it wouldn't be
+   crunchy, now would it?"
+   "Gannet Ripple", 1.99, "On a stick!"
+&lt;/pre&gt;&lt;/div&gt;
+&lt;table border="1" class="colwidths-given docutils"&gt;
+&lt;caption&gt;Frozen Delights!&lt;/caption&gt;
+&lt;colgroup&gt;
+&lt;col width="27%"/&gt;
+&lt;col width="18%"/&gt;
+&lt;col width="55%"/&gt;
+&lt;/colgroup&gt;
+&lt;thead valign="bottom"&gt;
+&lt;tr&gt;&lt;th class="head"&gt;Treat&lt;/th&gt;
+&lt;th class="head"&gt;Quantity&lt;/th&gt;
+&lt;th class="head"&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td&gt;Albatross&lt;/td&gt;
+&lt;td&gt;2.99&lt;/td&gt;
+&lt;td&gt;On a stick!&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Crunchy Frog&lt;/td&gt;
+&lt;td&gt;1.49&lt;/td&gt;
+&lt;td&gt;If we took the bones out, it wouldn't be
+crunchy, now would it?&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Gannet Ripple&lt;/td&gt;
+&lt;td&gt;1.99&lt;/td&gt;
+&lt;td&gt;On a stick!&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;..&lt;/span&gt; &lt;span class="ow"&gt;list-table&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt; Frozen Delights!
+   &lt;span class="nc"&gt;:widths:&lt;/span&gt; 15 10 30
+   &lt;span class="nc"&gt;:header-rows:&lt;/span&gt; 1
+
+   &lt;span class="m"&gt;*&lt;/span&gt; - Treat
+     &lt;span class="m"&gt;-&lt;/span&gt; Quantity
+     &lt;span class="m"&gt;-&lt;/span&gt; Description
+   &lt;span class="m"&gt;*&lt;/span&gt; - Albatross
+     &lt;span class="m"&gt;-&lt;/span&gt; 2.99
+     &lt;span class="m"&gt;-&lt;/span&gt; On a stick!
+   &lt;span class="m"&gt;*&lt;/span&gt; - Crunchy Frog
+     &lt;span class="m"&gt;-&lt;/span&gt; 1.49
+     &lt;span class="m"&gt;-&lt;/span&gt; If we took the bones out, it wouldn't be
+       crunchy, now would it?
+   &lt;span class="m"&gt;*&lt;/span&gt; - Gannet Ripple
+     &lt;span class="m"&gt;-&lt;/span&gt; 1.99
+     &lt;span class="m"&gt;-&lt;/span&gt; On a stick!
+&lt;/pre&gt;&lt;/div&gt;
+&lt;table border="1" class="colwidths-given docutils"&gt;
+&lt;caption&gt;Frozen Delights!&lt;/caption&gt;
+&lt;colgroup&gt;
+&lt;col width="27%"/&gt;
+&lt;col width="18%"/&gt;
+&lt;col width="55%"/&gt;
+&lt;/colgroup&gt;
+&lt;thead valign="bottom"&gt;
+&lt;tr&gt;&lt;th class="head"&gt;Treat&lt;/th&gt;
+&lt;th class="head"&gt;Quantity&lt;/th&gt;
+&lt;th class="head"&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td&gt;Albatross&lt;/td&gt;
+&lt;td&gt;2.99&lt;/td&gt;
+&lt;td&gt;On a stick!&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Crunchy Frog&lt;/td&gt;
+&lt;td&gt;1.49&lt;/td&gt;
+&lt;td&gt;If we took the bones out, it wouldn't be
+crunchy, now would it?&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Gannet Ripple&lt;/td&gt;
+&lt;td&gt;1.99&lt;/td&gt;
+&lt;td&gt;On a stick!&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="directives-for-substitution-definitions"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id12"&gt;Directives for Substitution Definitions&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;..&lt;/span&gt; &lt;span class="nt"&gt;|reST|&lt;/span&gt; &lt;span class="ow"&gt;replace&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt; reStructuredText
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Yes, reStructuredText is a long word, so I can't blame anyone for wanting to
+abbreviate it.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Copyright |copy| 2003, |BogusMegaCorp (TM)| |---|
+all rights reserved.
+
+&lt;span class="p"&gt;..&lt;/span&gt; &lt;span class="nt"&gt;|copy|&lt;/span&gt; &lt;span class="ow"&gt;unicode&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt; 0xA9 .. copyright sign
+&lt;span class="p"&gt;..&lt;/span&gt; &lt;span class="nt"&gt;|BogusMegaCorp (TM)|&lt;/span&gt; &lt;span class="ow"&gt;unicode&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt; BogusMegaCorp U+2122
+&lt;span class="cp"&gt;   .. with trademark sign&lt;/span&gt;
+&lt;span class="p"&gt;..&lt;/span&gt; &lt;span class="nt"&gt;|---|&lt;/span&gt; &lt;span class="ow"&gt;unicode&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt; U+02014 .. em dash
+   &lt;span class="nc"&gt;:trim:&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Copyright © 2003, BogusMegaCorp™—all rights reserved.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;..&lt;/span&gt; &lt;span class="nt"&gt;|date|&lt;/span&gt; &lt;span class="ow"&gt;date&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt;
+&lt;span class="p"&gt;..&lt;/span&gt; &lt;span class="nt"&gt;|time|&lt;/span&gt; &lt;span class="ow"&gt;date&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt; %H:%M
+
+Today's date is |date|.
+
+This document was generated on |date| at |time|.
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Today's date is 2021-06-07.&lt;/p&gt;
+&lt;p&gt;This document was generated on 2021-06-07 at 23:34.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;..&lt;/span&gt; &lt;span class="ow"&gt;raw&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt; html
+
+   &amp;lt;hr width=50 size=10&amp;gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;hr size="10" width="50"/&gt;&lt;/div&gt;
+&lt;div class="section" id="footnotes"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id13"&gt;Footnotes&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Some text that requires a footnote &lt;span class="s"&gt;[#f1]_&lt;/span&gt; .
+
+&lt;span class="p"&gt;..&lt;/span&gt; &lt;span class="ow"&gt;rubric&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt; Texto para footnotes
+
+&lt;span class="p"&gt;..&lt;/span&gt; &lt;span class="nt"&gt;[#f1]&lt;/span&gt; Text of the first footnote.
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Some text that requires a footnote &lt;a class="footnote-reference" href="#f1" id="id1"&gt;[1]&lt;/a&gt; .&lt;/p&gt;
+&lt;p class="rubric"&gt;Texto para footnotes&lt;/p&gt;
+&lt;table class="docutils footnote" frame="void" id="f1" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"/&gt;&lt;col/&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id1"&gt;[1]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Text of the first footnote.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div class="section" id="citations"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id14"&gt;Citations&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Haciendo mención a algo puesto en las referencias &lt;a class="citation-reference" href="#cit2002" id="id2"&gt;[CIT2002]&lt;/a&gt;&lt;/p&gt;
+&lt;table class="docutils citation" frame="void" id="cit2002" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"/&gt;&lt;col/&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id2"&gt;[CIT2002]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;A citation
+(as often used in journals).&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div class="section" id="more-about-aliases"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id15"&gt;More about aliases&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;..&lt;/span&gt; &lt;span class="nt"&gt;|logo|&lt;/span&gt; &lt;span class="ow"&gt;image&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt; images/el_placer_de_pensar.jpg
+    &lt;span class="nc"&gt;:width:&lt;/span&gt; 20pt
+    &lt;span class="nc"&gt;:height:&lt;/span&gt; 20pt
+
+&lt;span class="p"&gt;..&lt;/span&gt; &lt;span class="nt"&gt;|longtext|&lt;/span&gt; &lt;span class="ow"&gt;replace&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt; this is a very very long text to include
+
++---------+---------+-----------+
+&lt;span class="o"&gt;|&lt;/span&gt; |logo|  | |logo|  | |longtext||
++---------+---------+-----------+
+&lt;/pre&gt;&lt;/div&gt;
+&lt;table border="1" class="docutils"&gt;
+&lt;colgroup&gt;
+&lt;col width="31%"/&gt;
+&lt;col width="31%"/&gt;
+&lt;col width="38%"/&gt;
+&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td&gt;&lt;img alt="logo" src="images/el_placer_de_pensar.jpg" style="width: 20pt; height: 20pt;"/&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img alt="logo" src="images/el_placer_de_pensar.jpg" style="width: 20pt; height: 20pt;"/&gt;&lt;/td&gt;
+&lt;td&gt;this is a very very long text to include&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;script type='text/javascript'&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;&lt;script type='text/javascript'&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="Blog"></category><category term="Blog"></category><category term="Pelican"></category><category term="reStructuredText"></category></entry></feed>

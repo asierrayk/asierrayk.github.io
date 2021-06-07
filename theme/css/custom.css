@@ -1,0 +1,4 @@
+/*remove double title in TOC*/
+div#contents p.topic-title.first {
+  display: none;
+}
