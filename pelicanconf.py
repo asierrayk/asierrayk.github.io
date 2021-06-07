@@ -150,7 +150,7 @@ I18N_SUBSITES = {
         'SITENAME': "The joy of thinking",
         'SHARE_POST_INTRO': 'Share on:',
         'COMMENTS_INTRO': 'Add a comment:',
-        'SITESUBTITLE': 'The joy of thinking',
+        'SITESUBTITLE': LANDING_PAGE_TITLE,
         'LANDING_PAGE_TITLE': 'Asier Cardoso Sánchez',
         'RELATED_POSTS_LABEL': 'Related content',
         'SOCIAL_PROFILE_LABEL': 'Contact',
