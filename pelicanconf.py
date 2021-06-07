@@ -101,7 +101,7 @@ SITE_LICENSE = """Content licensed under <a rel="license nofollow noopener noref
 SITE_DESCRIPTION = 'El placer de pensar, blog donde hablo sobre matemáticas, curiosidades, programación, acertijos y rompecabezas. Escrito por Asier Cardoso Sánchez'
 
 # It is displayed along with the SITENAME in the footer of every page
-SITESUBTITLE = f'<a href="{SITEURL}/bob-ross/" target="_blank">{LANDING_PAGE_TITLE}</a>'
+SITESUBTITLE = LANDING_PAGE_TITLE
 
 HOSTED_ON = {
     "name": "GitHub Pages",
@@ -150,7 +150,7 @@ I18N_SUBSITES = {
         'SITENAME': "The joy of thinking",
         'SHARE_POST_INTRO': 'Share on:',
         'COMMENTS_INTRO': 'Add a comment:',
-        'SITESUBTITLE': f'<a href="{SITEURL}/bob-ross/" target="_blank">The joy of thinking</a>',
+        'SITESUBTITLE': 'The joy of thinking',
         'LANDING_PAGE_TITLE': 'Asier Cardoso Sánchez',
         'RELATED_POSTS_LABEL': 'Related content',
         'SOCIAL_PROFILE_LABEL': 'Contact',
