@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>El Placer de Pensar - Programación</title><link href="https://asierrayk.github.io/" rel="alternate"></link><link href="https://asierrayk.github.io/feeds/programacion.atom.xml" rel="self"></link><id>https://asierrayk.github.io/</id><updated>2020-03-15T19:21:00+01:00</updated><subtitle>Asier Cardoso Sánchez</subtitle><entry><title>Mi primer plugin en VIM</title><link href="https://asierrayk.github.io/my-first-vim-plugin" rel="alternate"></link><published>2020-03-15T19:21:00+01:00</published><updated>2020-03-15T19:21:00+01:00</updated><author><name></name></author><id>tag:asierrayk.github.io,2020-03-15:/my-first-vim-plugin</id><summary type="html">&lt;p&gt;Tras usar Vim durante un largo periodo de tiempo, he decidido aventurarme a hacer mi primer plugin.&lt;/p&gt;
-&lt;p&gt;Se trata de un plugin muy sencillo que simplemente te permite iterar una lista de posibles diccionarios para la corrección ortográfica.&lt;/p&gt;
-&lt;p&gt;La idea es que sea posible activar el corrector ortográfico (&lt;code&gt;:set spell …&lt;/code&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;Tras usar Vim durante un largo periodo de tiempo, he decidido aventurarme a hacer mi primer plugin.&lt;/p&gt;
-&lt;p&gt;Se trata de un plugin muy sencillo que simplemente te permite iterar una lista de posibles diccionarios para la corrección ortográfica.&lt;/p&gt;
-&lt;p&gt;La idea es que sea posible activar el corrector ortográfico (&lt;code&gt;:set spell&lt;/code&gt;) en caso de que este desactivado e ir iterando por una lista configurable de idiomas.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>El Placer de Pensar - Programación</title><link href="https://asierrayk.github.io/" rel="alternate"></link><link href="https://asierrayk.github.io/feeds/programacion.atom.xml" rel="self"></link><id>https://asierrayk.github.io/</id><updated>2020-03-15T19:21:00+01:00</updated><subtitle>Asier Cardoso Sánchez</subtitle><entry><title>Mi primer plugin en VIM</title><link href="https://asierrayk.github.io/my-first-vim-plugin" rel="alternate"></link><published>2020-03-15T19:21:00+01:00</published><updated>2020-03-15T19:21:00+01:00</updated><author><name></name></author><id>tag:asierrayk.github.io,2020-03-15:/my-first-vim-plugin</id><summary type="html">&lt;p&gt;Tras usar Vim durante un largo periodo de tiempo, he decidido aventurarme a hacer mi primer&amp;nbsp;plugin.&lt;/p&gt;
+&lt;p&gt;Se trata de un plugin muy sencillo que simplemente te permite iterar una lista de posibles diccionarios para la corrección&amp;nbsp;ortográfica.&lt;/p&gt;
+&lt;p&gt;La idea es que sea posible activar el corrector ortográfico (&lt;code&gt;:set spell …&lt;/code&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;Tras usar Vim durante un largo periodo de tiempo, he decidido aventurarme a hacer mi primer&amp;nbsp;plugin.&lt;/p&gt;
+&lt;p&gt;Se trata de un plugin muy sencillo que simplemente te permite iterar una lista de posibles diccionarios para la corrección&amp;nbsp;ortográfica.&lt;/p&gt;
+&lt;p&gt;La idea es que sea posible activar el corrector ortográfico (&lt;code&gt;:set spell&lt;/code&gt;) en caso de que este desactivado e ir iterando por una lista configurable de&amp;nbsp;idiomas.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:SpellLangList &lt;span class="p"&gt;=&lt;/span&gt; get&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;g&lt;/span&gt;:&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;SpellLangList&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; []&lt;span class="p"&gt;)&lt;/span&gt;
 
 &lt;span class="c"&gt;&amp;quot; Cycle through spelllang list and toggle spell&lt;/span&gt;
@@ -22,28 +22,28 @@
 &lt;span class="k"&gt;endfunction&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Se podría configurar por ejemplo con las siguientes opciones:&lt;/p&gt;
+&lt;p&gt;Se podría configurar por ejemplo con las siguientes&amp;nbsp;opciones:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:SpellLangList&lt;span class="p"&gt;=&lt;/span&gt; [&lt;span class="s2"&gt;&amp;quot;en_us&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;es&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;en_us,es&amp;quot;&lt;/span&gt;]
 &lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;F6&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; :&lt;span class="k"&gt;call&lt;/span&gt; ToggleCycleSpellLang&lt;span class="p"&gt;()&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;De esta manera una primera pulsación de la tecla &lt;code&gt;F6&lt;/code&gt; activaría la corrección ortográfica para el buffer activo, y sucesivas pulsaciones irían cambiando el idioma activo (&lt;code&gt;:set spelllang=es&lt;/code&gt;) iterando la lista &lt;code&gt;g:SpellLangList&lt;/code&gt; hasta desactivar de nuevo la corrección ortográfica (&lt;code&gt;:set nospell&lt;/code&gt;).&lt;/p&gt;
-&lt;p&gt;He subido el plugin a un repositorio en &lt;a class="ampl" href="https://github.com/asierrayk/vim-toggle" target="_blank"&gt;github&lt;/a&gt; y añadido alguna funcionalidad, relacionada con las ventanas &lt;code&gt;quickfix&lt;/code&gt; y &lt;code&gt;location&lt;/code&gt;.&lt;/p&gt;</content><category term="Programación"></category><category term="programación"></category><category term="Vim"></category></entry><entry><title>Objetos mutables en python</title><link href="https://asierrayk.github.io/python-mutable-objects" rel="alternate"></link><published>2020-02-01T16:31:00+01:00</published><updated>2020-02-01T16:31:00+01:00</updated><author><name></name></author><id>tag:asierrayk.github.io,2020-02-01:/python-mutable-objects</id><summary type="html">
-&lt;p&gt;Supongamos que tenemos definida en python la siguiente función:&lt;/p&gt;
+&lt;p&gt;He subido el plugin a un repositorio en &lt;a class="ampl" href="https://github.com/asierrayk/vim-toggle" target="_blank"&gt;github&lt;/a&gt; y añadido alguna funcionalidad, relacionada con las ventanas &lt;code&gt;quickfix&lt;/code&gt; y &lt;code&gt;location&lt;/code&gt;.&lt;/p&gt;</content><category term="Programación"></category><category term="programación"></category><category term="Vim"></category></entry><entry><title>Objetos mutables en python</title><link href="https://asierrayk.github.io/python-mutable-objects" rel="alternate"></link><published>2020-02-01T16:31:00+01:00</published><updated>2020-02-01T16:31:00+01:00</updated><author><name></name></author><id>tag:asierrayk.github.io,2020-02-01:/python-mutable-objects</id><summary type="html">
+&lt;p&gt;Supongamos que tenemos definida en python la siguiente función:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[]):&lt;/span&gt;
     &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
         &lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Si tuviésemos que decir cual es el resultado de hacer las siguientes llamadas sucesivas a la función, muchos pensareis que el resultado que se obtendría es:&lt;/p&gt;
+&lt;p&gt;Si tuviésemos que decir cual es el resultado de hacer las siguientes llamadas sucesivas a la función, muchos pensareis que el resultado que se obtendría es:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;f …&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">
-&lt;p&gt;Supongamos que tenemos definida en python la siguiente función:&lt;/p&gt;
+&lt;p&gt;Supongamos que tenemos definida en python la siguiente función:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[]):&lt;/span&gt;
     &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
         &lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Si tuviésemos que decir cual es el resultado de hacer las siguientes llamadas sucesivas a la función, muchos pensareis que el resultado que se obtendría es:&lt;/p&gt;
+&lt;p&gt;Si tuviésemos que decir cual es el resultado de hacer las siguientes llamadas sucesivas a la función, muchos pensareis que el resultado que se obtendría es:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
@@ -51,7 +51,7 @@
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# RESULTADO ERRONEO &lt;/span&gt;
 &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Sin embargo, el resultado que obtenemos es el siguiente:&lt;/p&gt;
+&lt;p&gt;Sin embargo, el resultado que obtenemos es el siguiente:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
@@ -59,9 +59,9 @@
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# RESULTADO CORRECTO&lt;/span&gt;
 &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Esto es debido a que &lt;strong&gt;las listas en python son objetos mutables&lt;/strong&gt; y por tanto cuando son definidos como parámetros por defecto en una función, la lista se comporta como una variable global a todas las ejecuciones de la función. &lt;/p&gt;
+&lt;p&gt;Esto es debido a que &lt;strong&gt;las listas en python son objetos mutables&lt;/strong&gt; y por tanto cuando son definidos como parámetros por defecto en una función, la lista se comporta como una variable global a todas las ejecuciones de la función. &lt;/p&gt;
 &lt;p&gt;Cuando llamamos a &lt;code&gt;f(2)&lt;/code&gt; por primera vez se utiliza &lt;code&gt;[]&lt;/code&gt; que es el valor por defecto de la lista. Pero cuando se ejecuta &lt;code&gt;f(3)&lt;/code&gt; se utiliza la misma variable global que cuando se llamó a &lt;code&gt;f(2)&lt;/code&gt; cuyo ultimo valor es &lt;code&gt;[0, 1]&lt;/code&gt;.&lt;/p&gt;
-&lt;h2 id="tabla-de-objetos-en-python"&gt;Tabla de objetos en python&lt;/h2&gt;
+&lt;h2 id="tabla-de-objetos-en-python"&gt;Tabla de objetos en python&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -109,7 +109,7 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;Los objetos mutables en python son pasados por referencia. A diferencia del resto que es como si fuesen pasados por valor (ya que son inmutables).
-Un ejemplo de ello es el siguiente código:&lt;/p&gt;
+Un ejemplo de ello es el siguiente código:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
     &lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;23&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 

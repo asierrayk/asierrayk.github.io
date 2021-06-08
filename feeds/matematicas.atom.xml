@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>El Placer de Pensar - Matemáticas</title><link href="https://asierrayk.github.io/" rel="alternate"></link><link href="https://asierrayk.github.io/feeds/matematicas.atom.xml" rel="self"></link><id>https://asierrayk.github.io/</id><updated>2021-05-30T20:22:00+02:00</updated><subtitle>Asier Cardoso Sánchez</subtitle><entry><title>Calendario Mental</title><link href="https://asierrayk.github.io/day-of-week-tutorial" rel="alternate"></link><published>2021-05-30T20:22:00+02:00</published><updated>2021-05-30T20:22:00+02:00</updated><author><name></name></author><id>tag:asierrayk.github.io,2021-05-30:/day-of-week-tutorial</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>El Placer de Pensar - Matemáticas</title><link href="https://asierrayk.github.io/" rel="alternate"></link><link href="https://asierrayk.github.io/feeds/matematicas.atom.xml" rel="self"></link><id>https://asierrayk.github.io/</id><updated>2021-05-30T20:22:00+02:00</updated><subtitle>Asier Cardoso Sánchez</subtitle><entry><title>Calendario Mental</title><link href="https://asierrayk.github.io/day-of-week-tutorial" rel="alternate"></link><published>2021-05-30T20:22:00+02:00</published><updated>2021-05-30T20:22:00+02:00</updated><author><name></name></author><id>tag:asierrayk.github.io,2021-05-30:/day-of-week-tutorial</id><summary type="html">
 &lt;p&gt;Existe un método para poder calcular en que día de la semana cayó cualquier fecha.
-El método es muy sencillo y hay que seguir los siguientes pasos:&lt;/p&gt;
+El método es muy sencillo y hay que seguir los siguientes pasos:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Calcular las claves para cada parte de la fecha:&lt;ul&gt;
 &lt;li&gt;Calcular la clave del &lt;strong&gt;día del mes&lt;/strong&gt;.&lt;/li&gt;
 &lt;li&gt;Calcular la clave del &lt;strong&gt;mes&lt;/strong&gt;.&lt;/li&gt;
 &lt;li&gt;Calcular la …&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ol&gt;</summary><content type="html">
 &lt;p&gt;Existe un método para poder calcular en que día de la semana cayó cualquier fecha.
-El método es muy sencillo y hay que seguir los siguientes pasos:&lt;/p&gt;
+El método es muy sencillo y hay que seguir los siguientes pasos:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Calcular las claves para cada parte de la fecha:&lt;ul&gt;
 &lt;li&gt;Calcular la clave del &lt;strong&gt;día del mes&lt;/strong&gt;.&lt;/li&gt;
@@ -17,18 +17,18 @@ El método es muy sencillo y hay que seguir los siguientes pasos:&lt;/p&gt;
 &lt;li&gt;Calcular la clave para el &lt;strong&gt;año&lt;/strong&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;Sumar todas las claves.&lt;/li&gt;
-&lt;li&gt;Restar 1 si el año es bisiesto y el mes es enero o febrero.&lt;/li&gt;
-&lt;li&gt;Aplicar modulo 7 para obtener el día de la semana.&lt;/li&gt;
+&lt;li&gt;Sumar todas las claves.&lt;/li&gt;
+&lt;li&gt;Restar 1 si el año es bisiesto y el mes es enero o febrero.&lt;/li&gt;
+&lt;li&gt;Aplicar modulo 7 para obtener el día de la semana.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h1 id="1-calculo-de-claves"&gt;1. Cálculo de claves&lt;/h1&gt;
+&lt;h1 id="1-calculo-de-claves"&gt;1. Cálculo de claves&lt;/h1&gt;
 &lt;p&gt;Vamos a ver como poder calcular cada una de las claves, para cada una de las partes de la fecha.
-Cada una de las claves que obtengamos la podemos simplificar aplicando modulo 7 antes de llegar al paso 2.&lt;/p&gt;
-&lt;h3 id="clave-del-dia-del-mes"&gt;Clave del día del mes&lt;/h3&gt;
+Cada una de las claves que obtengamos la podemos simplificar aplicando modulo 7 antes de llegar al paso 2.&lt;/p&gt;
+&lt;h3 id="clave-del-dia-del-mes"&gt;Clave del día del mes&lt;/h3&gt;
 &lt;p&gt;Para calcular la clave del día del mes, simplemente debemos coger el número del mes como clave.
 Por ejemplo para la fecha &lt;strong&gt;16 julio 1969&lt;/strong&gt; la clave para el día del mes es el propio número del día del mes &lt;strong&gt;16&lt;/strong&gt; que simplificada es &lt;strong&gt;2&lt;/strong&gt;.&lt;/p&gt;
-&lt;h3 id="clave-del-mes"&gt;Clave del mes&lt;/h3&gt;
-&lt;p&gt;Para calcular la clave del mes debemos aplicar la correspondencia de la siguiente tabla:&lt;/p&gt;
+&lt;h3 id="clave-del-mes"&gt;Clave del mes&lt;/h3&gt;
+&lt;p&gt;Para calcular la clave del mes debemos aplicar la correspondencia de la siguiente tabla:&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -89,7 +89,7 @@ Por ejemplo para la fecha &lt;strong&gt;16 julio 1969&lt;/strong&gt; la clave pa
 &lt;/table&gt;
 &lt;p&gt;Por ejemplo para la fecha 16 de julio de 1969 la clave del mes es &lt;strong&gt;6&lt;/strong&gt;.&lt;/p&gt;
 &lt;h3 id="clave-del-siglo"&gt;Clave del &lt;em&gt;siglo&lt;/em&gt;&lt;/h3&gt;
-&lt;p&gt;Para esta parte de la fecha, nos fijamos en el año ignorando las dos últimas cifras. Para calcular la clave del siglo deberemos tener en cuenta la siguiente correspondencia:&lt;/p&gt;
+&lt;p&gt;Para esta parte de la fecha, nos fijamos en el año ignorando las dos últimas cifras. Para calcular la clave del siglo deberemos tener en cuenta la siguiente correspondencia:&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -124,22 +124,22 @@ Por ejemplo para la fecha &lt;strong&gt;16 julio 1969&lt;/strong&gt; la clave pa
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h3 id="clave-del-ano"&gt;Clave del año&lt;/h3&gt;
-&lt;p&gt;El cálculo de la clave del año se compone de los siguientes pasos:&lt;/p&gt;
+&lt;h3 id="clave-del-ano"&gt;Clave del año&lt;/h3&gt;
+&lt;p&gt;El cálculo de la clave del año se compone de los siguientes pasos:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;Nos quedamos con las &lt;strong&gt;dos últimas cifras del año&lt;/strong&gt;. Por ejemplo con 1969 nos quedamos con 69.&lt;/li&gt;
+&lt;li&gt;Nos quedamos con las &lt;strong&gt;dos últimas cifras del año&lt;/strong&gt;. Por ejemplo con 1969 nos quedamos con 69.&lt;/li&gt;
 &lt;li&gt;Calculamos el &lt;strong&gt;cociente&lt;/strong&gt; de la división del primer paso &lt;strong&gt;entre 4&lt;/strong&gt;.
    Por ejemplo &lt;span class="math"&gt;\(69 = 4 \cdot 17+1\)&lt;/span&gt;, es decir, 69 entre 4 da como cociente 17.
    Simplificando 17 obtenemos &lt;span class="math"&gt;\(17 \equiv 3\)&lt;/span&gt;, por tanto la clave es &lt;span class="math"&gt;\(3\)&lt;/span&gt;.
-Este paso está relacionado con los años bisiestos.&lt;/li&gt;
+Este paso está relacionado con los años bisiestos.&lt;/li&gt;
 &lt;li&gt;Calculamos el &lt;strong&gt;resto&lt;/strong&gt; de la división del número del primer paso &lt;strong&gt;entre 7&lt;/strong&gt;. 
-   Por ejemplo &lt;span class="math"&gt;\(69 = 9 \cdot 7 + 6\)&lt;/span&gt;&lt;/li&gt;
+   Por ejemplo &lt;span class="math"&gt;\(69 = 9 \cdot 7 + 6\)&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;Por último &lt;strong&gt;sumamos los números del segundo y tercer paso&lt;/strong&gt; y obtenemos la clave para el año.
-   &lt;span class="math"&gt;\(3 + 6 = 9 \equiv 2\)&lt;/span&gt;&lt;/li&gt;
+   &lt;span class="math"&gt;\(3 + 6 = 9 \equiv 2\)&lt;/span&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h1 id="2-comprobar-el-resultado"&gt;2. Comprobar el resultado&lt;/h1&gt;
+&lt;h1 id="2-comprobar-el-resultado"&gt;2. Comprobar el resultado&lt;/h1&gt;
 &lt;p&gt;Una vez tengamos todas las claves basta con sumarlas, simplificar el resultado para que nos quede un número entre 0 y 6.
-Comprobar el resultado con la siguiente tabla:&lt;/p&gt;
+Comprobar el resultado con la siguiente tabla:&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -179,17 +179,17 @@ Comprobar el resultado con la siguiente tabla:&lt;/p&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;Para la fecha &lt;strong&gt;16 de julio de 1969&lt;/strong&gt;, tendríamos:
-&lt;span class="math"&gt;\(2 + 6 + 0 + 3 + 6 = 17 \equiv 3\)&lt;/span&gt;&lt;/p&gt;
+&lt;span class="math"&gt;\(2 + 6 + 0 + 3 + 6 = 17 \equiv 3\)&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Por tanto ese día fue un &lt;strong&gt;miércoles&lt;/strong&gt;.&lt;/p&gt;
-&lt;h1 id="3-consideracion-de-anos-bisiestos"&gt;3. Consideración de años bisiestos&lt;/h1&gt;
-&lt;p&gt;Si la fecha para la cual estamos calculando el día de la semana. Se trata de un año bisiesto y el mes es enero o febrero, al resultado final deberemos restar una unidad.&lt;/p&gt;
-&lt;h3 id="definicion-ano-bisiesto"&gt;Definición año bisiesto&lt;/h3&gt;
-&lt;p&gt;En el calendario que usamos actualmente que es el calendario Gregoriano, vigente desde 1582. Para nuestro calendario la definición de un año bisiesto es la siguiente: &lt;/p&gt;
+&lt;h1 id="3-consideracion-de-anos-bisiestos"&gt;3. Consideración de años bisiestos&lt;/h1&gt;
+&lt;p&gt;Si la fecha para la cual estamos calculando el día de la semana. Se trata de un año bisiesto y el mes es enero o febrero, al resultado final deberemos restar una unidad.&lt;/p&gt;
+&lt;h3 id="definicion-ano-bisiesto"&gt;Definición año bisiesto&lt;/h3&gt;
+&lt;p&gt;En el calendario que usamos actualmente que es el calendario Gregoriano, vigente desde 1582. Para nuestro calendario la definición de un año bisiesto es la siguiente: &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Un año es bisiesto si es divisible por 4, excepto si acaba en 00,
 que ha de ser divisible entre 400.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Es decir 1600 y 2000 son años bisiestos, sin embargo 1700, 1800 y 1900 no son años bisiestos.&lt;/p&gt;
-&lt;h3 id="ejemplo-ano-bisiesto"&gt;Ejemplo año bisiesto&lt;/h3&gt;
+&lt;p&gt;Es decir 1600 y 2000 son años bisiestos, sin embargo 1700, 1800 y 1900 no son años bisiestos.&lt;/p&gt;
+&lt;h3 id="ejemplo-ano-bisiesto"&gt;Ejemplo año bisiesto&lt;/h3&gt;
 &lt;p&gt;Calculemos el día de la semana para la fecha &lt;strong&gt;1 de enero de 2020&lt;/strong&gt;.
 &lt;span class="math"&gt;\(1 + 0 + 6 + 5 + 6 = 18 \equiv 4\)&lt;/span&gt;
 Pero debemos restar uno, ya que el año es bisiesto y el mes enero, por tanto el resultado es &lt;span class="math"&gt;\(3\)&lt;/span&gt;.
