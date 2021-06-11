@@ -4,6 +4,7 @@ Chuleta reStructuredText
 :date: 2021-06-07 20:29
 :tags: Blog, Pelican, reStructuredText
 :summary: Documento resumen con todas las directrices útiles
+:status: draft
 
 .. contents:: Contents duplicated :(
 
@@ -182,6 +183,7 @@ Epigraph
 --------
 
 .. code-block:: RST
+
     .. epigraph::
 
         I have discovered a truly remarkable proof of this theorem which this margin is too small to contain.
@@ -193,6 +195,11 @@ Epigraph
     I have discovered a truly remarkable proof of this theorem which this margin is too small to contain.
 
     -- Pierre de Fermat
+
+.. code-block:: RST
+
+    .. highlights::
+        Esto debería estar resaltado
 
 .. highlights::
     Esto debería estar resaltado
@@ -358,6 +365,12 @@ Some text that requires a footnote [#f1]_ .
 
 Citations
 =========
+.. code-block:: RST
+    Haciendo mención a algo puesto en las referencias [CIT2002]_
+
+    .. [CIT2002] A citation
+              (as often used in journals).
+
 Haciendo mención a algo puesto en las referencias [CIT2002]_
 
 .. [CIT2002] A citation
