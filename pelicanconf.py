@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-AUTHORS = ['Asier Cardoso Sánchez']
+AUTHOR = 'Asier Cardoso Sánchez'
 SITENAME = 'El Placer de Pensar'
 SITEURL = ''
 
@@ -120,6 +120,16 @@ PROJECTS = [{
     'url': 'https://asierrayk.github.io/bob-ross/',
     'description': 'Pequeño tributo a Bob Ross y su programa de televisión que es una inspiración para este blog'},
     ]
+
+AUTHORS = {
+    "Asier Cardoso Sánchez": {
+        "url": SITEURL,
+        "blurb": "Matemático e Ingeniero Informático",
+        "avatar": "https://avatars.githubusercontent.com/u/12305218?v=4",
+    },
+}
+
+WITH_FUTURE_DATES = False
 
 
 # MARKDOWN
