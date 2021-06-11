@@ -93,7 +93,7 @@ SUBSCRIBE_BUTTON_TITLE  = 'Suscribirse'
 
 # Thumbnail image to show when homepage is shared on social media. It also
 # serves as the default image for posts whose featured_image is not set.
-FEATURED_IMAGE = ''
+FEATURED_IMAGE = 'images/el_placer_de_pensar.jpg'
 # License of your site that appears in the footer of every page
 SITE_LICENSE = """Content licensed under <a rel="license nofollow noopener noreferrer"
     href="http://creativecommons.org/licenses/by/4.0/" target="_blank">
@@ -130,6 +130,9 @@ AUTHORS = {
 }
 
 WITH_FUTURE_DATES = False
+DEFAULT_METADATA = {
+    'status': 'draft',
+}
 
 
 # MARKDOWN
