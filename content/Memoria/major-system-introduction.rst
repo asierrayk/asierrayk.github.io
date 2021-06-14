@@ -17,7 +17,7 @@ Si intentamos memorizar una ristra de números sin ningún método, nos resultar
 Sin embargo haciendo que cada **dígito** se corresponda con una **consonante** y
 ayudándonos de vocales podremos formar una palabra para cada par de dígitos que contenga las correspondientes consonantes en el orden correcto.
 
-De esta forma habremos codificado los números en palabras, esas palabras las podremos convertir en **imágenes**, que podremos visualizar mentalmente, e incluso formar una historia con la sucesión de estas imágenes y por tanto recordar con mayor facilidad.
+De esta forma habremos codificado los números en palabras. Esas palabras las podremos convertir en **imágenes** que son mucho más fáciles de visualizar mentalmente. Con la sucesión de estas imágenes se puede formar una historia y por tanto recordar con mayor facilidad.
 
 
 Correspondencia dígito consonante
