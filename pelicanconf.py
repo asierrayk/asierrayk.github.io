@@ -135,6 +135,7 @@ AUTHORS = {
 WITH_FUTURE_DATES = False
 DEFAULT_METADATA = {
     'status': 'draft',
+    'lang': 'es',
 }
 
 
@@ -152,6 +153,16 @@ MARKDOWN = {
 
 # TRANSLATIONS
 LANG = 'es'
+
+LOCALE = (
+    'es_ES.utf8',
+    'en_US.utf8'
+)
+
+DATE_FORMATS = {
+    'es': ('es_ES.utf8','%a %d %b %Y'),
+    'en': ('en_US.utf8','%a %d %b %Y'),
+}
 
 # Waiting for this issue to be solved https://github.com/Pelican-Elegant/elegant/issues/139
 MENUITEMS = (
