@@ -4,6 +4,7 @@ Sistema Mayor
 :date: 2021-06-14
 :tags: Memoria, Mnemotecnia
 :summary: Un sistema para memorizar números
+:status: published
 
 .. contents:: .
 

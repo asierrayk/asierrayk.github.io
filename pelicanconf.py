@@ -78,6 +78,9 @@ SLUGIFY_SOURCE = 'title'
 SLUGIFY_PRESERVE_CASE = False
 
 ARTICLE_URL = "{slug}"
+DRAFT_URL = 'drafts/{slug}.html'
+DRAFT_SAVE_AS = 'drafts/{slug}.html'
+DRAFT_PAGE_URL = 'drafts/{slug}.html'
 PAGE_URL = "{slug}"
 PAGE_SAVE_AS = "{slug}.html"
 SEARCH_URL = "search"
