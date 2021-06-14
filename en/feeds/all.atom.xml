@@ -7,7 +7,7 @@
 Si intentamos memorizar una ristra de números sin ningún método, nos resultará muy complicado y tedioso.&lt;/p&gt;
 &lt;p&gt;Sin embargo haciendo que cada &lt;strong&gt;dígito&lt;/strong&gt; se corresponda con una &lt;strong&gt;consonante&lt;/strong&gt; y
 ayudándonos de vocales podremos formar una palabra para cada par de dígitos que contenga las correspondientes consonantes en el orden correcto.&lt;/p&gt;
-&lt;p&gt;De esta forma habremos codificado los números en palabras, esas palabras las podremos convertir en &lt;strong&gt;imágenes&lt;/strong&gt;, que podremos visualizar mentalmente, e incluso formar una historia con la sucesión de estas imágenes y por tanto recordar con mayor facilidad.&lt;/p&gt;
+&lt;p&gt;De esta forma habremos codificado los números en palabras. Esas palabras las podremos convertir en &lt;strong&gt;imágenes&lt;/strong&gt; que son mucho más fáciles de visualizar mentalmente. Con la sucesión de estas imágenes se puede formar una historia y por tanto recordar con mayor facilidad.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="correspondencia-digito-consonante"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id9"&gt;Correspondencia dígito consonante&lt;/a&gt;&lt;/h2&gt;
