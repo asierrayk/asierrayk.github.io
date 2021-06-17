@@ -1,0 +1,84 @@
+Title: El problema que Gauss resolvió al instante
+Date: 2021-07-14
+Tags: problema, gauss
+Summary: La suma de los primeros números naturales
+Status: published
+
+[TOC]
+
+Muchas veces se nos plantean problemas matemáticos abstractos y es difícil encontrar un problema de la vida real que se corresponda con ese problema abstracto.
+
+Dado un problema de matemáticas abstracto, podemos realizar un ejercicio muy curioso que es el de buscar un problema concreto que implique la resolución de ese problema abstracto.
+
+El problema abstracto
+=====================
+
+Estaba el profesor de Gauss cansado por el revuelo que formaban sus alumnos cuando decidió platearles un problema que les tuviese entretenidos por un largo periodo de tiempo. El problema era el siguiente:
+
+
+>Sumar todos los números naturales desde el 1 hasta el 100
+
+Sin embargo, Gauss contestó casi al instante con la respuesta correcta: $5050$
+
+Búsqueda del problema concreto
+==============================
+
+Un enunciado que implica resolver el problema abstracto planteado por el profesor de Gauss podría ser el siguiente:
+
+
+>Desiderio es una persona muy despistada, es por ello que todos los años ha de comprar tantas velas como años va a cumplir, ya que no reutiliza ninguna del año anterior. ¿Cuántas velas habrá comprado el día que celebre su centésimo cumpleaños?
+
+El hecho de poder ver un problema abstracto como un problema concreto, nos acerca el problema y da más sentido a su resolución, pues la solución adquiere un significado.
+
+!!! note
+    Con esto, no quiero decir que un problema abstracto del cual no se conozca un posible problema concreto deba ser ignorado. Es más, existen muchos problemas abstractos en la historia de las matemáticas que se han estudiado sin conocerse ninguna aplicación y han resultado ser de suma importancia para la humanidad. Un ejemplo es el **álgebra de Boole**.
+
+Resolución del problema general
+===============================
+
+Vamos a plantear el caso general del problema del profesor de Gauss y resolverlo por distintos métodos:
+
+>Sumar los $n$ primeros números naturales.
+
+Método 1: Agrupando términos
+----------------------------
+
+Para resolver el problema, podemos agrupar, al igual que hizo Gauss, los términos último y primero, penúltimo y segundo, tercero y antepenúltimo, ...
+
+$$
+\begin{align*}
+1 + 2 + 3 + \dots + (n-2) + (n-1) + n & =  \\
+\underbrace{(n + 1) + ((n-1) + 2) + ((n-2) + 3) + \dots}_{\dfrac{n}{2}} & = \\
+\underbrace{(n + 1) + (n+1) + (n+1) + \dots}_{\dfrac{n}{2}} & = \\
+\end{align*}
+$$
+
+Como todos los sumandos agrupados tienen valor $n+1$ y hay un total de $\dfrac{n}{2}$, sabemos que la suma da como resultado:
+
+$$
+\dfrac{n \cdot (n+1)}{2}
+$$
+
+Método 2: Manipulando Series
+----------------------------
+
+La suma que queremos calcular se puede expresar como la siguiente serie:
+
+$$
+\sum_{k=0}^{n}k = 1 + 2 + 3 + \dots + (n-2) + (n-1) + n
+$$
+
+!!! danger
+WORK IN PROGRESS
+
+Método 3: Solución geométrica
+-----------------------------
+
+!!! danger
+WORK IN PROGRESS
+
+Solución concreta
+=================
+
+Conociendo la solución general podemos fácilmente encontrar una solución concreta simplemente dando valores.
+La solución general para la suma de los $n$ primeros terminos es $S(n) = \dfrac{n \cdot (n+1)}{2}$, por tanto para $100$ obtendríamos $S(100) = \dfrac{100 \cdot (100 + 1)}{2} = \dfrac{10100}{2} = 5050$
