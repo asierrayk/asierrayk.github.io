@@ -176,6 +176,6 @@ Enlace archivos estaticos
 
 Adjuntar
 ========
-![Icon]({attach}icons/icon.png)
-![Photo]({attach}photo.jpg)
-[Downloadable File]({attach}/downloads/archive.zip)
+![Icon]({attach}icons/md.ico)
+![Photo]({attach}images/md.png)
+[Downloadable File]({attach}images/md.png)
