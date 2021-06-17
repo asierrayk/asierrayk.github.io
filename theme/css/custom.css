@@ -2,3 +2,6 @@
 div#contents p.topic-title.first {
   display: none;
 }
+
+code.red {color:red;}
+code.green {color: green;}
