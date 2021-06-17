@@ -165,17 +165,26 @@ Lista de tareas
 - [ ] Update the website
 - [ ] Contact the media
 
-Link interno
-============
-[a link relative to the current file]({filename}category/article1.rst)
-[a link relative to the content root]({filename}/category/article1.rst)
+[comment]: <> (Link interno)
 
-Enlace archivos estaticos
-=========================
-![Alt Text]({static}/images/el_placer_de_pensar.jpg)
+[comment]: <> (============)
 
-Adjuntar
-========
-![Icon]({attach}icons/md.ico)
-![Photo]({attach}images/md.png)
-[Downloadable File]({attach}images/md.png)
+[comment]: <> ([a link relative to the current file]&#40;{filename}reestructured-text-cheatsheet.rst&#41;)
+
+[comment]: <> ([a link relative to the content root]&#40;{filename}/Memoria/major-system-introduction.rst&#41;)
+
+[comment]: <> (Enlace archivos estaticos)
+
+[comment]: <> (=========================)
+
+[comment]: <> (![Alt Text]&#40;{static}/images/el_placer_de_pensar.jpg&#41;)
+
+[comment]: <> (Adjuntar)
+
+[comment]: <> (========)
+
+[comment]: <> (![Icon]&#40;{attach}icons/md.ico&#41;)
+
+[comment]: <> (![Photo]&#40;{attach}images/md.png&#41;)
+
+[comment]: <> ([Downloadable File]&#40;{attach}images/md.png&#41;)
