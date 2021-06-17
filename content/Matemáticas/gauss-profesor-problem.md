@@ -69,13 +69,13 @@ $$
 $$
 
 !!! danger
-WORK IN PROGRESS
+    WORK IN PROGRESS
 
 Método 3: Solución geométrica
 -----------------------------
 
 !!! danger
-WORK IN PROGRESS
+    WORK IN PROGRESS
 
 Solución concreta
 =================
