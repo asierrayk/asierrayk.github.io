@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "asierrayk.github.io"
+version = "0.1.0"
+description = ""
+authors = ["Asier Cardoso Sánchez <asier314@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+ghp-import = "^2.0.1"
+beautifulsoup4 = "^4.9.3"
+webassets = "^2.0"
+cssmin = "^0.2.0"
+pelican-render-math = "^1.0.3"
+typogrify = "^2.0.7"
+pelican = {version = "^4.6.0", extras = ["Markdown"]}
+Markdown = "^3.3.4"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
