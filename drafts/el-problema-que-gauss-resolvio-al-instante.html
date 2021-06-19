@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="../theme/css/style.min.css?0b5905c7">
+<link rel="stylesheet" href="../theme/css/style.min.css?b73f4d73">
 
         <link rel="dns-prefetch" href="//fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
@@ -127,24 +127,29 @@
 <p>Para resolver el problema, podemos agrupar, al igual que hizo Gauss, los términos último y primero, penúltimo y segundo, tercero y antepenúltimo, …</p>
 <div class="math">$$
 \begin{align*}
-1 + 2 + 3 + \dots + (n-2) + (n-1) + n &amp; =  \\
-\underbrace{(n + 1) + ((n-1) + 2) + ((n-2) + 3) + \dots}_{\dfrac{n}{2}} &amp; = \\
-\underbrace{(n + 1) + (n+1) + (n+1) + \dots}_{\dfrac{n}{2}} &amp; = \\
+&amp; 1 + 2 + 3 + \dots + (n-2) + (n-1) + n =  \\
+&amp; \underbrace{(n + 1) + ((n-1) + 2) + ((n-2) + 3) + \dots}_{\dfrac{n}{2}} = \\
+&amp; \underbrace{(n + 1) + (n+1) + (n+1) + \dots}_{\dfrac{n}{2}} = \\
 \end{align*}
 $$</div>
 <p>Como todos los sumandos agrupados tienen valor <span class="math">\(n+1\)</span> y hay un total de <span class="math">\(\dfrac{n}{2}\)</span>, sabemos que la suma da como resultado:</p>
 <div class="math">$$
-\dfrac{n \cdot (n+1)}{2}
+\dfrac{n(n+1)}{2}
 $$</div>
 <h2 id="metodo-2-manipulando-series">Método 2: Manipulando Series</h2>
 <p>La suma que queremos calcular se puede expresar como la siguiente serie:</p>
 <div class="math">$$
-\sum_{k=0}^{n}k = 1 + 2 + 3 + \dots + (n-2) + (n-1) + n
+S(n) = \sum_{k=1}^{n}k = 1 + 2 + 3 + \dots + (n-2) + (n-1) + n
 $$</div>
-<div class="admonition danger">
-<p class="admonition-title">Danger</p>
-<p><span class="caps">WORK</span> <span class="caps">IN</span> <span class="caps">PROGRESS</span></p>
-</div>
+<p>Si multiplicamos por <span class="math">\(2\)</span>, entonces tenemos lo siguiente:</p>
+<div class="math">$$
+\begin{align*}
+2S(n) &amp; = 2\sum_{k=1}^{n}k = \sum_{k=1}^{n}k + \sum_{k=1}^{n}(n+1-k) = \\
+&amp; = \sum_{k=1}^{n}(k + n + 1 - k) = \sum_{k=1}^{n}(n + 1) = \\
+&amp; = n(n+1)
+\end{align*}
+$$</div>
+<p>Por tanto, despejando <span class="math">\(S(n)\)</span> tenemos que <span class="math">\(S(n) = \dfrac{n(n+1)}{2}\)</span></p>
 <h2 id="metodo-3-solucion-geometrica">Método 3: Solución geométrica</h2>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
@@ -152,7 +157,7 @@ $$</div>
 </div>
 <h1 id="solucion-concreta">Solución concreta</h1>
 <p>Conociendo la solución general podemos fácilmente encontrar una solución concreta simplemente dando valores.
-La solución general para la suma de los <span class="math">\(n\)</span> primeros terminos es <span class="math">\(S(n) = \dfrac{n \cdot (n+1)}{2}\)</span>, por tanto para <span class="math">\(100\)</span> obtendríamos <span class="math">\(S(100) = \dfrac{100 \cdot (100 + 1)}{2} = \dfrac{10100}{2} = 5050\)</span></p>
+La solución general para la suma de los <span class="math">\(n\)</span> primeros terminos es <span class="math">\(S(n) = \dfrac{n(n+1)}{2}\)</span>, por tanto para <span class="math">\(100\)</span> obtendríamos <span class="math">\(S(100) = \dfrac{100 \cdot (100 + 1)}{2} = \dfrac{10100}{2} = 5050\)</span></p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
