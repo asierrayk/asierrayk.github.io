@@ -47,16 +47,16 @@ Para resolver el problema, podemos agrupar, al igual que hizo Gauss, los términ
 
 $$
 \begin{align*}
-1 + 2 + 3 + \dots + (n-2) + (n-1) + n & =  \\
-\underbrace{(n + 1) + ((n-1) + 2) + ((n-2) + 3) + \dots}_{\dfrac{n}{2}} & = \\
-\underbrace{(n + 1) + (n+1) + (n+1) + \dots}_{\dfrac{n}{2}} & = \\
+& 1 + 2 + 3 + \dots + (n-2) + (n-1) + n =  \\
+& \underbrace{(n + 1) + ((n-1) + 2) + ((n-2) + 3) + \dots}_{\dfrac{n}{2}} = \\
+& \underbrace{(n + 1) + (n+1) + (n+1) + \dots}_{\dfrac{n}{2}} = \\
 \end{align*}
 $$
 
 Como todos los sumandos agrupados tienen valor $n+1$ y hay un total de $\dfrac{n}{2}$, sabemos que la suma da como resultado:
 
 $$
-\dfrac{n \cdot (n+1)}{2}
+\dfrac{n(n+1)}{2}
 $$
 
 Método 2: Manipulando Series
@@ -65,11 +65,20 @@ Método 2: Manipulando Series
 La suma que queremos calcular se puede expresar como la siguiente serie:
 
 $$
-\sum_{k=0}^{n}k = 1 + 2 + 3 + \dots + (n-2) + (n-1) + n
+S(n) = \sum_{k=1}^{n}k = 1 + 2 + 3 + \dots + (n-2) + (n-1) + n
 $$
 
-!!! danger
-    WORK IN PROGRESS
+Si multiplicamos por $2$, entonces tenemos lo siguiente:
+
+$$
+\begin{align*}
+2S(n) & = 2\sum_{k=1}^{n}k = \sum_{k=1}^{n}k + \sum_{k=1}^{n}(n+1-k) = \\
+& = \sum_{k=1}^{n}(k + n + 1 - k) = \sum_{k=1}^{n}(n + 1) = \\
+& = n(n+1)
+\end{align*}
+$$
+
+Por tanto, despejando $S(n)$ tenemos que $S(n) = \dfrac{n(n+1)}{2}$
 
 Método 3: Solución geométrica
 -----------------------------
@@ -81,4 +90,4 @@ Solución concreta
 =================
 
 Conociendo la solución general podemos fácilmente encontrar una solución concreta simplemente dando valores.
-La solución general para la suma de los $n$ primeros terminos es $S(n) = \dfrac{n \cdot (n+1)}{2}$, por tanto para $100$ obtendríamos $S(100) = \dfrac{100 \cdot (100 + 1)}{2} = \dfrac{10100}{2} = 5050$
+La solución general para la suma de los $n$ primeros terminos es $S(n) = \dfrac{n(n+1)}{2}$, por tanto para $100$ obtendríamos $S(100) = \dfrac{100 \cdot (100 + 1)}{2} = \dfrac{10100}{2} = 5050$
