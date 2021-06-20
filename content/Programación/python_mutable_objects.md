@@ -4,7 +4,7 @@ Category: Programación
 Status: published
 lang: es
 slug: python-mutable-objects
-Tags: programación, Python
+Tags: Programación, Python
 
 [TOC]
 

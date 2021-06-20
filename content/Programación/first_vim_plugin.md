@@ -4,7 +4,7 @@ Category: Programación
 Status: published
 lang: es
 slug: my-first-vim-plugin
-Tags: programación, Vim
+Tags: Programación, Vim
 
 Tras usar Vim durante un largo periodo de tiempo, he decidido aventurarme a hacer mi primer plugin.
 
