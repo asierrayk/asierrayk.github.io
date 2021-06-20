@@ -1,5 +1,5 @@
 Title: ¿La banca siempre gana?
-Date: 2021-06-21
+Date: 2021-07-21
 Tags: problema, ecuaciones diofánticas, Matemáticas, Oposiciones
 Summary: Problema número 3 de las oposiciones 2021 de Matemáticas en Madrid
 Status: published
