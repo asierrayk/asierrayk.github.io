@@ -113,6 +113,8 @@ HOSTED_ON = {
     "url": " https://pages.github.com/"
     }
 
+GOOGLE_ANALYTICS = "G-XSXGSWGFTP"
+
 # Set it to True to display favicon and speed dial icon. Also make sure that
 # you have placed images in the appropriate directory and defined STATIC_PATHS
 # accordingly
