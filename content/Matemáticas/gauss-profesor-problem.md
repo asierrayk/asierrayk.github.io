@@ -8,12 +8,12 @@ Status: published
 
 Muchas veces se nos plantean problemas matemáticos abstractos y es difícil encontrar un problema de la vida real que se corresponda con ese problema abstracto.
 
-Dado un problema de matemáticas abstracto, podemos realizar un ejercicio muy curioso que es el de buscar un problema concreto que implique la resolución de ese problema abstracto.
+Dado un problema de matemáticas abstracto, podemos realizar un ejercicio muy curioso, que es buscar un problema concreto que implique la resolución de ese problema abstracto.
 
 El problema abstracto
 =====================
 
-Estaba el profesor de Gauss cansado por el revuelo que formaban sus alumnos cuando decidió platearles un problema que les tuviese entretenidos por un largo periodo de tiempo. El problema era el siguiente:
+Estaba el profesor de Gauss cansado por el revuelo que formaban sus alumnos cuando decidió plantearles un problema que les tuviese entretenidos por un largo periodo de tiempo. El problema era el siguiente:
 
 
 >Sumar todos los números naturales desde el 1 hasta el 100
@@ -43,7 +43,7 @@ Vamos a plantear el caso general del problema del profesor de Gauss y resolverlo
 Método 1: Agrupando términos
 ----------------------------
 
-Para resolver el problema, podemos agrupar, al igual que hizo Gauss, los términos último y primero, penúltimo y segundo, tercero y antepenúltimo, ...
+Para resolver el problema, podemos agrupar, al igual que hizo Gauss, los términos último y primero, penúltimo y segundo, tercero y antepenúltimo ...
 
 $$
 \begin{align*}
@@ -98,8 +98,10 @@ Por tanto el número total de puntos es $\dfrac{base \cdot altura}{2}$
 
 $$\dfrac{n(n+1)}{2}$$
 
+Está es la razón por la que estos números (la suma de los $n$ primeros números naturales) son también conocidos como números triangulares.
+
 Solución concreta
 =================
 
-Conociendo la solución general podemos fácilmente encontrar una solución concreta simplemente dando valores.
-La solución general para la suma de los $n$ primeros terminos es $S(n) = \dfrac{n(n+1)}{2}$, por tanto para $100$ obtendríamos $S(100) = \dfrac{100 \cdot (100 + 1)}{2} = \dfrac{10100}{2} = 5050$
+Conociendo la solución general podemos fácilmente encontrar una solución concreta para $n=100$ simplemente dando valores.
+La solución general para la suma de los $n$ primeros términos es $S(n) = \dfrac{n(n+1)}{2}$, por tanto para $n=100$ obtendríamos $S(100) = \dfrac{100 \cdot (100 + 1)}{2} = \dfrac{10100}{2} = 5050$

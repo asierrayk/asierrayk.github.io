@@ -5,7 +5,7 @@ Category: Matemáticas
 Status: published
 lang: es
 slug: day-of-week-tutorial
-Tags: Matemáticas, tutorial
+Tags: Matemáticas, Tutorial, Cálculo Mental
 
 [TOC]
 

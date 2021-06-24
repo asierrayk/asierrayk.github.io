@@ -28,7 +28,7 @@ $$ \begin{align*} -199 & = 98 \cdot (-3)+95 \\ 98 & = 95 \cdot (1)+3 \\ 95 & = 3
 Como el divisor de la división exacta es $1$, tenemos que el $mcd(-199, 98) = 1$
 
 Para que la ecuación diofántica tenga solución el máximo común divisor debe dividir al término independiente de la
-ecuación. En nuetro caso $mcd(-199, 98) = 1$ es divisor de $23$.
+ecuación. En nuestro caso $mcd(-199, 98) = 1$ es divisor de $23$.
 
 ## Algoritmo de Euclides extendido
 
@@ -105,6 +105,10 @@ $$ -199p+98q = mcd(-199, 98) = 1 $$
 
 <br/>
 
+$$
+p=-33 \quad \text{y} \quad q=-67
+$$
+
 ## Solución de la ecuación diofántica
 
 Como para obtener el término independiente $23$ a partir del $mcd(-199, 98) = 1$ hay que multiplicar por $23$. Hacemos lo mismo con la última ecuación obtenida con el algoritmo de Euclides extendido, obteniendo una solución de las infinitas que tiene la ecuación diofántica:
@@ -149,7 +153,7 @@ C = -1541 - 8 \cdot \dfrac{-199}{1} = 51
 \end{cases}
 $$
 
->El valor de cheque es de $25$ euros y $51$ centimos
+>El valor del cheque es de $25$ euros y $51$ céntimos
 
 # Comprobación del resultado
 Para comprobar que hemos obtenido la respuesta correcta basta con intercambiar los centimos por los euros:
