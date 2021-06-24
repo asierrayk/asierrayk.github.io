@@ -82,9 +82,21 @@ Por tanto, despejando $S(n)$ tenemos que $S(n) = \dfrac{n(n+1)}{2}$
 
 Método 3: Solución geométrica
 -----------------------------
+Si representamos el resultado de la suma como puntos distribuidos en el plano formando un triángulo rectángulo en el que cada fila tiene un punto más que el anterior, obtenemos la siguiente figura:
 
-!!! danger
-    WORK IN PROGRESS
+<p align="center">
+<img alt="Sexto número triangular" src="{attach}images/numero_triangular_6.png" title="Sexto número triangular">
+</p>
+
+Si realizamos una copia de este triángulo, podemos formar un cuadrado y contar fácilmente el número de puntos con la fórmula $\text{base} \cdot \text{altura}$
+
+<p align="center">
+<img alt="Fórmula visual" src="{attach}images/numero_triangular_rectangulo_6.png" title="Fórmula visual">
+</p>
+
+Por tanto el número total de puntos es $\dfrac{base \cdot altura}{2}$
+
+$$\dfrac{n(n+1)}{2}$$
 
 Solución concreta
 =================
