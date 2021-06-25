@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="../theme/css/style.min.css?b73f4d73">
+<link rel="stylesheet" href="../theme/css/style.min.css?e7d38322">
 
         <link rel="dns-prefetch" href="//fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
@@ -109,9 +109,9 @@
             
             
 <p>Muchas veces se nos plantean problemas matemáticos abstractos y es difícil encontrar un problema de la vida real que se corresponda con ese problema abstracto.</p>
-<p>Dado un problema de matemáticas abstracto, podemos realizar un ejercicio muy curioso que es el de buscar un problema concreto que implique la resolución de ese problema abstracto.</p>
+<p>Dado un problema de matemáticas abstracto, podemos realizar un ejercicio muy curioso, que es buscar un problema concreto que implique la resolución de ese problema abstracto.</p>
 <h1 id="el-problema-abstracto">El problema abstracto</h1>
-<p>Estaba el profesor de Gauss cansado por el revuelo que formaban sus alumnos cuando decidió platearles un problema que les tuviese entretenidos por un largo periodo de tiempo. El problema era el siguiente:</p>
+<p>Estaba el profesor de Gauss cansado por el revuelo que formaban sus alumnos cuando decidió plantearles un problema que les tuviese entretenidos por un largo periodo de tiempo. El problema era el siguiente:</p>
 <blockquote>
 <p>Sumar todos los números naturales desde el 1 hasta el 100</p>
 </blockquote>
@@ -132,7 +132,7 @@
 <p>Sumar los <span class="math">\(n\)</span> primeros números naturales.</p>
 </blockquote>
 <h2 id="metodo-1-agrupando-terminos">Método 1: Agrupando términos</h2>
-<p>Para resolver el problema, podemos agrupar, al igual que hizo Gauss, los términos último y primero, penúltimo y segundo, tercero y antepenúltimo, …</p>
+<p>Para resolver el problema, podemos agrupar, al igual que hizo Gauss, los términos último y primero, penúltimo y segundo, tercero y antepenúltimo …</p>
 <div class="math">$$
 \begin{align*}
 &amp; 1 + 2 + 3 + \dots + (n-2) + (n-1) + n =  \\
@@ -160,18 +160,15 @@ $$</div>
 <p>Por tanto, despejando <span class="math">\(S(n)\)</span> tenemos que <span class="math">\(S(n) = \dfrac{n(n+1)}{2}\)</span></p>
 <h2 id="metodo-3-solucion-geometrica">Método 3: Solución geométrica</h2>
 <p>Si representamos el resultado de la suma como puntos distribuidos en el plano formando un triángulo rectángulo en el que cada fila tiene un punto más que el anterior, obtenemos la siguiente figura:</p>
-<p align="center">
-<img alt="Sexto número triangular" src="../drafts/images/numero_triangular_6.png" title="Sexto número triangular"/>
-</p>
+<p><img alt="Sexto número triangular" class="center img-30 no-border" src="../drafts/images/numero_triangular_6.png"/></p>
 <p>Si realizamos una copia de este triángulo, podemos formar un cuadrado y contar fácilmente el número de puntos con la fórmula <span class="math">\(\text{base} \cdot \text{altura}\)</span></p>
-<p align="center">
-<img alt="Fórmula visual" src="../drafts/images/numero_triangular_rectangulo_6.png" title="Fórmula visual"/>
-</p>
+<p><img alt="Fórmula Visual" class="center img-40 no-border" src="../drafts/images/numero_triangular_rectangulo_6.png"/></p>
 <p>Por tanto el número total de puntos es <span class="math">\(\dfrac{base \cdot altura}{2}\)</span></p>
 <div class="math">$$\dfrac{n(n+1)}{2}$$</div>
+<p>Está es la razón por la que estos números (la suma de los <span class="math">\(n\)</span> primeros números naturales) son conocidos como números triangulares.</p>
 <h1 id="solucion-concreta">Solución concreta</h1>
-<p>Conociendo la solución general podemos fácilmente encontrar una solución concreta simplemente dando valores.
-La solución general para la suma de los <span class="math">\(n\)</span> primeros terminos es <span class="math">\(S(n) = \dfrac{n(n+1)}{2}\)</span>, por tanto para <span class="math">\(100\)</span> obtendríamos <span class="math">\(S(100) = \dfrac{100 \cdot (100 + 1)}{2} = \dfrac{10100}{2} = 5050\)</span></p>
+<p>Conociendo la solución general podemos fácilmente encontrar una solución concreta para <span class="math">\(n=100\)</span> simplemente dando valores.
+La solución general para la suma de los <span class="math">\(n\)</span> primeros términos es <span class="math">\(S(n) = \dfrac{n(n+1)}{2}\)</span>, por tanto para <span class="math">\(n=100\)</span> obtendríamos <span class="math">\(S(100) = \dfrac{100 \cdot (100 + 1)}{2} = \dfrac{10100}{2} = 5050\)</span></p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",

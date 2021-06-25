@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="../theme/css/style.min.css?2fcac227">
+<link rel="stylesheet" href="../theme/css/style.min.css?e7d38322">
 
         <link rel="dns-prefetch" href="//fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
@@ -106,7 +106,7 @@
 2 &amp; = 1 \cdot (2)+0 \end{align*} $$</div>
 <p>Como el divisor de la división exacta es <span class="math">\(1\)</span>, tenemos que el <span class="math">\(mcd(-199, 98) = 1\)</span></p>
 <p>Para que la ecuación diofántica tenga solución el máximo común divisor debe dividir al término independiente de la
-ecuación. En nuetro caso <span class="math">\(mcd(-199, 98) = 1\)</span> es divisor de <span class="math">\(23\)</span>.</p>
+ecuación. En nuestro caso <span class="math">\(mcd(-199, 98) = 1\)</span> es divisor de <span class="math">\(23\)</span>.</p>
 <h2 id="algoritmo-de-euclides-extendido">Algoritmo de Euclides extendido</h2>
 <p>El algoritmo extendido de Euclides nos permite encontrar coeficientes <span class="math">\(p\)</span> y <span class="math">\(q\)</span> para satisfacer la identidad de bezout.</p>
 <div class="math">$$ -199p+98q = mcd(-199, 98) = 1 $$</div>
@@ -175,6 +175,9 @@ ecuación. En nuetro caso <span class="math">\(mcd(-199, 98) = 1\)</span> es div
 </tbody>
 </table>
 <p><br/></p>
+<div class="math">$$
+p=-33 \quad \text{y} \quad q=-67
+$$</div>
 <h2 id="solucion-de-la-ecuacion-diofantica">Solución de la ecuación diofántica</h2>
 <p>Como para obtener el término independiente <span class="math">\(23\)</span> a partir del <span class="math">\(mcd(-199, 98) = 1\)</span> hay que multiplicar por <span class="math">\(23\)</span>. Hacemos lo mismo con la última ecuación obtenida con el algoritmo de Euclides extendido, obteniendo una solución de las infinitas que tiene la ecuación diofántica:</p>
 <div class="math">$$
@@ -212,7 +215,7 @@ C = -1541 - 8 \cdot \dfrac{-199}{1} = 51
 \end{cases}
 $$</div>
 <blockquote>
-<p>El valor de cheque es de <span class="math">\(25\)</span> euros y <span class="math">\(51\)</span> centimos</p>
+<p>El valor del cheque es de <span class="math">\(25\)</span> euros y <span class="math">\(51\)</span> céntimos</p>
 </blockquote>
 <h1 id="comprobacion-del-resultado">Comprobación del resultado</h1>
 <p>Para comprobar que hemos obtenido la respuesta correcta basta con intercambiar los centimos por los euros:</p>
