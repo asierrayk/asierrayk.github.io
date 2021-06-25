@@ -84,17 +84,17 @@ Método 3: Solución geométrica
 -----------------------------
 Si representamos el resultado de la suma como puntos distribuidos en el plano formando un triángulo rectángulo en el que cada fila tiene un punto más que el anterior, obtenemos la siguiente figura:
 
-![Sexto número triangular]({attach}images/numero_triangular_6.png){.img-center}
+![Sexto número triangular]({attach}images/numero_triangular_6.png){.center .img-30 .no-border}
 
 Si realizamos una copia de este triángulo, podemos formar un cuadrado y contar fácilmente el número de puntos con la fórmula $\text{base} \cdot \text{altura}$
 
-![Fórmula Visual]({attach}images/numero_triangular_rectangulo_6.png){.img-center}
+![Fórmula Visual]({attach}images/numero_triangular_rectangulo_6.png){.center .img-40 .no-border}
 
 Por tanto el número total de puntos es $\dfrac{base \cdot altura}{2}$
 
 $$\dfrac{n(n+1)}{2}$$
 
-Está es la razón por la que estos números (la suma de los $n$ primeros números naturales) son también conocidos como números triangulares.
+Está es la razón por la que estos números (la suma de los $n$ primeros números naturales) son conocidos como números triangulares.
 
 Solución concreta
 =================
