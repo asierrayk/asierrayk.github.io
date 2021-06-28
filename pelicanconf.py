@@ -93,6 +93,7 @@ PROJECTS_TITLE = 'Mis Proyectos'
 COMMENTS_INTRO = 'Añade un comentario:'
 SHARE_POST_INTRO = 'Compartir en:'
 SUBSCRIBE_BUTTON_TITLE  = 'Suscribirse'
+ARTICLE_TRANSLATION_MESSAGE = "Este artículo también está disponible en"
 
 # Thumbnail image to show when homepage is shared on social media. It also
 # serves as the default image for posts whose featured_image is not set.
@@ -167,11 +168,12 @@ DATE_FORMATS = {
 }
 
 # Waiting for this issue to be solved https://github.com/Pelican-Elegant/elegant/issues/139
+HOME_MENUITEM = 'Inicio'
+
 MENUITEMS = (
-    ('Inicio', '/'),
-    ('Categorías', '/categories'),
-    ('Etiquetas', '/tags'),
-    ('Archivos', '/archives'),
+    ('categories', 'Categorías', CATEGORIES_URL),
+    ('tags', 'Etiquetas', TAGS_URL),
+    ('archives', 'Archivos', ARCHIVES_URL),
 )
 
 I18N_SUBSITES = {
@@ -196,6 +198,13 @@ I18N_SUBSITES = {
         'PAGE_URL': "{slug}",
         'PAGE_SAVE_AS': "{slug}.html",
         'SEARCH_URL': "search",
+
+        'HOME_MENU_ITEM': 'Home',
+        'MENUITEMS': (
+            ('Categories', CATEGORIES_URL),
+            ('Tags', TAGS_URL),
+            ('Archives', ARCHIVES_URL),
+        ),
 
         # PROJECTS
         'PROJECTS': [{
