@@ -217,7 +217,8 @@ I18N_SUBSITES = {
 
 STATIC_PATHS =[
     'extra',
-    'images'
+    'images',
+    'extra/CNAME'
 ]
 
 EXTRA_PATH_METADATA = {
