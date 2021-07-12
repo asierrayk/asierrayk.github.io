@@ -43,7 +43,19 @@ Vamos a plantear el caso general del problema del profesor de Gauss y resolverlo
 Método 1: Agrupando términos
 ----------------------------
 
-Para resolver el problema, podemos agrupar, al igual que hizo Gauss, los términos último y primero, penúltimo y segundo, tercero y antepenúltimo ...
+Para resolver el problema, podemos agrupar, al igual que hizo Gauss, los términos último y primero, penúltimo y segundo, tercero y antepenúltimo ...[^1]
+
+[^1]: Esto solo lo podemos hacer cuando hay que sumar un número par de términos.
+En caso de ser un número impar podemos llegar a la misma fórmula de manera análoga.
+Formando $\dfrac{n-1}{2}$ parejas de valor $n+1$, más el término que queda en el centro sin emparejar de valor $\dfrac{n+1}{2}$.
+$$
+\begin{align}
+    \dfrac{n-1}{2}(n+1) + \dfrac{n+1}{2} & = \dfrac{n^2-1}{2} + \dfrac{n+1}{2} \\
+    & = \dfrac{n^2+n}{2} \\
+    & = \dfrac{n(n+1)}{2}
+\end{align}
+$$
+
 
 $$
 \begin{align*}
