@@ -1,5 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>El Placer de Pensar - Matemáticas</title><link href="http://elplacerdepensar.com/" rel="alternate"></link><link href="http://elplacerdepensar.com/feeds/matematicas.atom.xml" rel="self"></link><id>http://elplacerdepensar.com/</id><updated>2021-06-20T00:00:00+02:00</updated><subtitle>Asier Cardoso Sánchez</subtitle><entry><title>¿La banca siempre gana?</title><link href="http://elplacerdepensar.com/la-banca-siempre-gana" rel="alternate"></link><published>2021-06-20T00:00:00+02:00</published><updated>2021-06-20T00:00:00+02:00</updated><author><name>Asier Cardoso Sánchez</name></author><id>tag:elplacerdepensar.com,2021-06-20:/la-banca-siempre-gana</id><summary type="html">&lt;p&gt;Problema número 3 de las oposiciones 2021 de Matemáticas en&amp;nbsp;Madrid&lt;/p&gt;</summary><content type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>El Placer de Pensar - Matemáticas</title><link href="http://elplacerdepensar.com/" rel="alternate"></link><link href="http://elplacerdepensar.com/feeds/matematicas.atom.xml" rel="self"></link><id>http://elplacerdepensar.com/</id><updated>2021-07-14T00:00:00+02:00</updated><subtitle>Asier Cardoso Sánchez</subtitle><entry><title>El problema que Gauss resolvió al instante</title><link href="http://elplacerdepensar.com/el-problema-que-gauss-resolvio-al-instante" rel="alternate"></link><published>2021-07-14T00:00:00+02:00</published><updated>2021-07-14T00:00:00+02:00</updated><author><name>Asier Cardoso Sánchez</name></author><id>tag:elplacerdepensar.com,2021-07-14:/el-problema-que-gauss-resolvio-al-instante</id><summary type="html">&lt;p&gt;La suma de los primeros números&amp;nbsp;naturales&lt;/p&gt;</summary><content type="html">
+&lt;p&gt;Muchas veces se nos plantean problemas matemáticos abstractos y es difícil encontrar un problema de la vida real que se corresponda con ese problema abstracto.&lt;/p&gt;
+&lt;p&gt;Dado un problema de matemáticas abstracto, podemos realizar un ejercicio muy curioso, que es buscar un problema concreto que implique la resolución de ese problema abstracto.&lt;/p&gt;
+&lt;h1 id="el-problema-abstracto"&gt;El problema abstracto&lt;/h1&gt;
+&lt;p&gt;Estaba el profesor de Gauss cansado por el revuelo que formaban sus alumnos cuando decidió plantearles un problema que les tuviese entretenidos por un largo periodo de tiempo. El problema era el siguiente:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Sumar todos los números naturales desde el 1 hasta el 100&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Sin embargo, Gauss contestó casi al instante con la respuesta correcta: &lt;span class="math"&gt;\(5050\)&lt;/span&gt;&lt;/p&gt;
+&lt;h1 id="busqueda-del-problema-concreto"&gt;Búsqueda del problema concreto&lt;/h1&gt;
+&lt;p&gt;Un enunciado que implica resolver el problema abstracto planteado por el profesor de Gauss podría ser el siguiente:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Desiderio es una persona muy despistada, es por ello que todos los años ha de comprar tantas velas como años va a cumplir, ya que no reutiliza ninguna del año anterior. ¿Cuántas velas habrá comprado el día que celebre su centésimo cumpleaños?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;El hecho de poder ver un problema abstracto como un problema concreto, nos acerca el problema y da más sentido a su resolución, pues la solución adquiere un significado.&lt;/p&gt;
+&lt;div class="admonition note"&gt;
+&lt;p class="admonition-title"&gt;Note&lt;/p&gt;
+&lt;p&gt;Con esto, no quiero decir que un problema abstracto del cual no se conozca un posible problema concreto deba ser ignorado. Es más, existen muchos problemas abstractos en la historia de las matemáticas que se han estudiado sin conocerse ninguna aplicación y han resultado ser de suma importancia para la humanidad. Un ejemplo es el &lt;strong&gt;álgebra de Boole&lt;/strong&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;h1 id="resolucion-del-problema-general"&gt;Resolución del problema general&lt;/h1&gt;
+&lt;p&gt;Vamos a plantear el caso general del problema del profesor de Gauss y resolverlo por distintos métodos:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Sumar los &lt;span class="math"&gt;\(n\)&lt;/span&gt; primeros números naturales.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="metodo-1-agrupando-terminos"&gt;Método 1: Agrupando términos&lt;/h2&gt;
+&lt;p&gt;Para resolver el problema, podemos agrupar, al igual que hizo Gauss, los términos último y primero, penúltimo y segundo, tercero y antepenúltimo …&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\begin{align*}
+&amp;amp; 1 + 2 + 3 + \dots + (n-2) + (n-1) + n =  \\
+&amp;amp; \underbrace{(n + 1) + ((n-1) + 2) + ((n-2) + 3) + \dots}_{\dfrac{n}{2}} = \\
+&amp;amp; \underbrace{(n + 1) + (n+1) + (n+1) + \dots}_{\dfrac{n}{2}} = \\
+\end{align*}
+$$&lt;/div&gt;
+&lt;p&gt;Como todos los sumandos agrupados tienen valor &lt;span class="math"&gt;\(n+1\)&lt;/span&gt; y hay un total de &lt;span class="math"&gt;\(\dfrac{n}{2}\)&lt;/span&gt;, sabemos que la suma da como resultado:&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\dfrac{n(n+1)}{2}
+$$&lt;/div&gt;
+&lt;h2 id="metodo-2-manipulando-series"&gt;Método 2: Manipulando Series&lt;/h2&gt;
+&lt;p&gt;La suma que queremos calcular se puede expresar como la siguiente serie:&lt;/p&gt;
+&lt;div class="math"&gt;$$
+S(n) = \sum_{k=1}^{n}k = 1 + 2 + 3 + \dots + (n-2) + (n-1) + n
+$$&lt;/div&gt;
+&lt;p&gt;Si multiplicamos por &lt;span class="math"&gt;\(2\)&lt;/span&gt;, entonces tenemos lo siguiente:&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\begin{align*}
+2S(n) &amp;amp; = 2\sum_{k=1}^{n}k = \sum_{k=1}^{n}k + \sum_{k=1}^{n}(n+1-k) = \\
+&amp;amp; = \sum_{k=1}^{n}(k + n + 1 - k) = \sum_{k=1}^{n}(n + 1) = \\
+&amp;amp; = n(n+1)
+\end{align*}
+$$&lt;/div&gt;
+&lt;p&gt;Por tanto, despejando &lt;span class="math"&gt;\(S(n)\)&lt;/span&gt; tenemos que &lt;span class="math"&gt;\(S(n) = \dfrac{n(n+1)}{2}\)&lt;/span&gt;&lt;/p&gt;
+&lt;h2 id="metodo-3-solucion-geometrica"&gt;Método 3: Solución geométrica&lt;/h2&gt;
+&lt;p&gt;Si representamos el resultado de la suma como puntos distribuidos en el plano formando un triángulo rectángulo en el que cada fila tiene un punto más que el anterior, obtenemos la siguiente figura:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Sexto número triangular" class="center img-30 no-border" src="http://elplacerdepensar.com/images/numero_triangular_6.png"/&gt;&lt;/p&gt;
+&lt;p&gt;Si realizamos una copia de este triángulo, podemos formar un cuadrado y contar fácilmente el número de puntos con la fórmula &lt;span class="math"&gt;\(\text{base} \cdot \text{altura}\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Fórmula Visual" class="center img-40 no-border" src="http://elplacerdepensar.com/images/numero_triangular_rectangulo_6.png"/&gt;&lt;/p&gt;
+&lt;p&gt;Por tanto el número total de puntos es &lt;span class="math"&gt;\(\dfrac{base \cdot altura}{2}\)&lt;/span&gt;&lt;/p&gt;
+&lt;div class="math"&gt;$$\dfrac{n(n+1)}{2}$$&lt;/div&gt;
+&lt;p&gt;Está es la razón por la que estos números (la suma de los &lt;span class="math"&gt;\(n\)&lt;/span&gt; primeros números naturales) son conocidos como números triangulares.&lt;/p&gt;
+&lt;h1 id="solucion-concreta"&gt;Solución concreta&lt;/h1&gt;
+&lt;p&gt;Conociendo la solución general podemos fácilmente encontrar una solución concreta para &lt;span class="math"&gt;\(n=100\)&lt;/span&gt; simplemente dando valores.
+La solución general para la suma de los &lt;span class="math"&gt;\(n\)&lt;/span&gt; primeros términos es &lt;span class="math"&gt;\(S(n) = \dfrac{n(n+1)}{2}\)&lt;/span&gt;, por tanto para &lt;span class="math"&gt;\(n=100\)&lt;/span&gt; obtendríamos &lt;span class="math"&gt;\(S(100) = \dfrac{100 \cdot (100 + 1)}{2} = \dfrac{10100}{2} = 5050\)&lt;/span&gt;&lt;/p&gt;
+&lt;div class="footnote"&gt;
+&lt;hr/&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;Esto solo lo podemos hacer cuando hay que sumar un número par de términos.
+En caso de ser un número impar podemos llegar a la misma fórmula de manera análoga.
+Formando &lt;span class="math"&gt;\(\dfrac{n-1}{2}\)&lt;/span&gt; parejas de valor &lt;span class="math"&gt;\(n+1\)&lt;/span&gt;, más el término que queda en el centro sin emparejar de valor &lt;span class="math"&gt;\(\dfrac{n+1}{2}\)&lt;/span&gt;.
+&lt;div class="math"&gt;$$
+\begin{align}
+\dfrac{n-1}{2}(n+1) + \dfrac{n+1}{2} &amp;amp; = \dfrac{n^2-1}{2} + \dfrac{n+1}{2} \\
+&amp;amp; = \dfrac{n^2+n}{2} \\
+&amp;amp; = \dfrac{n(n+1)}{2}
+\end{align}
+$$&lt;/div&gt; &lt;a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="Matemáticas"></category><category term="Problema"></category><category term="Gauss"></category><category term="Problema Abstracto"></category></entry><entry><title>¿La banca siempre gana?</title><link href="http://elplacerdepensar.com/la-banca-siempre-gana" rel="alternate"></link><published>2021-06-20T00:00:00+02:00</published><updated>2021-06-20T00:00:00+02:00</updated><author><name>Asier Cardoso Sánchez</name></author><id>tag:elplacerdepensar.com,2021-06-20:/la-banca-siempre-gana</id><summary type="html">&lt;p&gt;Problema número 3 de las oposiciones 2021 de Matemáticas en&amp;nbsp;Madrid&lt;/p&gt;</summary><content type="html">
 &lt;p&gt;El siguiente problema ha sido planteado como tercer ejercicio de las oposiciones para profesor de secundaria en Madrid 2021 en la especialidad de matemáticas.&lt;/p&gt;
 &lt;h1 id="enunciado"&gt;Enunciado&lt;/h1&gt;
 &lt;blockquote&gt;
