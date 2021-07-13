@@ -132,7 +132,7 @@
 <p>Sumar los <span class="math">\(n\)</span> primeros números naturales.</p>
 </blockquote>
 <h2 id="metodo-1-agrupando-terminos">Método 1: Agrupando términos</h2>
-<p>Para resolver el problema, podemos agrupar, al igual que hizo Gauss, los términos último y primero, penúltimo y segundo, tercero y antepenúltimo …</p>
+<p>Para resolver el problema, podemos agrupar, al igual que hizo Gauss, los términos último y primero, penúltimo y segundo, tercero y antepenúltimo …<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
 <div class="math">$$
 \begin{align*}
 &amp; 1 + 2 + 3 + \dots + (n-2) + (n-1) + n =  \\
@@ -169,6 +169,23 @@ $$</div>
 <h1 id="solucion-concreta">Solución concreta</h1>
 <p>Conociendo la solución general podemos fácilmente encontrar una solución concreta para <span class="math">\(n=100\)</span> simplemente dando valores.
 La solución general para la suma de los <span class="math">\(n\)</span> primeros términos es <span class="math">\(S(n) = \dfrac{n(n+1)}{2}\)</span>, por tanto para <span class="math">\(n=100\)</span> obtendríamos <span class="math">\(S(100) = \dfrac{100 \cdot (100 + 1)}{2} = \dfrac{10100}{2} = 5050\)</span></p>
+<div class="footnote">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>Esto solo lo podemos hacer cuando hay que sumar un número par de términos.
+En caso de ser un número impar podemos llegar a la misma fórmula de manera análoga.
+Formando <span class="math">\(\dfrac{n-1}{2}\)</span> parejas de valor <span class="math">\(n+1\)</span>, más el término que queda en el centro sin emparejar de valor <span class="math">\(\dfrac{n+1}{2}\)</span>.
+<div class="math">$$
+\begin{align}
+\dfrac{n-1}{2}(n+1) + \dfrac{n+1}{2} &amp; = \dfrac{n^2-1}{2} + \dfrac{n+1}{2} \\
+&amp; = \dfrac{n^2+n}{2} \\
+&amp; = \dfrac{n(n+1)}{2}
+\end{align}
+$$</div> <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
+</li>
+</ol>
+</div>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
