@@ -1,6 +1,6 @@
 Title: El problema que Gauss resolvió al instante
 Date: 2021-07-14
-Tags: problema, gauss
+Tags: Problema, Gauss, Problema Abstracto
 Summary: La suma de los primeros números naturales
 Status: published
 
