@@ -50,6 +50,7 @@ PLUGINS = [
     'extract_toc',
     'latex',
     'pelican.plugins.render_math',
+    'minchin.pelican.plugins.nojekyll',
 ]
 DIRECT_TEMPLATES = [
     'index',

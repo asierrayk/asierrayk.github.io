@@ -14,6 +14,7 @@ pelican-render-math = "^1.0.3"
 typogrify = "^2.0.7"
 pelican = {version = "^4.6.0", extras = ["Markdown"]}
 Markdown = "^3.3.4"
+"minchin.pelican.plugins.nojekyll" = "^1.1.0"
 
 [tool.poetry.dev-dependencies]
 
