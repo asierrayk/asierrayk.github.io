@@ -1,0 +1,1 @@
+pelican-themes -r elegant && pelican-themes -i themes/elegant -v

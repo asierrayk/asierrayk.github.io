@@ -94,7 +94,7 @@ PROJECTS_TITLE = 'Mis Proyectos'
 COMMENTS_INTRO = 'Añade un comentario:'
 SHARE_POST_INTRO = 'Compartir en:'
 SUBSCRIBE_BUTTON_TITLE  = 'Suscribirse'
-ARTICLE_TRANSLATION_MESSAGE = "Este artículo también está disponible en"
+ARTICLE_TRANSLATION_MESSAGE = 'Este artículo también está disponible en'
 
 # Thumbnail image to show when homepage is shared on social media. It also
 # serves as the default image for posts whose featured_image is not set.
@@ -176,6 +176,9 @@ MENUITEMS = (
     ('tags', 'Etiquetas', TAGS_URL),
     ('archives', 'Archivos', ARCHIVES_URL),
 )
+ALL_POSTS = 'Publicaciones'
+ALL_CATEGORIES = 'Categorías'
+ALL_TAGS = 'Etiquetas'
 
 I18N_SUBSITES = {
     'en': {
@@ -200,13 +203,6 @@ I18N_SUBSITES = {
         'PAGE_SAVE_AS': "{slug}.html",
         'SEARCH_URL': "search",
 
-        'HOME_MENU_ITEM': 'Home',
-        'MENUITEMS': (
-            ('Categories', CATEGORIES_URL),
-            ('Tags', TAGS_URL),
-            ('Archives', ARCHIVES_URL),
-        ),
-
         # PROJECTS
         'PROJECTS': [{
             'name': 'The joy of painting - Bob Ross',
@@ -216,7 +212,7 @@ I18N_SUBSITES = {
     }
 }
 
-STATIC_PATHS =[
+STATIC_PATHS = [
     'extra',
     'images',
     'extra/CNAME'
