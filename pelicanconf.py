@@ -122,10 +122,17 @@ MODERN_GOOGLE_ANALYTICS = u'G-XSXGSWGFTP'
 # accordingly
 USE_SHORTCUT_ICONS = False
 
-PROJECTS = [{
-    'name': 'The joy of painting - Bob Ross',
-    'url': 'https://asierrayk.github.io/bob-ross/',
-    'description': 'Pequeño tributo a Bob Ross y su programa de televisión que es una inspiración para este blog'},
+PROJECTS = [
+    {
+        'name': 'Major System tool',
+        'url': 'https://major-system-tool.herokuapp.com/',
+        'description': 'Herramienta para codificar números en palabras. Útil para memorizar números de manera eficiente'
+    },
+    {
+        'name': 'The joy of painting - Bob Ross',
+        'url': 'https://asierrayk.github.io/bob-ross/',
+        'description': 'Pequeño tributo a Bob Ross y su programa de televisión que es una inspiración para este blog'
+    },
     ]
 
 AUTHORS = {
@@ -179,6 +186,15 @@ MENUITEMS = (
 ALL_POSTS = 'Publicaciones'
 ALL_CATEGORIES = 'Categorías'
 ALL_TAGS = 'Etiquetas'
+SEARCH_PLACEHOLDER = 'Buscar'
+SEARCH_TAG_PLACEHOLDER = 'Buscar etiqueta'
+
+TOC_TITLE = 'Contenido'
+ARTICLE_PUBLISHED = 'Publicado'
+ARTICLE_CATEGORY = 'Category'
+ARTICLE_TAGS = 'Etiquetas'
+RECENT_POSTS = 'Publicaciones recientes'
+POSTED_IN = 'Publicado en '
 
 I18N_SUBSITES = {
     'en': {
