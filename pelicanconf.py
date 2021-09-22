@@ -195,6 +195,9 @@ ARTICLE_CATEGORY = 'Category'
 ARTICLE_TAGS = 'Etiquetas'
 RECENT_POSTS = 'Publicaciones recientes'
 POSTED_IN = 'Publicado en '
+TAGS = 'Etiquetas'
+CATEGORY = 'Categoría'
+PUBLISHED = 'Publicado'
 
 I18N_SUBSITES = {
     'en': {
