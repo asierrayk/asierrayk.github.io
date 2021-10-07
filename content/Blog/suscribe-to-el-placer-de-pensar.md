@@ -1,16 +1,16 @@
 Title: ¿Cómo suscribirse al blog?
-Date: 2021-07-08
+Date: 2021-10-07
 Tags: Blog
-Status: draft
+Status: published
 
 [TOC]
 
-Si quieres enterarte el primero cuando haya una nueva entrada en el blog, deberás seguir alguna de estas opciones.
+Si quieres ser el primero en enterarte cuando haya una nueva entrada en el blog, deberás seguir alguna de estas opciones.
 
 Atom feed
 =========
 
-Se puede realizar la suscripción mediante el feed del Blog. Para ello podéis usar cualquier programa agregador.
+Se puede realizar la suscripción mediante el [feed del Blog](http://elplacerdepensar.com/feeds/all.atom.xml). Para ello podéis usar cualquier programa agregador.
 
 Yo en particular recomiendo [Feedbro](https://chrome.google.com/webstore/detail/feedbro/mefgmmbdailogpfhfblcnnjfmnpnmdfa?hl=es-419) para Chrome que soporta [MathJax](https://www.mathjax.org/) y se pueden previsualizar correctamente las fórmulas matemáticas del Blog si se activa esta opción en la configuración.
 

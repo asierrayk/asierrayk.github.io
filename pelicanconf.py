@@ -26,6 +26,7 @@ LINKS = ()
 SOCIAL = (('Github', 'https://github.com/asierrayk'),
           ('Youtube', 'https://www.youtube.com/channel/UCyXCYTXnFcCW6rm4BHMn9CA'),
           ('LinkedIn', 'https://www.linkedin.com/in/asier-cardoso-s%C3%A1nchez-7b90a8124/'),
+          ('Twitter', 'https://twitter.com/placerdepensar'),
           ("RSS", SITEURL + "/feeds/all.atom.xml"),
           )
 
