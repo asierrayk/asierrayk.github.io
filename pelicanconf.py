@@ -88,7 +88,7 @@ PAGE_SAVE_AS = "{slug}.html"
 SEARCH_URL = "search"
 
 # LABELS
-LANDING_PAGE_TITLE = 'Asier Cardoso Sánchez'
+LANDING_PAGE_TITLE = 'El Placer de Pensar'
 RELATED_POSTS_LABEL = 'Contenido relacionado'
 SOCIAL_PROFILE_LABEL = 'Otras redes'
 PROJECTS_TITLE = 'Mis Proyectos'
