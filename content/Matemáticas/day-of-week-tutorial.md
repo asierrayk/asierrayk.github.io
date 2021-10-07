@@ -1,5 +1,5 @@
 Title: Calendario Mental
-subtitle: Cómo saber en que día de la semana cayó cualquier fecha 
+subtitle: Cómo saber en qué día de la semana cayó cualquier fecha 
 Date: 2021-05-30 20:22
 Category: Matemáticas
 Status: published

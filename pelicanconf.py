@@ -88,7 +88,7 @@ PAGE_SAVE_AS = "{slug}.html"
 SEARCH_URL = "search"
 
 # LABELS
-LANDING_PAGE_TITLE = 'El Placer de Pensar'
+LANDING_PAGE_TITLE = 'Porque pensar puede ser divertido'
 RELATED_POSTS_LABEL = 'Contenido relacionado'
 SOCIAL_PROFILE_LABEL = 'Otras redes'
 PROJECTS_TITLE = 'Mis Proyectos'
