@@ -3,11 +3,11 @@ subtitle: fórmulas que no entendemos por qué son
 Date: 2021-10-7 16:23
 Tags: Problema, Inducción
 Summary: Demostrando por inducción la suma de los primeros cuadrados perfectos
-Status: published
+Status: draft
 
 [TOC]
 
-En muchas ocasiones he demostrado fórmulas, que no sería capaz de obtener. Una de ellas es la fórmula de la suma de los cuadrados de los $n$ primeros números naturales.
+En muchas ocasiones, sobre todo en los primeros años de la carrera de matemáticas, se suelen demostrar fórmulas por inducción sin saber como obtenerlas. Una de estas fórmulas es la suma de los cuadrados de los $n$ primeros números naturales.
 
 Inducción
 =========
@@ -15,7 +15,7 @@ Inducción es una forma de razonamiento en el que la verdad de las premisas apoy
 
 Inducción matemática
 ====================
-Nos permite la demostración de proposiciones que dependen de los números naturales. Si una propiedad se cumple para un número natural $n_0$ y suponiendo que se cumple para $n \in \mathbb{N}$ podemos demostrar que se cumple para $n+1$. Entonces la propiedad es cierta $\forall k\in \mathbb{N} \quad k \ge n_0$.
+Nos permite la demostración de proposiciones que dependen de los números naturales. Si una propiedad se cumple para un número natural $n_0$ y suponiendo que se cumple para $n \in \mathbb{N}$, podemos demostrar que se cumple para $n+1$, entonces la propiedad es cierta $\forall k\in \mathbb{N} \quad k \ge n_0$.
 
 Demostración por inducción
 --------------------------
@@ -28,8 +28,8 @@ Comprobemos que la propiedad se cumple para $n=1$.
 
 $$
 \begin{align*}
-    n=1 1^2 = 1 \\
-    \dfrac{n(n+1)(2n+1)}{6} = \dfrac{1(1+1)(2 \cdot 1+1)}{6} = 1}
+    & 1^2 = 1 \\
+    & \dfrac{n(n+1)(2n+1)}{6} = \dfrac{1(1+1)(2 \cdot 1+1)}{6} = 1
 \end{align*}
 $$
 

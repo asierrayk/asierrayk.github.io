@@ -20,9 +20,11 @@ $$ 100C+E-23 = 200E+2C $$ Despejando tenemos la siguiente ecuación Diofántica 
 
 ## Algoritmo de Euclides
 
-Aplicamos el algoritmo de Euclides para obtener el máximo común divisor.
+Aplicamos el algoritmo de Euclides para obtener el máximo común divisor. El máximo común divisor será el último resto distinto de cero de las sucesivas divisiones o el divisor de la división con resto cero.
 
-$$ \begin{align*} -199 & = 98 \cdot (-3)+95 \\ 98 & = 95 \cdot (1)+3 \\ 95 & = 3 \cdot (31)+2 \\ 3 & = 2 \cdot (1)+1 \\
+$$ \begin{align*}
+-199 & = 98 \cdot (-3)+95 \\
+98 & = 95 \cdot (1)+3 \\ 95 & = 3 \cdot (31)+2 \\ 3 & = 2 \cdot (1)+1 \\
 2 & = 1 \cdot (2)+0 \end{align*} $$
 
 Como el divisor de la división exacta es $1$, tenemos que el $mcd(-199, 98) = 1$
@@ -50,13 +52,15 @@ $$ -199p+98q = mcd(-199, 98) = 1 $$
 
 <table style="width: 100%">
     <colgroup>
+       <col style="width: 10%;">
        <col style="width: 20%;">
        <col style="width: 20%;">
        <col style="width: 20%;">
-       <col style="width: 40%;">
+       <col style="width: 30%;">
     </colgroup>
     <thead>
         <tr>
+            <th align="center">fila</th>
             <th align="center">p</th>
             <th align="center">q</th>
             <th align="center">r</th>
@@ -65,36 +69,42 @@ $$ -199p+98q = mcd(-199, 98) = 1 $$
     </thead>
     <tbody>
     <tr>
+        <td align="center">F1</td>
         <td align="center">1</td>
         <td align="center">0</td>
         <td align="center">-199</td>
         <td align="center">-199 (1) + 98 (0) = -199</td>
     </tr>
     <tr>
+        <td align="center">F2</td>
         <td align="center">0</td>
         <td align="center">1</td>
         <td align="center">98</td>
         <td align="center">-199 (0) + 98 (1) = 98</td>
     </tr>
     <tr>
+        <td align="center">F3</td>
         <td align="center">1</td>
         <td align="center">3</td>
         <td align="center">95</td>
         <td align="center">-199 (1) + 98 (3) = 95</td>
     </tr>
     <tr>
+        <td align="center">F4</td>
         <td align="center">-1</td>
         <td align="center">-2</td>
         <td align="center">3</td>
         <td align="center">-199 (-1) + 98 (-2) = 3</td>
     </tr>
     <tr>
+        <td align="center">F5</td>
         <td align="center">32</td>
         <td align="center">65</td>
         <td align="center">2</td>
         <td align="center">-199 (32) + 98 (65) = 2</td>
     </tr>
     <tr>
+        <td align="center">F6</td>
         <td align="center">-33</td>
         <td align="center">-67</td>
         <td align="center">1</td>
@@ -105,8 +115,33 @@ $$ -199p+98q = mcd(-199, 98) = 1 $$
 
 <br/>
 
+Para ello hemos usado las ecuaciones despejadas en el algoritmo de euclides.
+Las dos primeras entradas de la tabla son triviales y el resto se obtienen a partir de las anteriores.
+$$
+\begin{align}
+    -199 + 98 \cdot (3) = 95 \rightarrow & F_3 = F_1 + 3 \cdot F_2 \\
+    98 + 95 \cdot (-1) = 3 \rightarrow & F_4 = F_2 + (-1) \cdot F_3 \\
+    95 + 3 \cdot (-31) = 2 \rightarrow & F_5 = F_3 + (-31) \cdot F_4 \\
+    3 + 2 \cdot (-1) = 1 \rightarrow & F_6 = F_4 + (-1) \cdot F_5
+\end{align}
+$$
+
 $$
 p=-33 \quad \text{y} \quad q=-67
+$$
+
+De manera alternativa se pueden calcular $p$ y $q$ partiendo de la última ecuación, despejando el resto y haciendo sustituciones sucesivas.
+
+$$
+\begin{align}
+                                 & \quad 3 - 2 = 1 \\
+2= 95 - 3 \cdot (31) \rightarrow & \quad 3 - (95 -3 \cdot (31)) = 1 \\
+                                 & \quad 3 \cdot 32 - 95 = 1 \\
+3 = 98 - 95 \cdot (1)\rightarrow & \quad (98-95)\cdot(32)-95 = 1 \\
+                                 & \quad 95\cdot(-33)+98\cdot(32) = 1 \\
+95=-199-98\cdot(-3) \rightarrow & \quad (-199-98\cdot(-3))\cdot(-33)+98\cdot(32) = 1 \\
+& \quad -199\cdot(-33) + 98\cdot(-67) = 1 \\
+\end{align}
 $$
 
 ## Solución de la ecuación diofántica

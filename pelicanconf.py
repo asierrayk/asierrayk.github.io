@@ -199,6 +199,7 @@ POSTED_IN = 'Publicado en '
 TAGS = 'Etiquetas'
 CATEGORY = 'Categoría'
 PUBLISHED = 'Publicado'
+CONTENTS = 'Contenidos'
 
 I18N_SUBSITES = {
     'en': {
