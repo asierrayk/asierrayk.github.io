@@ -89,7 +89,7 @@
 <div class="row-fluid">
     <div class="span2 table-of-content">
         <nav>
-        <h4>Contents</h4>
+        <h4>Contenidos</h4>
         <div class="toc">
 <ul>
 <li><a href="#enunciado">Enunciado</a></li>
@@ -118,8 +118,10 @@
 <p> Despejando tenemos la siguiente ecuación Diofántica </p>
 <div class="math">$$ -199E+98C = 23 $$</div>
 <h2 id="algoritmo-de-euclides">Algoritmo de Euclides</h2>
-<p>Aplicamos el algoritmo de Euclides para obtener el máximo común divisor.</p>
-<div class="math">$$ \begin{align*} -199 &amp; = 98 \cdot (-3)+95 \\ 98 &amp; = 95 \cdot (1)+3 \\ 95 &amp; = 3 \cdot (31)+2 \\ 3 &amp; = 2 \cdot (1)+1 \\
+<p>Aplicamos el algoritmo de Euclides para obtener el máximo común divisor. El máximo común divisor será el último resto distinto de cero de las sucesivas divisiones o el divisor de la división con resto cero.</p>
+<div class="math">$$ \begin{align*}
+-199 &amp; = 98 \cdot (-3)+95 \\
+98 &amp; = 95 \cdot (1)+3 \\ 95 &amp; = 3 \cdot (31)+2 \\ 3 &amp; = 2 \cdot (1)+1 \\
 2 &amp; = 1 \cdot (2)+0 \end{align*} $$</div>
 <p>Como el divisor de la división exacta es <span class="math">\(1\)</span>, tenemos que el <span class="math">\(mcd(-199, 98) = 1\)</span></p>
 <p>Para que la ecuación diofántica tenga solución el máximo común divisor debe dividir al término independiente de la
@@ -139,13 +141,15 @@ ecuación. En nuestro caso <span class="math">\(mcd(-199, 98) = 1\)</span> es di
 &#8212;-->
 <table style="width: 100%">
 <colgroup>
+<col style="width: 10%;"/>
 <col style="width: 20%;"/>
 <col style="width: 20%;"/>
 <col style="width: 20%;"/>
-<col style="width: 40%;"/>
+<col style="width: 30%;"/>
 </colgroup>
 <thead>
 <tr>
+<th align="center">fila</th>
 <th align="center">p</th>
 <th align="center">q</th>
 <th align="center">r</th>
@@ -154,36 +158,42 @@ ecuación. En nuestro caso <span class="math">\(mcd(-199, 98) = 1\)</span> es di
 </thead>
 <tbody>
 <tr>
+<td align="center">F1</td>
 <td align="center">1</td>
 <td align="center">0</td>
 <td align="center">-199</td>
 <td align="center">-199 (1) + 98 (0) = -199</td>
 </tr>
 <tr>
+<td align="center">F2</td>
 <td align="center">0</td>
 <td align="center">1</td>
 <td align="center">98</td>
 <td align="center">-199 (0) + 98 (1) = 98</td>
 </tr>
 <tr>
+<td align="center">F3</td>
 <td align="center">1</td>
 <td align="center">3</td>
 <td align="center">95</td>
 <td align="center">-199 (1) + 98 (3) = 95</td>
 </tr>
 <tr>
+<td align="center">F4</td>
 <td align="center">-1</td>
 <td align="center">-2</td>
 <td align="center">3</td>
 <td align="center">-199 (-1) + 98 (-2) = 3</td>
 </tr>
 <tr>
+<td align="center">F5</td>
 <td align="center">32</td>
 <td align="center">65</td>
 <td align="center">2</td>
 <td align="center">-199 (32) + 98 (65) = 2</td>
 </tr>
 <tr>
+<td align="center">F6</td>
 <td align="center">-33</td>
 <td align="center">-67</td>
 <td align="center">1</td>
@@ -192,8 +202,31 @@ ecuación. En nuestro caso <span class="math">\(mcd(-199, 98) = 1\)</span> es di
 </tbody>
 </table>
 <p><br/></p>
+<p>Para ello hemos usado las ecuaciones despejadas en el algoritmo de euclides.
+Las dos primeras entradas de la tabla son triviales y el resto se obtienen a partir de las anteriores.
+</p>
+<div class="math">$$
+\begin{align}
+    -199 + 98 \cdot (3) = 95 \rightarrow &amp; F_3 = F_1 + 3 \cdot F_2 \\
+    98 + 95 \cdot (-1) = 3 \rightarrow &amp; F_4 = F_2 + (-1) \cdot F_3 \\
+    95 + 3 \cdot (-31) = 2 \rightarrow &amp; F_5 = F_3 + (-31) \cdot F_4 \\
+    3 + 2 \cdot (-1) = 1 \rightarrow &amp; F_6 = F_4 + (-1) \cdot F_5
+\end{align}
+$$</div>
 <div class="math">$$
 p=-33 \quad \text{y} \quad q=-67
+$$</div>
+<p>De manera alternativa se pueden calcular <span class="math">\(p\)</span> y <span class="math">\(q\)</span> partiendo de la última ecuación, despejando el resto y haciendo sustituciones sucesivas.</p>
+<div class="math">$$
+\begin{align}
+                                 &amp; \quad 3 - 2 = 1 \\
+2= 95 - 3 \cdot (31) \rightarrow &amp; \quad 3 - (95 -3 \cdot (31)) = 1 \\
+                                 &amp; \quad 3 \cdot 32 - 95 = 1 \\
+3 = 98 - 95 \cdot (1)\rightarrow &amp; \quad (98-95)\cdot(32)-95 = 1 \\
+                                 &amp; \quad 95\cdot(-33)+98\cdot(32) = 1 \\
+95=-199-98\cdot(-3) \rightarrow &amp; \quad (-199-98\cdot(-3))\cdot(-33)+98\cdot(32) = 1 \\
+&amp; \quad -199\cdot(-33) + 98\cdot(-67) = 1 \\
+\end{align}
 $$</div>
 <h2 id="solucion-de-la-ecuacion-diofantica">Solución de la ecuación diofántica</h2>
 <p>Como para obtener el término independiente <span class="math">\(23\)</span> a partir del <span class="math">\(mcd(-199, 98) = 1\)</span> hay que multiplicar por <span class="math">\(23\)</span>. Hacemos lo mismo con la última ecuación obtenida con el algoritmo de Euclides extendido, obteniendo una solución de las infinitas que tiene la ecuación diofántica:</p>
