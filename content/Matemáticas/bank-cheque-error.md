@@ -164,7 +164,7 @@ La solución general para la ecuación diofántica $ax+by=c$, con una solución 
 $$
 \begin{cases}
 x = x_0 + \lambda \dfrac{b}{mcd(a,b)} \\
-y = y_0 + \lambda \dfrac{a}{mcd(a,b)}
+y = y_0 - \lambda \dfrac{a}{mcd(a,b)}
 \end{cases}
 \lambda \in \mathbb Z
 $$
