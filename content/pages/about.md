@@ -6,7 +6,4 @@ status: hidden
 lang: es
 slug: landing-page-about-hidden
 ---
-Este Blog es un sitio donde compartir conocimiento, plantear cuestiones y disfrutar resolviendo problemas. En definitiva un lugar donde comprender las matemáticas desde una perspectiva diferente a la que estamos acostumbrados. 
-
-Además, podrás encontrar publicaciones sobre programación, ajedrez,
-rubik y muchas cosas más. 
+¡Hola! Soy Asier, profesor de matemáticas y apasionado de la programación, el ajedrez, el cubo de Rubik... y muchas cosas más. En este rincón comparto curiosidades, retos y trucos para disfrutar pensando.
