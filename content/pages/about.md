@@ -1,5 +1,5 @@
 ---
-title: ¿Qué esperar del Blog?
+title: ¿De qué va esto?
 layout: page
 date: 2020-02-08 11:20
 status: hidden
